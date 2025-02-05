@@ -85,10 +85,10 @@
     <div class="leftside-menu">
         <a href="{{route('dashboard')}}" class="logo logo-light">
             <span class="logo-lg">
-                <img src="{{URL::to('backend/images/etl_logo.png')}}" alt="logo" style="height: 50px;">
+                <img src="{{URL::to('backend/images/etl.png')}}" alt="logo" style="height: 50px;">
             </span>
             <span class="logo-sm">
-                <img src="{{URL::to('backend/images/etl_logo.png')}}" alt="small logo">
+                <img src="{{URL::to('backend/images/etl.png')}}" alt="small logo">
             </span>
         </a>
 
