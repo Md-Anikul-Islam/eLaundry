@@ -18,6 +18,8 @@ class CreateAdminUserSeeder extends Seeder
         $user = User::create([
             'name' => 'eLaundry Super Admin',
             'email' => 'eLaundry@admin.com',
+            'phone' => '01905256528',
+            'address' => 'Dhaka, Bangladesh',
             'password' => bcrypt('eLaundry@2025')
         ]);
 
