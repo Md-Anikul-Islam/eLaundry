@@ -32,21 +32,23 @@ class PermissionTableSeeder extends Seeder
             'user-edit',
             'user-delete',
 
-
             //For Slider
             'slider-list',
             'slider-create',
             'slider-edit',
             'slider-delete',
 
+            //category
+            'category-list',
+            'category-create',
+            'category-edit',
+            'category-delete',
 
             //Site Setting
             'site-setting',
 
             //Dashboard
             'login-log-list',
-
-
         ];
         foreach ($permissions as $permission) {
             if (!Permission::where('name', $permission)->exists()) {

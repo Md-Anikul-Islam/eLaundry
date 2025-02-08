@@ -131,9 +131,19 @@
                 </li>
                 @endcan
 
+                @can('category-list')
+                    <li class="side-nav-item">
+                        <a href="{{route('category.section')}}" class="side-nav-link">
+                            <i class=" ri-pencil-fill"></i>
+                            <span> Category </span>
+                        </a>
+                    </li>
+                @endcan
 
 
-                @can('site-setting')
+
+
+            @can('site-setting')
                     <li class="side-nav-item">
                         <a href="{{route('site.setting')}}" class="side-nav-link">
                             <i class="ri-drag-move-fill"></i>
