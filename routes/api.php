@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\api\AboutController;
+use App\Http\Controllers\api\CategoryController;
 use App\Http\Controllers\api\NewsController;
 use App\Http\Controllers\api\ProjectController;
 use App\Http\Controllers\api\SliderController;
@@ -27,5 +28,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('register', [UserAuthController::class, 'register']);
 Route::post('login', [UserAuthController::class, 'login']);
+
+
+//auth routes
+Route::group(['middleware' => ['auth:sanctum']], function () {
+
+    //category
+    Route::get('category', [CategoryController::class, 'index']);
+
+});
 
 
