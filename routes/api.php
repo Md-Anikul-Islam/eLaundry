@@ -27,6 +27,8 @@ use Illuminate\Support\Facades\Route;
 //});
 
 Route::post('register', [UserAuthController::class, 'register']);
+Route::post('verify', [UserAuthController::class, 'verify']);
+Route::post('resend-verification-code', [UserAuthController::class, 'resendVerificationCode']);
 Route::post('login', [UserAuthController::class, 'login']);
 
 
