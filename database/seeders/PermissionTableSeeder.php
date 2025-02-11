@@ -44,6 +44,12 @@ class PermissionTableSeeder extends Seeder
             'category-edit',
             'category-delete',
 
+            //Service
+            'service-list',
+            'service-create',
+            'service-edit',
+            'service-delete',
+
             //Site Setting
             'site-setting',
 

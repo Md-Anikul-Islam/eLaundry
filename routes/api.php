@@ -37,6 +37,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     //category
     Route::get('category', [CategoryController::class, 'index']);
+    
 
 });
 

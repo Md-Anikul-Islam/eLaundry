@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\admin\AdminDashboardController;
 use App\Http\Controllers\admin\CategoryController;
+use App\Http\Controllers\admin\ServiceController;
 use App\Http\Controllers\admin\SiteSettingController;
 use App\Http\Controllers\admin\SliderController;
 use App\Http\Controllers\RoleController;
@@ -39,6 +40,12 @@ Route::middleware('auth')->group(callback: function () {
     Route::post('/category-store', [CategoryController::class, 'store'])->name('category.store');
     Route::put('/category-update/{id}', [CategoryController::class, 'update'])->name('category.update');
     Route::get('/category-delete/{id}', [CategoryController::class, 'destroy'])->name('category.destroy');
+
+    //Service Section
+    Route::get('/service-section', [ServiceController::class, 'index'])->name('service.section');
+    Route::post('/service-store', [ServiceController::class, 'store'])->name('service.store');
+    Route::put('/service-update/{id}', [ServiceController::class, 'update'])->name('service.update');
+    Route::get('/service-delete/{id}', [ServiceController::class, 'destroy'])->name('service.destroy');
 
     //Role and User Section
     Route::resource('roles', RoleController::class);

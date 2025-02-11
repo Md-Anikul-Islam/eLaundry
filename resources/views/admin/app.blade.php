@@ -140,6 +140,15 @@
                     </li>
                 @endcan
 
+                @can('service-list')
+                    <li class="side-nav-item">
+                        <a href="{{route('service.section')}}" class="side-nav-link">
+                            <i class=" ri-pencil-fill"></i>
+                            <span> Service </span>
+                        </a>
+                    </li>
+                @endcan
+
 
 
 
