@@ -4,6 +4,7 @@ use App\Http\Controllers\api\AboutController;
 use App\Http\Controllers\api\CategoryController;
 use App\Http\Controllers\api\NewsController;
 use App\Http\Controllers\api\ProjectController;
+use App\Http\Controllers\api\ServiceController;
 use App\Http\Controllers\api\SliderController;
 use App\Http\Controllers\api\TeamController;
 use App\Http\Controllers\api\TrainingController;
@@ -37,7 +38,10 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     //category
     Route::get('category', [CategoryController::class, 'index']);
-    
+
+    //service
+    Route::get('service', [ServiceController::class, 'index']);
+
 
 });
 
