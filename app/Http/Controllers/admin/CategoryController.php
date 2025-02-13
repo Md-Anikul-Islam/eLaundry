@@ -32,6 +32,8 @@ class CategoryController extends Controller
             $request->validate([
                 'name' => 'required',
             ]);
+            $file = time().'.'.$request->file->extension();
+            $request->file->move(public_path('images/category'), $file);
             $category = new Category();
             $category->name = $request->name;
             $category->save();
@@ -51,6 +53,11 @@ class CategoryController extends Controller
             $category = Category::find($id);
             $category->name = $request->name;
             $category->status = $request->status;
+            if ($request->file) {
+                $file = time() . '.' . $request->file->extension();
+                $request->file->move(public_path('images/category'), $file);
+                $category->file = $file;
+            }
             $category->save();
             Toastr::success('Category Updated Successfully', 'Success');
             return redirect()->back();

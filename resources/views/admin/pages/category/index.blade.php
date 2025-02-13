@@ -70,6 +70,15 @@
                                                                    class="form-control" placeholder="Enter Name" required>
                                                         </div>
                                                     </div>
+
+                                                    <div class="col-12">
+                                                        <div class="mb-3">
+                                                            <label for="example-fileinput" class="form-label">File</label>
+                                                            <input type="file" name="file" id="example-fileinput" class="form-control" >
+                                                            <img src="{{asset('images/category/'. $categoryData->file )}}" alt="File or  Image" class="mt-2" style="max-width: 50px;">
+                                                        </div>
+                                                    </div>
+
                                                     <div class="col-12">
                                                         <div class="mb-3">
                                                             <label for="example-select" class="form-label">Status</label>
@@ -133,6 +142,14 @@
                                            class="form-control" placeholder="Enter Name" required>
                                 </div>
                             </div>
+
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="example-fileinput" class="form-label">File</label>
+                                    <input type="file" name="file" id="example-fileinput" class="form-control" >
+                                </div>
+                            </div>
+
                         </div>
                         <div class="d-flex justify-content-end">
                             <button class="btn btn-primary" type="submit">Submit</button>
