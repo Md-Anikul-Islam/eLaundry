@@ -22,20 +22,12 @@ return new class extends Migration
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
             $table->text('address')->nullable();
-            $table->text('address_bn')->nullable();
-            $table->text('short_description')->nullable();
             $table->string('site_link')->nullable();
             $table->string('facebook_link')->nullable();
             $table->string('twitter_link')->nullable();
             $table->string('linkedin_link')->nullable();
             $table->string('instagram_link')->nullable();
             $table->string('youtube_link')->nullable();
-            $table->string('team_banner')->nullable();
-            $table->string('notice_banner')->nullable();
-            $table->string('news_banner')->nullable();
-            $table->string('project_banner')->nullable();
-            $table->string('contact_banner')->nullable();
-            $table->string('training_banner')->nullable();
             $table->timestamps();
         });
     }

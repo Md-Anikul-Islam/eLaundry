@@ -10,5 +10,8 @@ php artisan migrate
 php artisan db:seed --class=PermissionTableSeeder
 # Admin Create
 php artisan db:seed --class=CreateAdminUserSeeder
+# Project Setup on local server virtual host
+php artisan serve --host 192.168.20.204 --port 8000
+
 
 

@@ -29,6 +29,7 @@
                     <thead>
                     <tr>
                         <th>S/N</th>
+                        <th>Image</th>
                         <th>Name</th>
                         <th>Status</th>
                         <th>Action</th>
@@ -38,6 +39,7 @@
                     @foreach($category as $key=>$categoryData)
                         <tr>
                             <td>{{$key+1}}</td>
+                            <td><img src="{{asset('images/category/'.$categoryData->file)}}" alt="" style="width: 50px;"></td>
                             <td>{{$categoryData->name}}</td>
                             <td>{{$categoryData->status==1? 'Active':'Inactive'}}</td>
                             <td style="width: 100px;">

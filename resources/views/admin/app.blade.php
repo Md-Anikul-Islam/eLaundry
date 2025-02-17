@@ -201,7 +201,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <script>document.write(new Date().getFullYear())</script> © Byte Care Limited</b>
+                        <script>document.write(new Date().getFullYear())</script> © US DRY LAUNDRY SERVICE</b>
                     </div>
                 </div>
             </div>

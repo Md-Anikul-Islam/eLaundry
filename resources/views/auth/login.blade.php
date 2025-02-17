@@ -74,7 +74,7 @@
 </div>
 <footer class="footer footer-alt fw-medium">
     <span class="text-dark">
-        <script>document.write(new Date().getFullYear())</script> © Byte Care Limited.
+        <script>document.write(new Date().getFullYear())</script> © US DRY LAUNDRY SERVICE.
     </span>
 </footer>
 <script src="{{ asset('backend/js/vendor.min.js') }}"></script>

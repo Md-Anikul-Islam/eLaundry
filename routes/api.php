@@ -27,9 +27,9 @@ use Illuminate\Support\Facades\Route;
 //    return $request->user();
 //});
 
-Route::post('register', [UserAuthController::class, 'register']);
-Route::post('verify', [UserAuthController::class, 'verify']);
-Route::post('resend-verification-code', [UserAuthController::class, 'resendVerificationCode']);
+Route::post('registration', [UserAuthController::class, 'register']);
+Route::post('verify-otp', [UserAuthController::class, 'verify']);
+Route::post('resend-otp', [UserAuthController::class, 'resendVerificationCode']);
 Route::post('login', [UserAuthController::class, 'login']);
 
 
@@ -38,10 +38,8 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     //category
     Route::get('category', [CategoryController::class, 'index']);
-
     //service
     Route::get('service', [ServiceController::class, 'index']);
-
 
 });
 
