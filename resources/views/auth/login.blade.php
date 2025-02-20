@@ -13,6 +13,9 @@
 </head>
 
 <body class="authentication-bg position-relative">
+@php
+    $siteSetting = DB::table('site_settings')->first();
+@endphp
 <div class="account-pages pt-2 pt-sm-5 pb-4 pb-sm-5 position-relative">
     <div class="container">
         <div class="row justify-content-center">
@@ -20,17 +23,19 @@
                 <div class="card overflow-hidden">
                     <div class="row g-0 align-items-center">
                         <div class="col-lg-6 d-none d-lg-block p-2">
-                            <img src="{{ asset('backend/images/user.png') }}" alt="" class="img-fluid rounded h-200">
+                            @if (!empty($siteSetting->favicon))
+                            <img src="{{ asset($siteSetting ? $siteSetting->favicon : '') }}" alt="" class="img-fluid rounded h-200">
+                            @endif
                         </div>
                         <div class="col-lg-6">
                             <div class="d-flex flex-column h-100">
                                 <div class="auth-brand p-4">
-                                    <a href="{{ url('/') }}" class="logo-light">
-                                        <img src="{{ asset('backend/images/usa.png') }}" alt="logo" height="80">
-                                    </a>
-                                    <a href="{{ url('/') }}" class="logo-dark">
-                                        <img src="{{ asset('backend/images/usa.png') }}" alt="dark logo" height="80">
-                                    </a>
+                                    @if (!empty($siteSetting->site_preview_image))
+                                        <a href="{{ url('/') }}" class="logo-dark">
+                                            <img src="{{ asset($siteSetting ? $siteSetting->site_preview_image : '') }}" alt="dark logo" height="150">
+                                        </a>
+                                    @endif
+
                                 </div>
                                 <div class="p-4 pt-0 my-auto">
                                     <h4 class="fs-20">Sign In</h4>

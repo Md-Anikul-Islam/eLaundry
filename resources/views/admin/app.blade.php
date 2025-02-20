@@ -28,6 +28,9 @@
 </head>
 
 <body>
+@php
+    $siteSetting = DB::table('site_settings')->first();
+@endphp
 <div class="wrapper">
     <div class="navbar-custom">
         <div class="topbar container-fluid">
@@ -84,12 +87,16 @@
 
     <div class="leftside-menu">
         <a href="{{route('dashboard')}}" class="logo logo-light">
-            <span class="logo-lg">
-                <img src="{{URL::to('backend/images/usa.png')}}" alt="logo" style="height: 50px;">
-            </span>
-            <span class="logo-sm">
-                <img src="{{URL::to('backend/images/usa.png')}}" alt="small logo">
-            </span>
+            @if (!empty($siteSetting->logo))
+                <span class="logo-lg">
+                    <img src="{{ asset($siteSetting ? $siteSetting->logo : '') }}" alt="logo" style="height: 80px;">
+                </span>
+            @else
+                <span class="logo-sm">
+                    <img src="{{URL::to('backend/images/usa.png')}}" alt="small logo">
+                </span>
+
+            @endif
         </a>
 
         <div class="h-100" id="leftside-menu-container" data-simplebar>

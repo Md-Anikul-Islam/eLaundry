@@ -55,6 +55,8 @@ Route::middleware('auth')->group(callback: function () {
     Route::get('/site-setting', [SiteSettingController::class, 'index'])->name('site.setting');
     Route::post('/site-settings-store-update/{id?}', [SiteSettingController::class, 'createOrUpdate'])->name('site-settings.createOrUpdate');
 
+
+
 });
 
 require __DIR__.'/auth.php';
