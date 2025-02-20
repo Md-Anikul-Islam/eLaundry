@@ -2,11 +2,18 @@
 	05. About CSS start
 ===============================*/
 .about-section {
+  .section-title {
+    margin-bottom: 14px;
+  }
   .about-img {
     vertical-align: middle;
   }
   .about-content {
+    p+p {
+      margin-top: 14px;
+    }
     p {
+      max-width: 591px;
       @media (max-width: 1199.98px) {
         font-size: 14px;
         line-height: 24px;

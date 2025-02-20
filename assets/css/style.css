@@ -129,6 +129,15 @@ p {
   }
 }
 
+.py-50 {
+  padding: 50px 0;
+}
+@media (max-width: 991.98px) {
+  .py-50 {
+    padding: 40px 0;
+  }
+}
+
 .pt-120 {
   padding-top: 120px;
 }
@@ -148,45 +157,20 @@ p {
 }
 
 .section-title .sub-title {
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--primary) !important;
-  position: relative;
-  padding-right: 10px;
+  font-size: 24px;
+  line-height: 26px;
+  color: var(--secondary) !important;
   display: inline-block;
-  margin-bottom: 10px;
-}
-.section-title .sub-title::before, .section-title .sub-title::after {
-  position: absolute;
-  content: "";
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-.section-title .sub-title::before {
-  left: 100%;
-  width: 30px;
-  height: 2px;
-  background-color: var(--tertiary);
-}
-.section-title .sub-title::after {
-  left: calc(100% + 30px);
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: var(--tertiary);
+  margin-bottom: 4px;
 }
 .section-title .title {
-  font-size: 60px;
-  line-height: 68px;
-  letter-spacing: -1.48px;
+  font-size: 44px;
+  line-height: 48.4px;
 }
 @media (max-width: 1199.98px) {
   .section-title .title {
-    font-size: 40px;
-    line-height: 55px;
+    font-size: 36px;
+    line-height: 40px;
   }
 }
 @media (max-width: 991.98px) {
@@ -539,8 +523,17 @@ p {
 /*=============================
 	05. About CSS start
 ===============================*/
+.about-section .section-title {
+  margin-bottom: 14px;
+}
 .about-section .about-img {
   vertical-align: middle;
+}
+.about-section .about-content p + p {
+  margin-top: 14px;
+}
+.about-section .about-content p {
+  max-width: 591px;
 }
 @media (max-width: 1199.98px) {
   .about-section .about-content p {
