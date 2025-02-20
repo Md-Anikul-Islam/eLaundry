@@ -1,0 +1,27 @@
+/*=============================
+	07. Service CSS Start
+===============================*/
+
+.service-section {
+  .service-card {
+    .content-part {
+        width: 100%;
+      padding: 40px 30px 54px 30px;
+      .title {
+        font-size: 30px;
+        line-height: 33px;
+        margin-bottom: 14px;
+        color: white !important;
+      }
+      .desc {
+        color: white !important;
+      }
+    }
+    &.secondary {
+      background: var(--secondary);
+    }
+    &.primary {
+      background: var(--primary);
+    }
+  }
+}
