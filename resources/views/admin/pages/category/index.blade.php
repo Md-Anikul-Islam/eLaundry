@@ -39,7 +39,7 @@
                     @foreach($category as $key=>$categoryData)
                         <tr>
                             <td>{{$key+1}}</td>
-                            <td><img src="{{asset('images/category/'.$categoryData->file)}}" alt="" style="width: 50px;"></td>
+                            <td><img src="{{asset('images/category/'.$categoryData->image)}}" alt="" style="width: 50px;"></td>
                             <td>{{$categoryData->name}}</td>
                             <td>{{$categoryData->status==1? 'Active':'Inactive'}}</td>
                             <td style="width: 100px;">
@@ -76,7 +76,7 @@
                                                     <div class="col-12">
                                                         <div class="mb-3">
                                                             <label for="example-fileinput" class="form-label">File</label>
-                                                            <input type="file" name="file" id="example-fileinput" class="form-control" >
+                                                            <input type="file" name="image" id="example-fileinput" class="form-control" >
                                                             <img src="{{asset('images/category/'. $categoryData->file )}}" alt="File or  Image" class="mt-2" style="max-width: 50px;">
                                                         </div>
                                                     </div>
@@ -148,7 +148,7 @@
                             <div class="col-12">
                                 <div class="mb-3">
                                     <label for="example-fileinput" class="form-label">File</label>
-                                    <input type="file" name="file" id="example-fileinput" class="form-control" >
+                                    <input type="file" name="image" id="example-fileinput" class="form-control" >
                                 </div>
                             </div>
 
