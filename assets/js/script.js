@@ -55,7 +55,7 @@
     });
   });
 
-  // Testimonial slider js
+  // Banner slider js
   $('.banner-slider').slick({
     dots: false,
     infinite: true,
@@ -64,8 +64,6 @@
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
-    // prevArrow: '<i class="fa-solid arrow arrow-prev fa-angle-left"></i>',
-    // nextArrow: '<i class="fa-solid arrow arrow-next fa-angle-right"></i>',
     responsive: [{
       breakpoint: 768,
       settings: {

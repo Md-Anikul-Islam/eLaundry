@@ -529,9 +529,6 @@ p {
 .about-section .about-img {
   vertical-align: middle;
 }
-.about-section .about-content p + p {
-  margin-top: 14px;
-}
 .about-section .about-content p {
   max-width: 591px;
 }
@@ -547,8 +544,13 @@ p {
     line-height: 24px;
   }
 }
-.about-section .about-content .learn-more {
-  color: var(--primary);
+.about-section .description {
+  margin-top: 64px;
+  max-width: 1190px;
+  margin-bottom: 17px;
+}
+.about-section p + p {
+  margin-top: 14px;
 }
 
 /*=============================

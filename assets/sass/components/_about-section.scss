@@ -9,9 +9,7 @@
     vertical-align: middle;
   }
   .about-content {
-    p+p {
-      margin-top: 14px;
-    }
+    
     p {
       max-width: 591px;
       @media (max-width: 1199.98px) {
@@ -23,8 +21,14 @@
         line-height: 24px;
       }
     }
-    .learn-more {
-      color: var(--primary);
-    }
+    
+  }
+  .description{
+    margin-top: 64px;
+    max-width: 1190px;
+    margin-bottom: 17px;
+  }
+  p+p {
+    margin-top: 14px;
   }
 }
