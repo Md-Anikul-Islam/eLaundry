@@ -2,18 +2,24 @@
 	05. Feature CSS start
 ===============================*/
 .feature-section {
-  .feature-content {
-    .sub-title {
-      font-size: 16px;
-      line-height: 30px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--tertiary) !important;
+  padding-bottom: 50px;
+  .feature-card{
+    padding: 51px 31px 65px 31px;
+    background: white;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    .title{
+      margin-top: 30px;
+      margin-bottom: 14px;
+      color: var(--secondary) !important;
+      font-size: 24px;
+      line-height: 26px;
+      text-align: center;
     }
-    .feature-title {
-      font-size: 60px;
-      line-height: 68px;
-      letter-spacing: -1.48px;
+    .desc{
+      font-size: 16;
+      line-height: 26.4px;
+      text-align: center;
     }
   }
 }

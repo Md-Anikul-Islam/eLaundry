@@ -554,38 +554,30 @@ p {
 }
 
 /*=============================
-	06. Upcoming-Section CSS start
+	05. Feature CSS start
 ===============================*/
-@media (max-width: 575.98px) {
-  .upcoming-section .sub-title {
-    font-size: 12px;
-  }
+.feature-section {
+  padding-bottom: 50px;
 }
-.upcoming-section h4 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  font-family: var(--font-roboto);
-  color: var(--primary);
+.feature-section .feature-card {
+  padding: 51px 31px 65px 31px;
+  background: white;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
 }
-@media (max-width: 575.98px) {
-  .upcoming-section h4 {
-    font-size: 0.9rem;
-  }
+.feature-section .feature-card .title {
+  margin-top: 30px;
+  margin-bottom: 14px;
+  color: var(--secondary) !important;
+  font-size: 24px;
+  line-height: 26px;
+  text-align: center;
 }
-.upcoming-section .value-card {
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-  height: 118.45px;
-}
-.upcoming-section .value-card div {
-  color: var(--primary);
-}
-.upcoming-section .value-card div img {
-  max-width: 50px;
-}
-.upcoming-section .value-card:hover {
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+.feature-section .feature-card .desc {
+  font-size: 16;
+  line-height: 26.4px;
+  text-align: center;
 }
 
 /*=============================
