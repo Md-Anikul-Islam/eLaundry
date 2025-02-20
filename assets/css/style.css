@@ -25,7 +25,7 @@
 /*=============================
 	1. Google Fonts
 ===============================*/
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&&family=Space+Grotesk:wght@300..700&display=swap");
 /*=============================
 	01. Variable CSS Start
 ===============================*/
@@ -37,6 +37,7 @@
   --paragraph-color: #575757;
   --bg-one: #F2F5F1;
   --font-montserat: "Montserrat", serif;
+  --font-Space: "Space Grotesk", serif;
   --font-size: 16px;
   --font-weight: 400;
   --transition: all linear 0.3s;
@@ -109,6 +110,7 @@ h5,
 h6 {
   font-weight: 800;
   color: var(--primary);
+  font-family: var(--font-Space);
 }
 
 p {
@@ -143,17 +145,48 @@ p {
 }
 
 .theme-btn {
-  padding: 20px 32px;
-  background: #44c8f5;
-  color: #ffffff !important;
-  font-size: 17px;
+  padding: 15px 30px;
+  border-radius: 999px;
+  font-family: var(--font-montserat);
   font-weight: 700;
-  line-height: 20px;
+  font-size: 18px;
+  line-height: 30px;
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
-.theme-btn:hover {
-  background-color: var(--primary);
+.theme-btn .btn-arrow {
+  margin-left: 10px;
+}
+.theme-btn .btn-arrow .btn-arrow-fill {
+  fill: white;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.theme-btn-primary {
+  background: var(--primary);
+  color: white;
+  position: relative;
+  z-index: 9;
+}
+.theme-btn-primary::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  top: 0;
+  left: 0;
+  content: "";
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background: var(--secondary2);
+  z-index: -1;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.theme-btn-primary:hover::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .section-title .sub-title {
@@ -505,25 +538,57 @@ p {
   background: white;
   padding-top: 88px;
 }
-.banner-section .main-banner .banner-content {
-  color: white !important;
-  left: 342px;
-  bottom: 130px;
-  padding: 60px;
+.banner-section .main-banner .banner-main-content {
   background: rgba(16, 130, 183, 0.7);
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+.banner-section .main-banner .banner-content {
+  width: 100%;
+  height: 100%;
+  color: white !important;
 }
 .banner-section .main-banner .banner-content h3 {
   color: white;
-  font-size: 30px;
-  line-height: 33px;
-  margin-bottom: 8px;
-}
-.banner-section .main-banner .banner-content h1 {
-  color: white;
   font-size: 50px;
   line-height: 55px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.banner-section .main-banner .banner-content .banner-title {
+  color: white !important;
+  text-align: center;
+  font-size: 74px;
+  line-height: 84px;
+  letter-spacing: -1.48px;
+}
+@media screen and (max-width: 991.98px) {
+  .banner-section .main-banner .banner-content .banner-title {
+    margin: 0 auto;
+    text-align: center !important;
+  }
+}
+.banner-section .main-banner .banner-content .banner-title .title-shape {
+  right: -42px;
+  top: -30px;
+}
+@media (max-width: 1199.98px) {
+  .banner-section .main-banner .banner-content .banner-title .title-shape {
+    right: 8px;
+  }
+}
+.banner-section .main-banner .banner-content .banner-title svg {
+  color: #0ae754;
+}
+@media (max-width: 1199.98px) {
+  .banner-section .main-banner .banner-content .banner-title {
+    font-size: 60px;
+    line-height: 70px;
+  }
 }
 .banner-section .main-banner .banner-content .desc {
+  text-align: center;
   max-width: 582px;
   color: white !important;
   font-size: 20px;
