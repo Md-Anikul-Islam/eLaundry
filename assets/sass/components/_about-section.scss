@@ -1,0 +1,23 @@
+/*=============================
+	05. About CSS start
+===============================*/
+.about-section {
+  .about-img {
+    vertical-align: middle;
+  }
+  .about-content {
+    p {
+      @media (max-width: 1199.98px) {
+        font-size: 14px;
+        line-height: 24px;
+      }
+      @media (max-width: 991.98px) {
+        font-size: 12px;
+        line-height: 24px;
+      }
+    }
+    .learn-more {
+      color: var(--primary);
+    }
+  }
+}

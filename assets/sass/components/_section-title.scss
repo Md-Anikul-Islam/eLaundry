@@ -1,0 +1,46 @@
+.section-title {
+  .sub-title {
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--primary) !important;
+    position: relative;
+    padding-right: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &::before {
+      left: 100%;
+      width: 30px;
+      height: 2px;
+      background-color: var(--tertiary);
+    }
+    &::after {
+      left: calc(100% + 30px);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--tertiary);
+    }
+  }
+  .title {
+    font-size: 60px;
+    line-height: 68px;
+    letter-spacing: -1.48px;
+    @media (max-width: 1199.98px) {
+      font-size: 40px;
+      line-height: 55px;
+    }
+    @media (max-width: 991.98px) {
+        font-size: 36px;
+        line-height: 50px;
+    }
+  }
+}

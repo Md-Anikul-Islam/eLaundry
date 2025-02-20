@@ -1,0 +1,39 @@
+/*=============================
+	03. Banner CSS start
+===============================*/
+
+.banner-section {
+  background: white;
+  padding: 117px 0 0 0;
+  @media (max-width: 1199.98px) {
+    padding-top: 99px;
+  }
+  .main-banner {
+    .banner-content {
+      color: white !important;
+      left: 342px;
+      bottom: 130px;
+      padding: 60px;
+      background: rgba(16, 130, 183, 0.7);
+      h3{
+        color: white;
+        font-size: 30px;
+        line-height: 33px;
+        margin-bottom: 8px;
+      }
+      h1{
+        color: white;
+        font-size: 50px;
+        line-height: 55px;
+      }
+      .desc{
+        max-width: 582px;
+        color: white !important;
+        font-size: 20px;
+        line-height: 33px;
+        margin-bottom: 20px;
+        margin-top: 17px;
+      }
+    }
+  }
+}

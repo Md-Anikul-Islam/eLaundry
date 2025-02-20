@@ -1,0 +1,19 @@
+/*=============================
+	05. Feature CSS start
+===============================*/
+.feature-section {
+  .feature-content {
+    .sub-title {
+      font-size: 16px;
+      line-height: 30px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--tertiary) !important;
+    }
+    .feature-title {
+      font-size: 60px;
+      line-height: 68px;
+      letter-spacing: -1.48px;
+    }
+  }
+}

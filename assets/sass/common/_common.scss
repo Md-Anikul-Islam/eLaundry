@@ -1,0 +1,141 @@
+/*
+  Theme Name: eLaundry Template
+  Support: mr.rafiqulthedev@gmail.com
+  Description: eLaundry Template
+  Version: 1.0
+*/
+
+/* CSS Index
+============================
+*** Template Components ***
+============================
+01. Variable CSS
+02. Common CSS
+03. Header CSS
+04. Banner CSS
+05. About CSS
+06. Upcoming-Section CSS
+07. Product CSS
+08. Branch CSS
+
+*** Template Pages ***
+=========================
+09. About Page CSS
+============================
+*/
+
+/*=============================
+	1. Google Fonts
+===============================*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*=============================
+	01. Variable CSS Start
+===============================*/
+
+:root {
+  --primary: #1d2e5c;
+  --secondary: #1083b7;
+  --secondary2: #1082b7;
+  --tertiary: #44c8f5;
+  --paragraph-color: #575757;
+  --bg-one: #F2F5F1;
+  --font-montserat: "Montserrat", serif;
+  --font-size: 16px;
+  --font-weight: 400;
+  --transition: all linear 0.3s;
+  --body-background: #ffffff;
+  --border-color: #f0f0f0;
+  --shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;;
+}
+
+/*=============================
+	02. Common CSS start
+===============================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+button {
+  display: inline-block;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-montserat);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  color: var(--paragraph-color);
+  line-height: 26px;
+  background: var(--body-background);
+  overflow-x: hidden;
+}
+::selection {
+  background: var(--primary);
+  color: white;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+  color: var(--primary);
+}
+p {
+  color: var(--paragraph-color);
+  letter-spacing: -0.36px;
+}
+// section bg
+.section-bg {
+  background: var(--bg-one);
+}
+// custom padding class
+.py-120 {
+  padding: 120px 0;
+  @media (max-width: 991.98px) {
+    padding: 60px 0;
+  }
+}
+.pt-120 {
+  padding-top: 120px;
+}
+
+// Theme btn css
+.theme-btn {
+  padding: 20px 32px;
+  background: #44c8f5;
+  color: #ffffff !important;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+  transition: var(--transition);
+  &:hover {
+    background-color: var(--primary);
+  }
+}
+
+

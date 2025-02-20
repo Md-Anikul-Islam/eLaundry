@@ -1,0 +1,13 @@
+/*=============================
+	08. Branch CSS Start
+===============================*/
+.branch-section{
+    .branch-card{
+        width: 100%;
+        height: 100%;
+        transition: var(--transition);
+        &:hover{
+            box-shadow: var(--shadow);
+        }
+    }
+}

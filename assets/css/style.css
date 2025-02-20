@@ -1,0 +1,774 @@
+/*
+  Theme Name: eLaundry Template
+  Support: mr.rafiqulthedev@gmail.com
+  Description: eLaundry Template
+  Version: 1.0
+*/
+/* CSS Index
+============================
+*** Template Components ***
+============================
+01. Variable CSS
+02. Common CSS
+03. Header CSS
+04. Banner CSS
+05. About CSS
+06. Upcoming-Section CSS
+07. Product CSS
+08. Branch CSS
+
+*** Template Pages ***
+=========================
+09. About Page CSS
+============================
+*/
+/*=============================
+	1. Google Fonts
+===============================*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/*=============================
+	01. Variable CSS Start
+===============================*/
+:root {
+  --primary: #1d2e5c;
+  --secondary: #1083b7;
+  --secondary2: #1082b7;
+  --tertiary: #44c8f5;
+  --paragraph-color: #575757;
+  --bg-one: #F2F5F1;
+  --font-montserat: "Montserrat", serif;
+  --font-size: 16px;
+  --font-weight: 400;
+  --transition: all linear 0.3s;
+  --body-background: #ffffff;
+  --border-color: #f0f0f0;
+  --shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/*=============================
+	02. Common CSS start
+===============================*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+button {
+  display: inline-block;
+  text-decoration: none;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-montserat);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  color: var(--paragraph-color);
+  line-height: 26px;
+  background: var(--body-background);
+  overflow-x: hidden;
+}
+
+::-moz-selection {
+  background: var(--primary);
+  color: white;
+}
+
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+  color: var(--primary);
+}
+
+p {
+  color: var(--paragraph-color);
+  letter-spacing: -0.36px;
+}
+
+.section-bg {
+  background: var(--bg-one);
+}
+
+.py-120 {
+  padding: 120px 0;
+}
+@media (max-width: 991.98px) {
+  .py-120 {
+    padding: 60px 0;
+  }
+}
+
+.pt-120 {
+  padding-top: 120px;
+}
+
+.theme-btn {
+  padding: 20px 32px;
+  background: #44c8f5;
+  color: #ffffff !important;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.theme-btn:hover {
+  background-color: var(--primary);
+}
+
+.section-title .sub-title {
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--primary) !important;
+  position: relative;
+  padding-right: 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.section-title .sub-title::before, .section-title .sub-title::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.section-title .sub-title::before {
+  left: 100%;
+  width: 30px;
+  height: 2px;
+  background-color: var(--tertiary);
+}
+.section-title .sub-title::after {
+  left: calc(100% + 30px);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--tertiary);
+}
+.section-title .title {
+  font-size: 60px;
+  line-height: 68px;
+  letter-spacing: -1.48px;
+}
+@media (max-width: 1199.98px) {
+  .section-title .title {
+    font-size: 40px;
+    line-height: 55px;
+  }
+}
+@media (max-width: 991.98px) {
+  .section-title .title {
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
+
+/*=============================
+	03. Header CSS start
+===============================*/
+.header-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+}
+.header-section .top-nav {
+  background: var(--tertiary);
+}
+.header-section .navbar {
+  padding: 0;
+}
+.header-section .navbar .navbar-main .navbar-brand {
+  padding: 0;
+}
+.header-section .navbar .navbar-main .navbar-collapse .navbar-nav {
+  padding: 0;
+  gap: 25px;
+}
+.header-section .navbar .navbar-main .navbar-collapse .navbar-nav .nav-item {
+  padding: 0;
+  position: relative;
+}
+.header-section .navbar .navbar-main .navbar-collapse .navbar-nav .nav-item .nav-link {
+  padding: 0;
+  color: var(--primary);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 85px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.header-section .navbar .navbar-main .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
+  color: var(--secondary2);
+}
+.header-section .navbar .navbar-main .navbar-collapse .navbar-nav .nav-item .nav-link i {
+  font-size: 18px;
+}
+.header-section .navbar .navbar-main .navbar-collapse .navbar-nav .nav-item .nav-link.active {
+  border-bottom: 2px solid var(--primary);
+}
+.header-section .navbar .navbar-main .navbar-collapse .navbar-nav .nav-item .sub-menu {
+  width: 226px;
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  margin-top: 10px;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+}
+.header-section .navbar .navbar-main .navbar-collapse .navbar-nav .nav-item .sub-menu li a {
+  color: var(--black);
+  display: block;
+  background-color: transparent;
+  width: 100%;
+  padding: 8px 16px;
+  font-weight: 500;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.header-section .navbar .navbar-main .navbar-collapse .navbar-nav .nav-item .sub-menu li a:hover {
+  background-color: var(--primary);
+  color: white;
+}
+.header-section .navbar .navbar-main .navbar-collapse .navbar-nav .nav-item:hover > .sub-menu {
+  visibility: visible;
+  opacity: 1;
+  margin-top: 0px;
+}
+.header-section .call-to-action {
+  gap: 5px;
+  padding: 5px 0;
+}
+.header-section .call-to-action p {
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.36px;
+  color: white !important;
+}
+.header-section .call-to-action .info {
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 20px;
+  color: white !important;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.header-section .call-to-action .info:hover {
+  color: var(--secondary2) !important;
+}
+
+#header-fixed-height.active-height {
+  display: block;
+  height: 94px;
+}
+
+.sticky-menu {
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-animation: 400ms ease-in-out 0s normal none 1 running fadeInDown;
+          animation: 400ms ease-in-out 0s normal none 1 running fadeInDown;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.sticky-menu .navbar-main {
+  border-radius: 0;
+  padding: 0 12px !important;
+}
+
+/* Mobile menu start */
+.mobile-menu-area {
+  z-index: 999;
+  background-color: transparent;
+  width: 100%;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.mobile-menu-area .mobile-topbar {
+  width: 100%;
+  padding: 13px 20px;
+}
+.mobile-menu-area .mobile-topbar .bars {
+  height: 40px;
+  width: 40px;
+  color: var(--primary);
+  border-radius: 50% !important;
+  text-align: center;
+  line-height: 35px;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid var(--primary);
+}
+.mobile-menu-area .mobile-topbar .bars i {
+  font-size: 20px;
+}
+.mobile-menu-area .mobile-topbar .bars:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+.mobile-menu-area .mobile-menu-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  visibility: hidden;
+  opacity: 0;
+}
+.mobile-menu-area .mobile-menu-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+.mobile-menu-area .mobile-menu-main {
+  width: 320px;
+  height: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: -320px;
+  z-index: 999;
+  overflow-y: scroll;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+.mobile-menu-area .mobile-menu-main .logo {
+  padding: 20px;
+}
+.mobile-menu-area .mobile-menu-main .close-mobile-menu {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  border-radius: 5px;
+}
+.mobile-menu-area .mobile-menu-main .close-mobile-menu i {
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  color: var(--black);
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.mobile-menu-area .mobile-menu-main .close-mobile-menu:hover {
+  background: var(--bg-one);
+}
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list {
+  padding-top: 10px;
+}
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list ul li a {
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 78px;
+  border-top: 1px solid var(--border-color);
+  width: 100%;
+  padding: 0px 20px;
+  line-height: 44px;
+  padding-right: 10px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list ul li a i {
+  width: 32px;
+  height: 32px;
+  background-color: var(--bg-one);
+  text-align: center;
+  line-height: 32px;
+  font-size: 12px;
+  border-radius: 3px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list ul li a:hover {
+  color: var(--primary);
+}
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list ul li a:hover i {
+  background-color: var(--primary);
+  color: white;
+}
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list ul li ul {
+  padding-left: 0;
+  display: none;
+}
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list ul li ul a {
+  padding: 0px 20px;
+  padding-left: 40px;
+}
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list ul li ul li:last-child a {
+  border-bottom: 0;
+}
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list ul li:last-child a {
+  border-bottom: 1px solid var(--bg-one);
+}
+.mobile-menu-area .mobile-menu-main.active {
+  left: 0 !important;
+}
+.mobile-menu-area .mobile-menu-action-btn {
+  padding: 20px;
+}
+.mobile-menu-area .mobile-menu-action-btn a {
+  color: white;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+}
+.mobile-menu-area .mobile-menu-action-btn a i {
+  font-size: 14px;
+  margin-left: 8px;
+}
+.mobile-menu-area .mobile-menu-action-btn a:hover {
+  background-color: var(--primary);
+}
+
+/*=============================
+	03. Banner CSS start
+===============================*/
+.banner-section {
+  background: white;
+  padding: 117px 0 0 0;
+}
+@media (max-width: 1199.98px) {
+  .banner-section {
+    padding-top: 99px;
+  }
+}
+.banner-section .main-banner .banner-content {
+  color: white !important;
+  left: 342px;
+  bottom: 130px;
+  padding: 60px;
+  background: rgba(16, 130, 183, 0.7);
+}
+.banner-section .main-banner .banner-content h3 {
+  color: white;
+  font-size: 30px;
+  line-height: 33px;
+  margin-bottom: 8px;
+}
+.banner-section .main-banner .banner-content h1 {
+  color: white;
+  font-size: 50px;
+  line-height: 55px;
+}
+.banner-section .main-banner .banner-content .desc {
+  max-width: 582px;
+  color: white !important;
+  font-size: 20px;
+  line-height: 33px;
+  margin-bottom: 20px;
+  margin-top: 17px;
+}
+
+/*=============================
+	05. About CSS start
+===============================*/
+.about-section .about-img {
+  vertical-align: middle;
+}
+@media (max-width: 1199.98px) {
+  .about-section .about-content p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 991.98px) {
+  .about-section .about-content p {
+    font-size: 12px;
+    line-height: 24px;
+  }
+}
+.about-section .about-content .learn-more {
+  color: var(--primary);
+}
+
+/*=============================
+	06. Upcoming-Section CSS start
+===============================*/
+@media (max-width: 575.98px) {
+  .upcoming-section .sub-title {
+    font-size: 12px;
+  }
+}
+.upcoming-section h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: var(--font-roboto);
+  color: var(--primary);
+}
+@media (max-width: 575.98px) {
+  .upcoming-section h4 {
+    font-size: 0.9rem;
+  }
+}
+.upcoming-section .value-card {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  height: 118.45px;
+}
+.upcoming-section .value-card div {
+  color: var(--primary);
+}
+.upcoming-section .value-card div img {
+  max-width: 50px;
+}
+.upcoming-section .value-card:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+/*=============================
+	07. Product CSS start
+===============================*/
+.product-section .product-card {
+  width: 100%;
+  height: 100%;
+  background: white;
+  padding: 5px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.product-section .product-card:hover {
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+}
+.product-section .product-card .product-img {
+  width: 100%;
+  height: 250px;
+}
+@media (max-width: 991.98px) {
+  .product-section .product-card .product-img {
+    height: 200px;
+  }
+}
+@media (max-width: 425.98px) {
+  .product-section .product-card .product-img {
+    height: 125px;
+  }
+}
+.product-section .product-card .product-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.product-section .product-card .product-content {
+  text-align: center;
+  margin: 10px 0;
+}
+.product-section .product-card .product-content .product-title {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+@media screen and (max-width: 575px) {
+  .product-section .product-card .product-content .product-title {
+    font-size: 16px;
+  }
+}
+.product-section .product-card .product-content .product-desc {
+  font-size: 14px;
+}
+@media screen and (max-width: 575px) {
+  .product-section .product-card .product-content .product-desc {
+    font-size: 12px;
+  }
+}
+
+/*=============================
+	08. Branch CSS Start
+===============================*/
+.branch-section .branch-card {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.branch-section .branch-card:hover {
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+}
+
+.footer-section {
+  background: url("../images/footer/footer.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+}
+.footer-section .footer-top .footer-widget {
+  padding: 0 15px;
+}
+.footer-section .footer-top .footer-widget .widget-title {
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--black);
+  position: relative;
+  padding-right: 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.footer-section .footer-top .footer-widget ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+.footer-section .footer-top .footer-widget ul li {
+  color: white;
+}
+.footer-section .footer-top .footer-widget ul li a {
+  font-size: 14px;
+  line-height: 24px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 500;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.footer-section .footer-top .footer-widget ul li a:hover {
+  color: var(--primary);
+}
+.footer-section .footer-top .footer-widget .footer-desc {
+  font-size: 12px;
+  line-height: 24px;
+  color: var(--black);
+}
+.footer-section .footer-top .footer-widget .footer-social ul li {
+  display: inline-block;
+  margin-right: 15px;
+}
+.footer-section .footer-top .footer-widget .footer-social ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  border-radius: 50%;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.footer-section .footer-top .footer-widget .footer-social ul li a i {
+  font-size: 18px;
+  color: var(--white);
+}
+.footer-section .footer-top .footer-widget .footer-social ul li a:hover {
+  background: var(--secondary);
+}
+
+/*=============================
+	09. About Page CSS Start
+===============================*/
+.why-us .why-us-content .why-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+.why-us .why-us-content .why-list .why-item i {
+  color: var(--primary);
+}
+@media (max-width: 991.98px) {
+  .why-us .why-us-content .why-list .why-item {
+    font-size: 16px;
+  }
+}
