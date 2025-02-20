@@ -9,7 +9,6 @@ use App\Http\Controllers\api\SliderController;
 use App\Http\Controllers\api\TeamController;
 use App\Http\Controllers\api\TrainingController;
 use App\Http\Controllers\api\UserAuthController;
-use App\Http\Controllers\Auth\PasswordResetLinkController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -37,12 +36,10 @@ Route::post('login', [UserAuthController::class, 'login']);
 
 //auth routes
 Route::group(['middleware' => ['auth:sanctum']], function () {
-
     //category
     Route::get('category', [CategoryController::class, 'index']);
     //service
     Route::get('service', [ServiceController::class, 'index']);
-
 });
 
 

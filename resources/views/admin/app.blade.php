@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Dashboard | eLaundry</title>
+    <title>Dashboard | Halsey Street Laundromat</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully responsive admin theme which can be used to build CRM, CMS,ERP etc." name="description" />
     <link rel="shortcut icon" href="{{asset('backend/images/favicon.ico')}}">
@@ -208,7 +208,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <script>document.write(new Date().getFullYear())</script> © US DRY LAUNDRY SERVICE</b>
+                        <script>document.write(new Date().getFullYear())</script> © Halsey Street Laundromat</b>
                     </div>
                 </div>
             </div>
@@ -261,6 +261,15 @@
             .catch(error => {
                 console.error(error);
             });
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.form-control[multiple]').select2({
+            allowClear: true
+        });
     });
 </script>
 
