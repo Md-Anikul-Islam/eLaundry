@@ -1,0 +1,32 @@
+/*=============================
+	06. Service CSS start
+===============================*/
+.service-section {
+  
+  .service-card{
+    padding: 51px 31px 65px 31px;
+    background: white;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    &:hover {
+      border-color: #0044eb;
+    }
+    .title{
+      margin-top: 30px;
+      margin-bottom: 14px;
+      color: var(--secondary) !important;
+      font-size: 24px;
+      line-height: 26px;
+      text-align: center;
+    }
+    .desc{
+      font-size: 16;
+      line-height: 26.4px;
+      text-align: center;
+    }
+  }
+  .service-btn{
+    margin-top: 60px;
+  }
+}

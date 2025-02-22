@@ -1,6 +1,12 @@
 (function ($) {
   "use strict";
-
+// data background image js
+$("[data-background]").each(function () {
+  $(this).css(
+    "background-image",
+    "url(" + $(this).attr("data-background") + ")"
+  );
+});
  
   // fixed menu js
   $(window).on('scroll', function () {

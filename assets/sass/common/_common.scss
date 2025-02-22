@@ -14,8 +14,8 @@
 03. Header CSS
 04. Banner CSS
 05. About CSS
-06. Feature CSS
-07. Service CSS
+06. Service CSS
+07. Feature CSS
 08. Branch CSS
 
 *** Template Pages ***
@@ -113,7 +113,7 @@ p {
 }
 // section bg
 .section-bg {
-  background: var(--bg-one);
+  background: #F1F6FC;
 }
 // custom padding class
 .py-120 {
@@ -131,7 +131,15 @@ p {
 .pt-120 {
   padding-top: 120px;
 }
-
+.mb-60{
+  margin-bottom: 60px;
+}
+.mb-30{
+  margin-bottom: 30px;
+}
+.rounded-20{
+  border-radius: 20px !important;
+}
 // Theme btn css
 // .theme-btn {
 //   padding: 20px 32px;
