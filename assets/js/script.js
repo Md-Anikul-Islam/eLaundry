@@ -1,20 +1,24 @@
 (function ($) {
   "use strict";
-// data background image js
-$("[data-background]").each(function () {
-  $(this).css(
-    "background-image",
-    "url(" + $(this).attr("data-background") + ")"
-  );
-});
- 
+
+  // dynamic year for copyright
+  document.getElementById("copyright_year").textContent =
+    new Date().getFullYear();
+
+  // data background image js
+  $("[data-background]").each(function () {
+    $(this).css(
+      "background-image",
+      "url(" + $(this).attr("data-background") + ")"
+    );
+  });
+
   // fixed menu js
-  $(window).on('scroll', function () {
+  $(window).on("scroll", function () {
     let scroll = $(window).scrollTop();
     if (scroll < 120) {
       $("#sticky-header").removeClass("sticky-menu");
       $("#header-fixed-height").removeClass("active-height");
-
     } else {
       $("#sticky-header").addClass("sticky-menu");
       $("#header-fixed-height").addClass("active-height");
@@ -22,14 +26,12 @@ $("[data-background]").each(function () {
   });
 
   // Magnific popup image js
-  $('.image-popup').magnificPopup({
-    type: 'image',
+  $(".image-popup").magnificPopup({
+    type: "image",
     gallery: {
-      enabled: true
+      enabled: true,
     },
   });
-  
-  
 
   // Mobile menu js start
   $(".mobile-topbar .bars").on("click", function () {
@@ -40,19 +42,20 @@ $("[data-background]").each(function () {
     $(".mobile-menu-overlay,.mobile-menu-main").removeClass("active");
   });
 
-  $('.sub-mobile-menu ul').hide();
+  $(".sub-mobile-menu ul").hide();
   $(".sub-mobile-menu a").on("click", function () {
-    $('.sub-mobile-menu ul').not($(this).next("ul")).slideUp(300);
-    $(".sub-mobile-menu a i").not($(this).find("i")).removeClass("fa-chevron-up").addClass("fa-chevron-down");
+    $(".sub-mobile-menu ul").not($(this).next("ul")).slideUp(300);
+    $(".sub-mobile-menu a i")
+      .not($(this).find("i"))
+      .removeClass("fa-chevron-up")
+      .addClass("fa-chevron-down");
     $(this).next("ul").slideToggle(300);
     $(this).find("i").toggleClass("fa-chevron-up fa-chevron-down");
   });
 
-  
-
   /* Odometer Activeate js */
   $(document).ready(function () {
-    $('.odometer').appear(function () {
+    $(".odometer").appear(function () {
       var odo = $(".odometer");
       odo.each(function () {
         var countNumber = $(this).attr("data-count");
@@ -62,7 +65,7 @@ $("[data-background]").each(function () {
   });
 
   // Banner slider js
-  $('.banner-slider').slick({
+  $(".banner-slider").slick({
     dots: false,
     infinite: true,
     speed: 300,
@@ -70,12 +73,13 @@ $("[data-background]").each(function () {
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
-    responsive: [{
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-      }
-    }]
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
-
 })(jQuery);
