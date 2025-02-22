@@ -1,25 +1,27 @@
 /*=============================
-	05. Feature CSS start
+	07. Feature CSS Start
 ===============================*/
+
 .feature-section {
-  padding-bottom: 50px;
-  .feature-card{
-    padding: 51px 31px 65px 31px;
-    background: white;
-    box-shadow: var(--shadow);
-    border: 1px solid var(--border-color);
-    .title{
-      margin-top: 30px;
-      margin-bottom: 14px;
-      color: var(--secondary) !important;
-      font-size: 24px;
-      line-height: 26px;
-      text-align: center;
+  .feature-card {
+    .content-part {
+        width: 100%;
+      padding: 40px 30px 54px 30px;
+      .title {
+        font-size: 30px;
+        line-height: 33px;
+        margin-bottom: 14px;
+        color: white !important;
+      }
+      .desc {
+        color: white !important;
+      }
     }
-    .desc{
-      font-size: 16;
-      line-height: 26.4px;
-      text-align: center;
+    &.secondary {
+      background: var(--secondary);
+    }
+    &.primary {
+      background: var(--primary);
     }
   }
 }
