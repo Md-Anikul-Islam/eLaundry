@@ -140,6 +140,17 @@ p {
 .rounded-20{
   border-radius: 20px !important;
 }
+.box-icon{
+  width: 80px;
+  height: 80px;
+  background: var(--tertiary);
+  &.primary{
+    background: var(--primary);
+  }
+  &.secondary{
+    background: var(--secondary);
+  }
+}
 // Theme btn css
 // .theme-btn {
 //   padding: 20px 32px;
