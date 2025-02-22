@@ -80,6 +80,7 @@
 
   .service-card {
     // position: relative;
+    height: 100% !important;
     box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05);
     transition: var(--transition);
     border-bottom: 3px solid transparent;
