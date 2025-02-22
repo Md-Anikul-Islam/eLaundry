@@ -4,6 +4,7 @@
 
 .feature-section {
   .feature-card {
+    
     .main-img{
       overflow: hidden;
       img{
@@ -19,8 +20,24 @@
       }
     }
     .content-part {
-        width: 100%;
+      width: 100%;
       padding: 40px 30px 54px 30px;
+      position: relative;
+      z-index: 1;
+      &::before {
+        position: absolute;
+        content: "";
+        top: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        transform: rotate(45deg);
+        width: 50px;
+        height: 50px;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+        background: var(--secondary);
+      }
+      
       .title {
         font-size: 30px;
         line-height: 33px;
@@ -30,12 +47,15 @@
       .desc {
         color: white !important;
       }
-    }
-    &.secondary {
-      background: var(--secondary);
-    }
-    &.primary {
-      background: var(--primary);
+      &.secondary {
+        background: var(--secondary);
+      }
+      &.primary {
+        background: var(--primary);
+        &::before {
+          background: var(--primary);
+        }
+      }
     }
   }
 }

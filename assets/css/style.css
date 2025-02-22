@@ -15,7 +15,7 @@
 05. About CSS
 06. Service CSS
 07. Feature CSS
-08. Branch CSS
+08. Why Section CSS
 
 *** Template Pages ***
 =========================
@@ -791,6 +791,23 @@ p {
 .feature-section .feature-card .content-part {
   width: 100%;
   padding: 40px 30px 54px 30px;
+  position: relative;
+  z-index: 1;
+}
+.feature-section .feature-card .content-part::before {
+  position: absolute;
+  content: "";
+  top: -25px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  background: var(--secondary);
 }
 .feature-section .feature-card .content-part .title {
   font-size: 30px;
@@ -801,10 +818,13 @@ p {
 .feature-section .feature-card .content-part .desc {
   color: white !important;
 }
-.feature-section .feature-card.secondary {
+.feature-section .feature-card .content-part.secondary {
   background: var(--secondary);
 }
-.feature-section .feature-card.primary {
+.feature-section .feature-card .content-part.primary {
+  background: var(--primary);
+}
+.feature-section .feature-card .content-part.primary::before {
   background: var(--primary);
 }
 
@@ -939,22 +959,3 @@ p {
 /*=============================
 	09. About Page CSS Start
 ===============================*/
-.why-us .why-us-content .why-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 10px;
-  margin-top: 15px;
-}
-.why-us .why-us-content .why-list .why-item i {
-  color: var(--primary);
-}
-@media (max-width: 991.98px) {
-  .why-us .why-us-content .why-list .why-item {
-    font-size: 16px;
-  }
-}
