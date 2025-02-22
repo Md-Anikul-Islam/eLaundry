@@ -809,17 +809,38 @@ p {
 }
 
 /*=============================
-	08. Branch CSS Start
+	08. Why CSS Start
 ===============================*/
-.branch-section .branch-card {
+.why-section .why-card {
   width: 100%;
   height: 100%;
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
-.branch-section .branch-card:hover {
+.why-section .why-card:hover {
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
+  background: var(--tertiary) !important;
+  border-color: var(--tertiary) !important;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+.why-section .why-card:hover .why-desc {
+  color: white !important;
+}
+.why-section .why-card .why-content .number {
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 700;
+  color: var(--secondary) !important;
+  text-align: left !important;
+}
+.why-section .why-card .why-content .why-title {
+  margin-bottom: 15px;
+}
+.why-section .why-card .why-content .why-desc {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
 }
 
 .footer-section {
