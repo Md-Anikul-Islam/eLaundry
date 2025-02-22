@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\admin\AdminDashboardController;
 use App\Http\Controllers\admin\CategoryController;
+use App\Http\Controllers\admin\OrderManageController;
 use App\Http\Controllers\admin\ServiceController;
 use App\Http\Controllers\admin\SiteSettingController;
 use App\Http\Controllers\admin\SliderController;
@@ -54,6 +55,9 @@ Route::middleware('auth')->group(callback: function () {
     //Site Setting
     Route::get('/site-setting', [SiteSettingController::class, 'index'])->name('site.setting');
     Route::post('/site-settings-store-update/{id?}', [SiteSettingController::class, 'createOrUpdate'])->name('site-settings.createOrUpdate');
+
+    //Order Manage
+    Route::get('/order-manage', [OrderManageController::class, 'index'])->name('order.manage');
 
 
 

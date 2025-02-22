@@ -52,6 +52,7 @@ class PermissionTableSeeder extends Seeder
 
             //Site Setting
             'site-setting',
+            'order-manage',
 
             //Dashboard
             'login-log-list',

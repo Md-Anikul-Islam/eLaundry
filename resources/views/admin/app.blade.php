@@ -147,6 +147,15 @@
                     </li>
                 @endcan
 
+                @can('order-manage')
+                    <li class="side-nav-item">
+                        <a href="{{route('order.manage')}}" class="side-nav-link">
+                            <i class="ri-pencil-fill"></i>
+                            <span> Order Manage </span>
+                        </a>
+                    </li>
+                @endcan
+
                 @can('service-list')
                     <li class="side-nav-item">
                         <a href="{{route('service.section')}}" class="side-nav-link">
@@ -156,10 +165,7 @@
                     </li>
                 @endcan
 
-
-
-
-            @can('site-setting')
+                @can('site-setting')
                     <li class="side-nav-item">
                         <a href="{{route('site.setting')}}" class="side-nav-link">
                             <i class="ri-drag-move-fill"></i>
