@@ -4,6 +4,22 @@
 
 .feature-section {
   .feature-card {
+    .main-img{
+      // transition: var(--transition);
+      overflow: hidden;
+      img{
+        transition: var(--transition);
+        transform: scale(1);
+      }
+    }
+    &:hover {
+      .main-img{
+        
+        img{
+          transform: scale(1.1);
+        }
+      }
+    }
     .content-part {
         width: 100%;
       padding: 40px 30px 54px 30px;

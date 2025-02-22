@@ -775,6 +775,19 @@ p {
 /*=============================
 	07. Feature CSS Start
 ===============================*/
+.feature-section .feature-card .main-img {
+  overflow: hidden;
+}
+.feature-section .feature-card .main-img img {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.feature-section .feature-card:hover .main-img img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
 .feature-section .feature-card .content-part {
   width: 100%;
   padding: 40px 30px 54px 30px;
