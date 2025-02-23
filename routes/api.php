@@ -1,14 +1,9 @@
 <?php
 
-use App\Http\Controllers\api\AboutController;
 use App\Http\Controllers\api\CategoryController;
-use App\Http\Controllers\api\NewsController;
 use App\Http\Controllers\api\OrderController;
-use App\Http\Controllers\api\ProjectController;
 use App\Http\Controllers\api\ServiceController;
 use App\Http\Controllers\api\SliderController;
-use App\Http\Controllers\api\TeamController;
-use App\Http\Controllers\api\TrainingController;
 use App\Http\Controllers\api\UserAuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -44,6 +39,9 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     //order
     Route::post('order', [OrderController::class, 'store']);
+
+    //slider
+    Route::get('slider', [SliderController::class, 'index']);
 });
 
 
