@@ -6,6 +6,7 @@ use App\Http\Controllers\admin\OrderManageController;
 use App\Http\Controllers\admin\ServiceController;
 use App\Http\Controllers\admin\SiteSettingController;
 use App\Http\Controllers\admin\SliderController;
+use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -21,10 +22,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
+Route::get('/', [FrontendController::class, 'index'])->name('home');
+Route::get('/holidays', [FrontendController::class, 'holidays'])->name('holidays');
+Route::get('/locations', [FrontendController::class, 'location'])->name('locations');
+Route::get('/contact-us', [FrontendController::class, 'contact'])->name('contact.us');
 
 Route::middleware('auth')->group(callback: function () {
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');

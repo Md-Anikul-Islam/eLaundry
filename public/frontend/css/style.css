@@ -1,0 +1,1052 @@
+/*
+  Theme Name: eLaundry Template
+  Support: mr.rafiqulthedev@gmail.com
+  Description: eLaundry Template
+  Version: 1.0
+*/
+/* CSS Index
+============================
+*** Template Components ***
+============================
+01. Variable CSS
+02. Common CSS
+03. Header CSS
+04. Banner CSS
+05. About CSS
+06. Service CSS
+07. Feature CSS
+08. Why Section CSS
+
+*** Template Pages ***
+=========================
+09. About Page CSS
+============================
+*/
+/*=============================
+	1. Google Fonts
+===============================*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&&family=Space+Grotesk:wght@300..700&display=swap");
+/*=============================
+	01. Variable CSS Start
+===============================*/
+:root {
+  --primary: #1d2e5c;
+  --secondary: #1083b7;
+  --secondary2: #1082b7;
+  --tertiary: #44c8f5;
+  --paragraph-color: #575757;
+  --bg-one: #F2F5F1;
+  --font-montserat: "Montserrat", serif;
+  --font-Space: "Space Grotesk", serif;
+  --font-size: 16px;
+  --font-weight: 400;
+  --transition: all linear 0.3s;
+  --body-background: #ffffff;
+  --border-color: #f0f0f0;
+  --shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/*=============================
+	02. Common CSS start
+===============================*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+button {
+  display: inline-block;
+  text-decoration: none;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-montserat);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  color: var(--paragraph-color);
+  line-height: 26px;
+  background: var(--body-background);
+  overflow-x: hidden;
+}
+
+::-moz-selection {
+  background: var(--primary);
+  color: white;
+}
+
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+  color: var(--primary);
+  font-family: var(--font-Space);
+}
+
+p {
+  color: var(--paragraph-color);
+  letter-spacing: -0.36px;
+}
+
+.section-bg {
+  background: #F1F6FC;
+}
+
+.py-120 {
+  padding: 120px 0;
+}
+@media (max-width: 991.98px) {
+  .py-120 {
+    padding: 60px 0;
+  }
+}
+
+.py-50 {
+  padding: 50px 0;
+}
+@media (max-width: 991.98px) {
+  .py-50 {
+    padding: 40px 0;
+  }
+}
+
+.pt-120 {
+  padding-top: 120px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.rounded-20 {
+  border-radius: 20px !important;
+}
+
+.box-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--tertiary);
+}
+.box-icon.primary {
+  background: var(--primary);
+}
+.box-icon.secondary {
+  background: var(--secondary);
+}
+
+.theme-btn {
+  padding: 15px 30px;
+  border-radius: 999px;
+  font-family: var(--font-montserat);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.theme-btn .btn-arrow {
+  margin-left: 10px;
+}
+.theme-btn .btn-arrow .btn-arrow-fill {
+  fill: white;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.theme-btn-primary {
+  background: var(--primary);
+  color: white;
+  position: relative;
+  z-index: 9;
+}
+.theme-btn-primary::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  top: 0;
+  left: 0;
+  content: "";
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background: var(--secondary2);
+  z-index: -1;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.theme-btn-primary:hover::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.section-title.style-two .sub-title {
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #47b16a !important;
+  position: relative;
+  padding-right: 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.section-title.style-two .sub-title::before, .section-title.style-two .sub-title::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.section-title.style-two .sub-title::before {
+  left: 100%;
+  width: 30px;
+  height: 2px;
+  background-color: #0044eb;
+}
+.section-title.style-two .sub-title::after {
+  left: calc(100% + 30px);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #0044eb;
+}
+.section-title.style-two .title {
+  font-size: 60px;
+  line-height: 68px;
+  letter-spacing: -1.48px;
+}
+@media (max-width: 1199.98px) {
+  .section-title.style-two .title {
+    font-size: 42px;
+    line-height: 52px;
+  }
+}
+@media (max-width: 991.98px) {
+  .section-title.style-two .title {
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
+.section-title .sub-title {
+  font-size: 24px;
+  line-height: 26px;
+  color: #47b16a !important;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+.section-title .title {
+  font-size: 44px;
+  line-height: 48.4px;
+}
+@media (max-width: 1199.98px) {
+  .section-title .title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 991.98px) {
+  .section-title .title {
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
+
+/*=============================
+	03. Header CSS start
+===============================*/
+.header-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  background: var(--body-background);
+}
+.header-section .navbar {
+  padding: 0;
+}
+.header-section .navbar .navbar-main .navbar-brand {
+  padding: 0;
+}
+.header-section .navbar .navbar-main .navbar-collapse .navbar-nav {
+  padding: 0;
+  gap: 25px;
+}
+.header-section .navbar .navbar-main .navbar-collapse .navbar-nav .nav-item {
+  padding: 0;
+  position: relative;
+}
+.header-section .navbar .navbar-main .navbar-collapse .navbar-nav .nav-item .nav-link {
+  padding: 0;
+  color: var(--primary);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 85px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.header-section .navbar .navbar-main .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
+  color: var(--secondary2);
+}
+.header-section .navbar .navbar-main .navbar-collapse .navbar-nav .nav-item .nav-link i {
+  font-size: 18px;
+}
+.header-section .navbar .navbar-main .navbar-collapse .navbar-nav .nav-item .nav-link.active {
+  border-bottom: 2px solid var(--primary);
+}
+.header-section .navbar .navbar-main .navbar-collapse .navbar-nav .nav-item .sub-menu {
+  width: 226px;
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  margin-top: 10px;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+}
+.header-section .navbar .navbar-main .navbar-collapse .navbar-nav .nav-item .sub-menu li a {
+  color: var(--black);
+  display: block;
+  background-color: transparent;
+  width: 100%;
+  padding: 8px 16px;
+  font-weight: 500;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.header-section .navbar .navbar-main .navbar-collapse .navbar-nav .nav-item .sub-menu li a:hover {
+  background-color: var(--primary);
+  color: white;
+}
+.header-section .navbar .navbar-main .navbar-collapse .navbar-nav .nav-item:hover > .sub-menu {
+  visibility: visible;
+  opacity: 1;
+  margin-top: 0px;
+}
+
+.call-to-action {
+  gap: 15px;
+}
+.call-to-action .icon {
+  width: 55px;
+  height: 55px;
+  background: var(--tertiary);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  color: var(--primary);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.call-to-action .info p {
+  letter-spacing: -0.36px;
+}
+.call-to-action .info h6 {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.call-to-action:hover .icon {
+  color: white;
+  background: var(--primary);
+}
+.call-to-action.style2 .icon {
+  background: var(--tertiary);
+  color: white;
+}
+.call-to-action.style2 .info .help {
+  margin-bottom: 2px;
+}
+.call-to-action.style2 .info .number {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.call-to-action.style2:hover .info .number {
+  color: var(--tertiary);
+}
+
+#header-fixed-height.active-height {
+  display: block;
+  height: 94px;
+}
+
+.sticky-menu {
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-animation: 400ms ease-in-out 0s normal none 1 running fadeInDown;
+          animation: 400ms ease-in-out 0s normal none 1 running fadeInDown;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.sticky-menu .navbar-main {
+  border-radius: 0;
+  padding: 0 12px !important;
+}
+
+/* Mobile menu start */
+.mobile-menu-area {
+  z-index: 999;
+  background-color: transparent;
+  width: 100%;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.mobile-menu-area .mobile-topbar {
+  width: 100%;
+  padding: 13px 20px;
+}
+.mobile-menu-area .mobile-topbar .bars {
+  height: 40px;
+  width: 40px;
+  color: var(--primary);
+  border-radius: 50% !important;
+  text-align: center;
+  line-height: 35px;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid var(--primary);
+}
+.mobile-menu-area .mobile-topbar .bars i {
+  font-size: 20px;
+}
+.mobile-menu-area .mobile-topbar .bars:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+.mobile-menu-area .mobile-menu-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  visibility: hidden;
+  opacity: 0;
+}
+.mobile-menu-area .mobile-menu-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+.mobile-menu-area .mobile-menu-main {
+  width: 320px;
+  height: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: -320px;
+  z-index: 999;
+  overflow-y: scroll;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+.mobile-menu-area .mobile-menu-main .logo {
+  padding: 20px;
+}
+.mobile-menu-area .mobile-menu-main .close-mobile-menu {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  border-radius: 5px;
+}
+.mobile-menu-area .mobile-menu-main .close-mobile-menu i {
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  color: var(--black);
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.mobile-menu-area .mobile-menu-main .close-mobile-menu:hover {
+  background: var(--bg-one);
+}
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list {
+  padding-top: 10px;
+}
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list ul li a {
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 78px;
+  border-top: 1px solid var(--border-color);
+  width: 100%;
+  padding: 0px 20px;
+  line-height: 44px;
+  padding-right: 10px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list ul li a i {
+  width: 32px;
+  height: 32px;
+  background-color: var(--bg-one);
+  text-align: center;
+  line-height: 32px;
+  font-size: 12px;
+  border-radius: 3px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list ul li a:hover {
+  color: var(--primary);
+}
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list ul li a:hover i {
+  background-color: var(--primary);
+  color: white;
+}
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list ul li ul {
+  padding-left: 0;
+  display: none;
+}
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list ul li ul a {
+  padding: 0px 20px;
+  padding-left: 40px;
+}
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list ul li ul li:last-child a {
+  border-bottom: 0;
+}
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list ul li:last-child a {
+  border-bottom: 1px solid var(--bg-one);
+}
+.mobile-menu-area .mobile-menu-main.active {
+  left: 0 !important;
+}
+.mobile-menu-area .mobile-menu-action-btn {
+  padding: 20px;
+}
+.mobile-menu-area .mobile-menu-action-btn a {
+  color: white;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+}
+.mobile-menu-area .mobile-menu-action-btn a i {
+  font-size: 14px;
+  margin-left: 8px;
+}
+.mobile-menu-area .mobile-menu-action-btn a:hover {
+  background-color: var(--primary);
+}
+
+/*=============================
+	03. Banner CSS start
+===============================*/
+.banner-section {
+  background: white;
+  padding-top: 87px;
+}
+.banner-section .main-banner .banner-main-content {
+  background: rgba(16, 130, 183, 0.7);
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+.banner-section .main-banner .banner-content {
+  width: 100%;
+  height: 100%;
+  color: white !important;
+}
+.banner-section .main-banner .banner-content h3 {
+  color: white;
+  font-size: 50px;
+  line-height: 55px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.banner-section .main-banner .banner-content .banner-title {
+  color: white !important;
+  text-align: center;
+  font-size: 74px;
+  line-height: 84px;
+  letter-spacing: -1.48px;
+}
+@media screen and (max-width: 991.98px) {
+  .banner-section .main-banner .banner-content .banner-title {
+    margin: 0 auto;
+    text-align: center !important;
+  }
+}
+.banner-section .main-banner .banner-content .banner-title .title-shape {
+  right: -42px;
+  top: -30px;
+}
+@media (max-width: 1199.98px) {
+  .banner-section .main-banner .banner-content .banner-title .title-shape {
+    right: 8px;
+  }
+}
+.banner-section .main-banner .banner-content .banner-title svg {
+  color: #0ae754;
+}
+@media (max-width: 1199.98px) {
+  .banner-section .main-banner .banner-content .banner-title {
+    font-size: 60px;
+    line-height: 70px;
+  }
+}
+.banner-section .main-banner .banner-content .desc {
+  text-align: center;
+  max-width: 582px;
+  color: white !important;
+  font-size: 20px;
+  line-height: 33px;
+  margin-bottom: 20px;
+  margin-top: 17px;
+}
+
+/*=============================
+	05. About CSS start
+===============================*/
+.about-section .section-title {
+  margin-bottom: 14px;
+}
+.about-section .about-img {
+  vertical-align: middle;
+}
+.about-section .about-img .img-main {
+  max-width: 460px;
+}
+@media screen and (min-width: 991.98px) {
+  .about-section .about-img .img-main {
+    margin-left: 100px;
+  }
+}
+.about-section .about-img .img-main .about-shape {
+  right: -60px;
+  top: -5px;
+  -webkit-animation: spin 26s infinite linear;
+          animation: spin 26s infinite linear;
+}
+.about-section .about-content p {
+  max-width: 591px;
+}
+@media (max-width: 1199.98px) {
+  .about-section .about-content p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 991.98px) {
+  .about-section .about-content p {
+    font-size: 12px;
+    line-height: 24px;
+  }
+}
+.about-section .about-content .list-box .list-wrapper .list-info li {
+  text-wrap: nowrap;
+  margin-bottom: 10px;
+  color: var(--black);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px; /* 155.556% */
+  letter-spacing: -0.36px;
+}
+.about-section .about-content .list-box .list-wrapper .list-info li i {
+  color: #47b16a;
+  margin-right: 15px;
+}
+.about-section .description {
+  max-width: 1190px;
+}
+.about-section p + p {
+  margin-top: 14px;
+}
+.about-section .theme-btn {
+  margin-top: 14px;
+  margin-bottom: 64px;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*=============================
+	06. Service CSS start
+===============================*/
+.service-section .service-card {
+  padding: 51px 31px 65px 31px;
+  background: white;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.service-section .service-card:hover {
+  border-color: #0044eb;
+}
+.service-section .service-card .title {
+  margin-top: 30px;
+  margin-bottom: 14px;
+  color: var(--secondary) !important;
+  font-size: 24px;
+  line-height: 26px;
+  text-align: center;
+}
+.service-section .service-card .desc {
+  font-size: 16;
+  line-height: 26.4px;
+  text-align: center;
+}
+.service-section .service-btn {
+  margin-top: 60px;
+}
+
+.service-section-two .services-slider-two .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  margin-top: 75px;
+}
+.service-section-two .services-slider-two .slick-dots .slick-active button {
+  width: 100px;
+  border-radius: 50px;
+  background-color: var(--tertiary);
+}
+.service-section-two .services-slider-two .slick-dots li:first-child button {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+.service-section-two .services-slider-two .slick-dots li:last-child button {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.service-section-two .services-slider-two .slick-dots li button {
+  background-color: var(--bg-one);
+  width: 50px;
+  height: 10px;
+  font-size: 0;
+  border: 0;
+}
+.service-section-two .services-slider-two .slick-list {
+  padding: 20px 0;
+  margin: -20px 0;
+}
+.service-section-two .service-card {
+  height: 100% !important;
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  border-bottom: 3px solid transparent;
+  margin: 0 15px;
+}
+.service-section-two .service-card:hover {
+  border-color: var(--tertiary);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.service-section-two .service-card:hover .img img {
+  scale: 1.1;
+}
+.service-section-two .service-card .img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.service-section-two .service-card .img img {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.service-section-two .service-card .box-icon {
+  bottom: -40px;
+}
+.service-section-two .service-card .box-icon i {
+  color: white !important;
+  font-size: 24px;
+}
+.service-section-two .service-card .service-text {
+  padding: 60px 40px 40px 40px;
+}
+.service-section-two .service-card .service-text .service-title {
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-style: normal;
+  line-height: 36px; /* 163.636% */
+}
+
+/*=============================
+	07. Feature CSS Start
+===============================*/
+.feature-section .feature-card .main-img {
+  overflow: hidden;
+}
+.feature-section .feature-card .main-img img {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.feature-section .feature-card:hover .main-img img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.feature-section .feature-card .content-part {
+  width: 100%;
+  padding: 40px 30px 54px 30px;
+  position: relative;
+  z-index: 1;
+}
+.feature-section .feature-card .content-part::before {
+  position: absolute;
+  content: "";
+  top: -25px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  background: var(--secondary);
+}
+.feature-section .feature-card .content-part .title {
+  font-size: 30px;
+  line-height: 33px;
+  margin-bottom: 14px;
+  color: white !important;
+}
+.feature-section .feature-card .content-part .desc {
+  color: white !important;
+}
+.feature-section .feature-card .content-part.secondary {
+  background: var(--secondary);
+}
+.feature-section .feature-card .content-part.primary {
+  background: var(--primary);
+}
+.feature-section .feature-card .content-part.primary::before {
+  background: var(--primary);
+}
+
+/*=============================
+	08. Why CSS Start
+===============================*/
+.why-section .why-card {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.why-section .why-card:hover {
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+  background: var(--tertiary) !important;
+  border-color: var(--tertiary) !important;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+.why-section .why-card:hover .why-desc {
+  color: white !important;
+}
+.why-section .why-card .why-content .number {
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 700;
+  color: var(--secondary) !important;
+  text-align: left !important;
+}
+.why-section .why-card .why-content .why-title {
+  margin-bottom: 15px;
+}
+.why-section .why-card .why-content .why-desc {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.footer-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 100px;
+  background: var(--secondary);
+}
+.footer-section .footer-top .footer-widget {
+  padding: 0 15px;
+}
+.footer-section .footer-top .footer-widget .widget-title {
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: white !important;
+  position: relative;
+  padding-right: 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.footer-section .footer-top .footer-widget ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+.footer-section .footer-top .footer-widget ul li {
+  color: white;
+}
+.footer-section .footer-top .footer-widget ul li a {
+  font-size: 14px;
+  line-height: 24px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 500;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.footer-section .footer-top .footer-widget ul li a:hover {
+  color: var(--primary);
+}
+.footer-section .footer-top .footer-widget .footer-desc {
+  font-size: 14px;
+  line-height: 24px;
+  color: white;
+}
+.footer-section .footer-top .footer-widget .footer-social ul li {
+  display: inline-block;
+  margin-right: 15px;
+}
+.footer-section .footer-top .footer-widget .footer-social ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  border-radius: 50%;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.footer-section .footer-top .footer-widget .footer-social ul li a i {
+  font-size: 18px;
+  color: var(--white);
+}
+.footer-section .footer-top .footer-widget .footer-social ul li a:hover {
+  background: var(--secondary);
+}
+.footer-section .footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  background: var(--primary);
+  margin-top: 100px;
+}
+.footer-section .footer-bottom p {
+  color: white;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/*=============================
+	09. About Page CSS Start
+===============================*/

@@ -1,0 +1,64 @@
+/*=============================
+	03. Banner CSS start
+===============================*/
+
+.banner-section {
+  background: white;
+  padding-top: 87px;
+  .main-banner {
+    .banner-main-content{
+      background: rgba(16, 130, 183, 0.7);
+      display: grid;
+      place-content: center;
+    }
+    .banner-content {
+      width: 100%;
+      height: 100%;
+      color: white !important;
+      h3{
+        color: white;
+        font-size: 50px;
+        line-height: 55px;
+        margin-bottom: 8px;
+        text-align: center;
+      }
+      
+      .banner-title {
+        @media screen and (max-width: 991.98px) {
+          margin: 0 auto;
+          text-align: center !important;
+        }
+        .title-shape {
+          right: -42px;
+          top: -30px;
+          @media (max-width: 1199.98px) {
+            right: 8px;
+          }
+        }
+        svg{
+          color: #0ae754;
+        }
+        // max-width: 541px;
+        color: white !important;
+        text-align: center;
+        font-size: 74px;
+        line-height: 84px;
+        letter-spacing: -1.48px;
+        @media (max-width: 1199.98px) {
+          font-size: 60px;
+          line-height: 70px;
+        }
+      }
+      .desc{
+        text-align: center;
+        max-width: 582px;
+        color: white !important;
+        font-size: 20px;
+        line-height: 33px;
+        margin-bottom: 20px;
+        margin-top: 17px;
+      }
+      
+    }
+  }
+}
