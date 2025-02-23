@@ -28,7 +28,8 @@
                                 <div class="auth-brand p-12 d-flex justify-content-center align-items-center">
                                     @if (!empty($siteSetting->favicon))
                                         <a href="{{ url('/') }}" class="logo-dark">
-                                            <img src="{{ asset($siteSetting ? $siteSetting->favicon : '') }}" alt="dark logo" height="150">
+                                            <img src="
+                                            " alt="dark logo" height="150">
                                         </a>
                                     @endif
                                 </div>
