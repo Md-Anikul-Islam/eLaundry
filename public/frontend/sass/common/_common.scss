@@ -144,6 +144,9 @@ p {
 }
 .mb-60{
   margin-bottom: 60px;
+  @media screen and (max-width: 767.98px) {
+    margin-bottom: 40px;
+  }
 }
 .mb-30{
   margin-bottom: 30px;
@@ -162,19 +165,7 @@ p {
     background: var(--secondary);
   }
 }
-// Theme btn css
-// .theme-btn {
-//   padding: 20px 32px;
-//   background: #44c8f5;
-//   color: #ffffff !important;
-//   font-size: 17px;
-//   font-weight: 700;
-//   line-height: 20px;
-//   transition: var(--transition);
-//   &:hover {
-//     background-color: var(--primary);
-//   }
-// }
+
 
 // Theme btn css
 .theme-btn {
@@ -185,6 +176,11 @@ p {
   font-size: 18px;
   line-height: 30px;
   transition: var(--transition);
+  @media screen and (max-width: 767.98px) {
+    padding: 10px 20px;
+    font-size: 16px;
+    
+  }
   .btn-arrow {
     margin-left: 10px;
     .btn-arrow-fill {

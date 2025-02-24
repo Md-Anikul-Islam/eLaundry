@@ -40,10 +40,10 @@
     <!-- About section start -->
     <section class="about-section pt-120 pb-5 section-bg">
         <div class="container">
-            <div class="row">
+            <div class="row g-5  g-xl-0">
                 <div class="col-lg-6">
-                    <div class="about-img position-relative">
-                        <div class="img-main position-relative">
+                    <div class="about-img ">
+                        <div class="img-main position-relative mx-auto mx-lg-0">
                             <img src="{{URL::to('frontend/images/about/about-img-1.webp')}}" class="w-100 img-fluid rounded-pill" alt="about-img-1" />
                             <img src="{{URL::to('frontend/images/about/about-shape.svg')}}" alt="about-shape" class="about-shape position-absolute">
                         </div>

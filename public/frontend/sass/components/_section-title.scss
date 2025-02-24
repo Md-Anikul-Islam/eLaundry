@@ -51,7 +51,9 @@
     color: #47b16a !important;
     display: inline-block;
     margin-bottom: 4px;
-    
+    @media screen and  (max-width: 991.98px) {
+      font-size: 18px;
+    }
   }
   .title {
     font-size: 44px;

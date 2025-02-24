@@ -156,6 +156,11 @@ p {
 .mb-60 {
   margin-bottom: 60px;
 }
+@media screen and (max-width: 767.98px) {
+  .mb-60 {
+    margin-bottom: 40px;
+  }
+}
 
 .mb-30 {
   margin-bottom: 30px;
@@ -186,6 +191,12 @@ p {
   line-height: 30px;
   -webkit-transition: var(--transition);
   transition: var(--transition);
+}
+@media screen and (max-width: 767.98px) {
+  .theme-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
 }
 .theme-btn .btn-arrow {
   margin-left: 10px;
@@ -276,6 +287,11 @@ p {
   color: #47b16a !important;
   display: inline-block;
   margin-bottom: 4px;
+}
+@media screen and (max-width: 991.98px) {
+  .section-title .sub-title {
+    font-size: 18px;
+  }
 }
 .section-title .title {
   font-size: 44px;
@@ -731,7 +747,7 @@ p {
 .about-section .about-img .img-main {
   max-width: 460px;
 }
-@media screen and (min-width: 991.98px) {
+@media (min-width: 1399.98px) {
   .about-section .about-img .img-main {
     margin-left: 100px;
   }
@@ -742,18 +758,24 @@ p {
   -webkit-animation: spin 26s infinite linear;
           animation: spin 26s infinite linear;
 }
+@media screen and (max-width: 1199.98px) {
+  .about-section .about-img .img-main .about-shape {
+    right: -5px;
+    width: 100px;
+  }
+}
 .about-section .about-content p {
   max-width: 591px;
 }
 @media (max-width: 1199.98px) {
   .about-section .about-content p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 24px;
   }
 }
 @media (max-width: 991.98px) {
   .about-section .about-content p {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 24px;
   }
 }
@@ -766,6 +788,11 @@ p {
   line-height: 28px; /* 155.556% */
   letter-spacing: -0.36px;
 }
+@media screen and (max-width: 767.98px) {
+  .about-section .about-content .list-box .list-wrapper .list-info li {
+    font-size: 14px;
+  }
+}
 .about-section .about-content .list-box .list-wrapper .list-info li i {
   color: #47b16a;
   margin-right: 15px;
@@ -773,12 +800,29 @@ p {
 .about-section .description {
   max-width: 1190px;
 }
+@media (max-width: 1199.98px) {
+  .about-section .description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 991.98px) {
+  .about-section .description {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
 .about-section p + p {
   margin-top: 14px;
 }
 .about-section .theme-btn {
   margin-top: 14px;
   margin-bottom: 64px;
+}
+@media screen and (max-width: 767.98px) {
+  .about-section .theme-btn {
+    margin-bottom: 40px;
+  }
 }
 
 @-webkit-keyframes spin {
