@@ -64,7 +64,7 @@
             <div class="mobile-topbar">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="logo">
-                        <a href="index.html">
+                        <a href="{{route('home')}}">
                             <img src="{{URL::to('frontend/images/logo/logo-1.webp')}}" style="max-width: 70px" class="img-fluid" alt="logo" />
                         </a>
                     </div>
@@ -79,7 +79,7 @@
         <div class="mobile-menu-main">
             <div class="d-flex align-items-center justify-content-between pe-2">
                 <div class="logo">
-                    <a href="./index.html">
+                    <a href="{{route('home')}}">
                         <img src="{{URL::to('frontend/images/logo/logo-1.webp')}}" style="width: 100px" class="img-fluid" alt="logo" />
                     </a>
                 </div>

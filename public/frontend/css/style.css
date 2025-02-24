@@ -1040,12 +1040,29 @@ p {
   color: var(--secondary) !important;
   text-align: left !important;
 }
+@media screen and (max-width: 1199.98px) {
+  .why-section .why-card .why-content .number {
+    font-size: 45px;
+    line-height: 55px;
+  }
+}
 .why-section .why-card .why-content .why-title {
   margin-bottom: 15px;
+  text-align: center;
 }
 .why-section .why-card .why-content .why-desc {
   -webkit-transition: var(--transition);
   transition: var(--transition);
+}
+@media screen and (max-width: 1199.98px) {
+  .why-section .why-card .why-content .why-desc {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 576.98px) {
+  .why-section .why-card .why-content .why-desc {
+    font-size: 14px;
+  }
 }
 
 .footer-section {

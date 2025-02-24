@@ -164,7 +164,7 @@
     <section class="service-section-two z-1 py-120">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-9 text-center">
+                <div class="col-md-9 text-center">
                     <div class="section-title style-two mb-60">
                         <h5 class="sub-title text-uppercase">Our Features</h5>
                         <h3 class="title split-text right">
