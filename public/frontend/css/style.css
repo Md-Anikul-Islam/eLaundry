@@ -616,28 +616,43 @@ p {
 	03. Banner CSS start
 ===============================*/
 .banner-section {
-  background: white;
-  padding-top: 87px;
+  margin-top: 87px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.banner-section .main-banner .banner-main-content {
-  background: rgba(16, 130, 183, 0.7);
+.banner-section .banner-main-content {
+  background-color: rgba(16, 130, 183, 0.7);
+  padding: 200px 0;
   display: -ms-grid;
   display: grid;
   place-content: center;
 }
-.banner-section .main-banner .banner-content {
+.banner-section .banner-content {
   width: 100%;
   height: 100%;
   color: white !important;
 }
-.banner-section .main-banner .banner-content h3 {
+.banner-section .banner-content h3 {
   color: white;
   font-size: 50px;
   line-height: 55px;
   margin-bottom: 8px;
   text-align: center;
 }
-.banner-section .main-banner .banner-content .banner-title {
+@media screen and (max-width: 576.98px) {
+  .banner-section .banner-content h3 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+}
+@media (max-width: 374.98px) {
+  .banner-section .banner-content h3 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+.banner-section .banner-content .banner-title {
   color: white !important;
   text-align: center;
   font-size: 74px;
@@ -645,30 +660,56 @@ p {
   letter-spacing: -1.48px;
 }
 @media screen and (max-width: 991.98px) {
-  .banner-section .main-banner .banner-content .banner-title {
+  .banner-section .banner-content .banner-title {
     margin: 0 auto;
     text-align: center !important;
   }
 }
-.banner-section .main-banner .banner-content .banner-title .title-shape {
+.banner-section .banner-content .banner-title .title-shape {
   right: -42px;
   top: -30px;
 }
 @media (max-width: 1199.98px) {
-  .banner-section .main-banner .banner-content .banner-title .title-shape {
+  .banner-section .banner-content .banner-title .title-shape {
     right: 8px;
   }
 }
-.banner-section .main-banner .banner-content .banner-title svg {
+@media (max-width: 767.98px) {
+  .banner-section .banner-content .banner-title .title-shape {
+    right: -35px;
+  }
+}
+@media (max-width: 576.98px) {
+  .banner-section .banner-content .banner-title .title-shape {
+    right: 25px;
+  }
+}
+@media screen and (max-width: 530.98px) {
+  .banner-section .banner-content .banner-title .title-shape {
+    display: none;
+  }
+}
+.banner-section .banner-content .banner-title svg {
   color: #0ae754;
 }
 @media (max-width: 1199.98px) {
-  .banner-section .main-banner .banner-content .banner-title {
+  .banner-section .banner-content .banner-title {
     font-size: 60px;
     line-height: 70px;
   }
 }
-.banner-section .main-banner .banner-content .desc {
+@media (max-width: 576.98px) {
+  .banner-section .banner-content .banner-title {
+    font-size: 45px;
+  }
+}
+@media (max-width: 375.98px) {
+  .banner-section .banner-content .banner-title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+.banner-section .banner-content .desc {
   text-align: center;
   max-width: 582px;
   color: white !important;

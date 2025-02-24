@@ -3,11 +3,13 @@
 ===============================*/
 
 .banner-section {
-  background: white;
-  padding-top: 87px;
-  .main-banner {
-    .banner-main-content{
-      background: rgba(16, 130, 183, 0.7);
+  margin-top: 87px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  .banner-main-content{
+      background-color: rgba(16, 130, 183, 0.7);
+      padding: 200px 0;
       display: grid;
       place-content: center;
     }
@@ -21,6 +23,14 @@
         line-height: 55px;
         margin-bottom: 8px;
         text-align: center;
+        @media screen and (max-width: 576.98px) {
+          font-size: 35px;
+          line-height: 45px;
+        }
+        @media (max-width: 374.98px) {
+          font-size: 30px;
+          line-height: 40px; 
+        }
       }
       
       .banner-title {
@@ -34,11 +44,22 @@
           @media (max-width: 1199.98px) {
             right: 8px;
           }
+          @media (max-width: 767.98px) {
+            right: -35px;
+          }
+          @media (max-width: 576.98px) {
+            right: 25px;
+          }
+          
+          @media screen and (max-width: 530.98px) {
+            display: none;
+          }
         }
         svg{
           color: #0ae754;
         }
         // max-width: 541px;
+        
         color: white !important;
         text-align: center;
         font-size: 74px;
@@ -47,6 +68,13 @@
         @media (max-width: 1199.98px) {
           font-size: 60px;
           line-height: 70px;
+        }
+        @media (max-width: 576.98px) {
+          font-size: 45px;
+        }
+        @media (max-width: 375.98px) {
+          font-size: 36px;
+          line-height: 40px;
         }
       }
       .desc{
@@ -60,5 +88,5 @@
       }
       
     }
-  }
+ 
 }

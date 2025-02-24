@@ -65,7 +65,7 @@
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="logo">
                         <a href="index.html">
-                            <img src="./assets/images/logo/logo-1.webp" style="max-width: 70px" class="img-fluid" alt="logo" />
+                            <img src="{{URL::to('frontend/images/logo/logo-1.webp')}}" style="max-width: 70px" class="img-fluid" alt="logo" />
                         </a>
                     </div>
                     <div class="bars">
@@ -81,7 +81,6 @@
                 <div class="logo">
                     <a href="./index.html">
                         <img src="{{URL::to('frontend/images/logo/logo-1.webp')}}" style="width: 100px" class="img-fluid" alt="logo" />
-                        <!-- <h2 class="">Air King</h2> -->
                     </a>
                 </div>
                 <div class="close-mobile-menu"><i class="fas fa-times"></i></div>
