@@ -9,10 +9,9 @@
             <div class="container">
                 <div class="banner-content">
                     <div class="text-content">
-                        <h3>Want to get your</h3>
-                        <h1 class="banner-title position-relative">Clothes Cleaned?
-                            <!-- <img src="./assets/images/shapes/banner-shape-1.svg" alt="banner-title-shape.svg"
-                            class="position-absolute title-shape" /> -->
+                        <h3 class="split-text right">Want to get your</h3>
+                        <h1 class="banner-title position-relative">
+                            <span class="split-text right">Clothes Cleaned?</span>
 
                             <svg class="position-absolute title-shape" xmlns="http://www.w3.org/2000/svg" width="85" height="66" viewBox="0 0 85 66" fill="none">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M61.9459 62.9644C65.1482 62.5979 68.3193 62.2634 71.5093 61.8037C72.1959 61.7073 72.6696 61.0762 72.5716 60.3943C72.4752 59.7077 71.8394 59.2324 71.1575 59.3303C67.9849 59.785 64.8407 60.1175 61.6605 60.4806C60.9736 60.5612 60.4823 61.1816 60.5596 61.8621C60.6402 62.549 61.2591 63.045 61.9459 62.9644Z" fill="currentColor"/>
@@ -51,7 +50,7 @@
                 <div class="about-content">
                     <div class="section-title">
                         <h5 class="sub-title text-uppercase">More than 25 Years of Experience</h5>
-                        <h3 class="title text-capitalize">
+                        <h3 class="title split-text right">
                             Your Trusted Laundry Partner
                         </h3>
                     </div>
@@ -113,7 +112,7 @@
     <div class="container">
         <div class="section-title text-center mb-30 style-two">
             <h5 class="sub-title text-uppercase">Our Services</h5>
-            <h3 class="title text-capitalize text-center">
+            <h3 class="title split-text right text-center">
                 Clean Clothes, Delivered with Care !
             </h3>
         </div>
@@ -165,7 +164,7 @@
             <div class="col-9 text-center">
                 <div class="section-title style-two mb-60">
                     <h5 class="sub-title text-uppercase">Our Features</h5>
-                    <h3 class="title">
+                    <h3 class="title split-text right">
                         Advancing Laundry Technology for A Better Cleaning Experience
                     </h3>
                 </div>
@@ -258,7 +257,7 @@
     <div class="container">
         <div class="section-title style-two text-center mb-1">
             <h4 class="sub-title">Why Choose Us</h4>
-            <h2 class="title">
+            <h2 class="title split-text right">
                 Your Trusted Laundry Service
             </h2>
         </div>

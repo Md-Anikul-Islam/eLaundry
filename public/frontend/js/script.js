@@ -1,6 +1,6 @@
 (function ($) {
   "use strict";
-   
+  
   $(".services-slider-two").slick({
     dots: true,
     infinite: true,
@@ -107,4 +107,100 @@
       },
     ],
   });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Image reveal js
+		let revealContainers = document.querySelectorAll(".reveal");
+		revealContainers.forEach((container) => {
+			let image = container.querySelector("img");
+			let tl = gsap.timeline({
+				scrollTrigger: {
+					trigger: container,
+					toggleActions: "play none none none"
+				}
+			});
+
+			tl.set(container, {
+				autoAlpha: 1
+			});
+
+			if (container.classList.contains('zoom-out')) {
+				// Zoom-out effect
+				tl.from(image, 1.5, {
+					scale: 1.4,
+					ease: Power2.out
+				});
+			} else if (container.classList.contains('left') || container.classList.contains('right')) {
+				let xPercent = container.classList.contains('left') ? -100 : 100;
+				tl.from(container, 1.5, {
+					xPercent,
+					ease: Power2.out
+				});
+				tl.from(image, 1.5, {
+					xPercent: -xPercent,
+					scale: 1,
+					delay: -1.5,
+					ease: Power2.out
+				});
+			}
+		});
+    
+    // Split text animation
+		if ($(".split-text").length > 0) {
+			let st = $(".split-text");
+			if (st.length == 0) return;
+			gsap.registerPlugin(SplitText);
+			st.each(function (index, el) {
+				el.split = new SplitText(el, {
+					type: "lines,words,chars",
+					linesClass: "tp-split-line"
+				});
+				gsap.set(el, {
+					perspective: 800
+				});
+				if ($(el).hasClass('right')) {
+					gsap.set(el.split.chars, {
+						opacity: 0,
+						x: "50",
+						ease: "Back.easeOut",
+					});
+				}
+				if ($(el).hasClass('left')) {
+					gsap.set(el.split.chars, {
+						opacity: 0,
+						x: "-50",
+						ease: "circ.out",
+					});
+				}
+				if ($(el).hasClass('up')) {
+					gsap.set(el.split.chars, {
+						opacity: 0,
+						y: "80",
+						ease: "circ.out",
+					});
+				}
+				if ($(el).hasClass('down')) {
+					gsap.set(el.split.chars, {
+						opacity: 0,
+						y: "-80",
+						ease: "circ.out",
+					});
+				}
+				el.anim = gsap.to(el.split.chars, {
+					scrollTrigger: {
+						trigger: el,
+						start: "top 90%",
+					},
+					x: "0",
+					y: "0",
+					rotateX: "0",
+					scale: 1,
+					opacity: 1,
+					duration: 0.8,
+					stagger: 0.02,
+				});
+			});
+		};
+  });
+
 })(jQuery);

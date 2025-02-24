@@ -199,6 +199,8 @@
 <!-- All Js File -->
 <script src="{{asset('frontend/js/vendor/jquery-3.6.4.min.js')}}"></script>
 <script src="{{asset('frontend/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('frontend/js/gsap.js')}}"></script>
+<script src="{{asset('frontend/js/gsap-split-text.js')}}"></script>
 <script src="{{asset('frontend/js/jquery.appear.js')}}"></script>
 <script src="{{asset('frontend/js/odometer.min.js')}}"></script>
 <script src="{{asset('frontend/js/slick.min.js')}}"></script>
