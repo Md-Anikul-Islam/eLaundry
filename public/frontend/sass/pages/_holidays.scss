@@ -1,4 +1,72 @@
 /*=============================
-	09. Holidays Page CSS Start
+	11. Holidays Page CSS Start
 ===============================*/
-@import '../components/page-header';
+@import "../components/page-header";
+
+.holidays-section {
+    .holiday-item {
+        height: 100%;
+        .img {
+            img {
+                height: 100%;
+            }
+        }
+        .overlay {
+            bottom: -20px;
+            left: 0;
+            width: 100%;
+            padding: 30px 30px 20px 30px;
+            visibility: hidden;
+            opacity: 0;
+            transition: var(--transition);
+
+            p {
+                color: white;
+                background-color: var(--tertiary);
+                border-radius: 20px 20px 0 0;
+                padding: 4px 25px;
+                display: inline-block;
+				@media (min-width: 767.98px) and (max-width: 991.98px) {
+					font-size: 14px;
+					padding: 4px 18px;					
+				}
+				@media (min-width: 575.98px) and (max-width: 767.98px) {
+					line-height: 24px;
+					font-size: 14px;
+				}
+
+            }
+
+            .title {
+                font-size: 22px;
+                font-weight: 700;
+                line-height: 36px;
+                background-color: white;
+                border-radius: 0 20px 20px 20px;
+                padding: 12px 30px;
+				@media screen and (max-width: 1199.98px) {
+					font-size: 15px;
+					text-wrap: nowrap;
+					padding: 12px 24px;
+				}
+				@media screen and (max-width: 1199.98px) {
+					
+					text-wrap: wrap;
+					line-height: 26px;
+				}
+            }
+        }
+
+        &:hover {
+            .overlay {
+                visibility: visible;
+                opacity: 1;
+                bottom: 0;
+            }
+        }
+
+        & + .project-item {
+            margin-top: 30px;
+        }
+    }
+}

@@ -17,10 +17,12 @@
 07. Feature CSS
 08. Service Details CSS
 09. Why Section CSS
+10. Footer CSS
+A. Page Header CSS
 
 *** Template Pages ***
 =========================
-09. About Page CSS
+11. Holidays Page CSS
 ============================
 */
 /*=============================
@@ -1093,6 +1095,9 @@ p {
   }
 }
 
+/*=============================
+	10. Footer CSS Start
+===============================*/
 .footer-section {
   background-size: cover;
   background-position: center;
@@ -1187,7 +1192,7 @@ p {
 }
 
 /*=============================
-	09. Holidays Page CSS Start
+	11. Holidays Page CSS Start
 ===============================*/
 .page-header-section {
   padding-top: 100px;
@@ -1225,4 +1230,69 @@ p {
 }
 .page-header-section .bread-crumb ul li a {
   color: var(--primary);
+}
+
+.holidays-section .holiday-item {
+  height: 100%;
+}
+.holidays-section .holiday-item .img img {
+  height: 100%;
+}
+.holidays-section .holiday-item .overlay {
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  padding: 30px 30px 20px 30px;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.holidays-section .holiday-item .overlay p {
+  color: white;
+  background-color: var(--tertiary);
+  border-radius: 20px 20px 0 0;
+  padding: 4px 25px;
+  display: inline-block;
+}
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+  .holidays-section .holiday-item .overlay p {
+    font-size: 14px;
+    padding: 4px 18px;
+  }
+}
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+  .holidays-section .holiday-item .overlay p {
+    line-height: 24px;
+    font-size: 14px;
+  }
+}
+.holidays-section .holiday-item .overlay .title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 36px;
+  background-color: white;
+  border-radius: 0 20px 20px 20px;
+  padding: 12px 30px;
+}
+@media screen and (max-width: 1199.98px) {
+  .holidays-section .holiday-item .overlay .title {
+    font-size: 15px;
+    text-wrap: nowrap;
+    padding: 12px 24px;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .holidays-section .holiday-item .overlay .title {
+    text-wrap: wrap;
+    line-height: 26px;
+  }
+}
+.holidays-section .holiday-item:hover .overlay {
+  visibility: visible;
+  opacity: 1;
+  bottom: 0;
+}
+.holidays-section .holiday-item + .project-item {
+  margin-top: 30px;
 }
