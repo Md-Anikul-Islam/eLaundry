@@ -288,7 +288,7 @@
 
             <div class="row g-5">
                 <div class="col-md-6 align-self-center">
-                    <div class="main-img">
+                    <div class="main-img reveal left">
                         <img src="{{URL::to('frontend/images/service/image-6.png')}}" class="img-fluid" alt="service-img">
                     </div>
                 </div>
@@ -342,7 +342,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 align-self-center">
-                    <div class="main-img">
+                    <div class="main-img reveal right">
                         <img src="{{URL::to('frontend/images/service/image-7.jpg')}}" class="img-fluid" alt="service-img">
                     </div>
                 </div>
