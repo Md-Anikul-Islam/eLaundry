@@ -104,6 +104,9 @@
     .message-main {
         background-color: white;
         padding: 80px 60px;
+        @media screen and (max-width: 556.98px) {
+            padding: 70px 30px;
+        }
 
         .message-form {
             .input-group {
@@ -151,8 +154,8 @@
                     @media (min-width: 992px) and (max-width: 1399.98px) {
                         font-size: 12px;
                     }
-                    @media screen and (max-width: 767.98px) {
-                        font-size: 12px;
+                    @media screen and (max-width: 567.98px) {
+                        font-size: 11px;
                     }
 
                     a {

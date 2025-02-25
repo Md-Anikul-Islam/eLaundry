@@ -98,7 +98,7 @@
                       <h5 class="cn-info">653 Halsey Street Brooklyn NY 11233</h5>
                     </div>
                   </li>
-                  <li class="d-flex align-items-center">
+                  <li class="d-flex align-items-center flex-wrap flex-lg-nowrap">
                     <div class="icon flex-shrink-0"><i class="fa-solid fa-envelope"></i></div>
                     <div class="text">
                       <p class="cn-title">Email</p>

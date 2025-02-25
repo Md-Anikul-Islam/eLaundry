@@ -1477,6 +1477,11 @@ p {
   background-color: white;
   padding: 80px 60px;
 }
+@media screen and (max-width: 556.98px) {
+  .message-section-two .message-main {
+    padding: 70px 30px;
+  }
+}
 .message-section-two .message-main .message-form .input-group .form-field {
   background-color: #f1f6fc;
   border-radius: 30px !important;
@@ -1514,9 +1519,9 @@ p {
     font-size: 12px;
   }
 }
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 567.98px) {
   .message-section-two .message-main .message-contact-info .contact-info .cn-info {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 .message-section-two .message-main .message-contact-info .contact-info .cn-info a {
