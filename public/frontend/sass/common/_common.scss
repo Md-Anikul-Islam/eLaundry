@@ -24,6 +24,8 @@ A. Page Header CSS
 *** Template Pages ***
 =========================
 11. Holidays Page CSS
+12. Location Page CSS
+13. Contact Page CSS
 ============================
 */
 
@@ -50,7 +52,8 @@ A. Page Header CSS
   --transition: all linear 0.3s;
   --body-background: #ffffff;
   --border-color: #f0f0f0;
-  --shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;;
+  --shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  --shadow2: rgba(149, 157, 165, 0.2) 0px 8px 6px;
 }
 
 /*=============================
@@ -194,7 +197,7 @@ p {
 }
 .theme-btn-primary {
   background: var(--primary);
-  // border: 1px solid var(--primary);
+  border: none;
   color: white;
   position: relative;
   z-index: 9;

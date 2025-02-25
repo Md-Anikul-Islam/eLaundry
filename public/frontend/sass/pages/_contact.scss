@@ -1,0 +1,181 @@
+/*=============================
+	13. Contact CSS Start
+===============================*/
+@import "../components/form-input";
+
+.contact-section {
+    .contact-information {
+        margin-bottom: 80px;
+
+        .info-item {
+            border: 1px solid var(--border-color);
+            padding: 20px 30px;
+            height: 100%;
+            box-shadow: var(--shadow2);
+
+            .icon {
+                width: 65px;
+                height: 65px;
+                transition: var(--transition);
+                background: var(--primary);
+                color: white;
+            }
+
+            .text {
+                .title {
+                    margin-bottom: 7px;
+                }
+
+                ul {
+                    li {
+                        color: var(--paragraph-color);
+
+                        a {
+                            color: var(--paragraph-color);
+                            @media (min-width: 1199.98px) and (max-width: 1399.98px) {
+                                font-size: 13px;
+                            }
+                            &:hover {
+                                color: var(--primary);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                .icon {
+                    background-color: var(--tertiary);
+                    color: var(--primary);
+                }
+            }
+        }
+    }
+}
+
+/*=============================
+	 Message Section CSS start
+===============================*/
+
+.message-section {
+    padding-bottom: 92px;
+    &::before {
+        width: 1600px;
+        height: 100%;
+        background-color: white !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        @media (max-width: 1399.98px) {
+            width: 1100px;
+        }
+    }
+    .section-title {
+        margin-bottom: 40px;
+        position: relative;
+    }
+    .message-image {
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        max-width: 915px;
+        height: 854px;
+        img {
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            object-fit: cover;
+            object-position: center;
+            height: 100%;
+        }
+        @media (max-width: 1399.98px) {
+            max-width: 585px;
+        }
+    }
+}
+
+// messages section two
+.message-section-two {
+    padding-bottom: 120px;
+    //   background: var(--bg-one);
+    &::before {
+        display: none;
+    }
+
+    .message-main {
+        background-color: white;
+        padding: 80px 60px;
+
+        .message-form {
+            .input-group {
+                .form-field {
+                    background-color: #f1f6fc;
+                    border-radius: 30px !important;
+                }
+
+                .textarea-control {
+                    height: 150px;
+                }
+            }
+        }
+
+        .message-contact-info {
+            padding: 80px 40px;
+            background-color: var(--tertiary);
+            height: 100%;
+
+            .contact-info {
+                li {
+                    gap: 15px;
+
+                    .icon {
+                        width: 40px;
+                        height: 40px;
+                        text-align: center;
+                        line-height: 40px;
+                        border-radius: 10px;
+                        background-color: rgba(255, 255, 255, 0.1);
+                        color: white;
+                    }
+                }
+
+                .cn-title {
+                    color: white;
+                    // opacity: 0.8;
+                    margin-bottom: 2px;
+                }
+
+                .cn-info {
+                    color: white;
+                    // opacity: 0.8;
+                    text-wrap: wrap !important;
+                    @media (min-width: 992px) and (max-width: 1399.98px) {
+                        font-size: 12px;
+                    }
+                    @media screen and (max-width: 767.98px) {
+                        font-size: 12px;
+                    }
+
+                    a {
+                        color: white;
+                        //   opacity: 0.8;
+
+                        &:hover {
+                            // opacity: 1;
+                            color: var(--primary);
+                        }
+                    }
+                }
+
+                li + li {
+                    margin-top: 58px;
+                }
+            }
+        }
+    }
+
+    &.style2 {
+        .message-main {
+            border: 1px solid var(--border-color);
+        }
+    }
+}

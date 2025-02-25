@@ -22,7 +22,58 @@
             </div>
         </section>
         <!-- Page Header Section End-->
-    <p class="fs-1 text-center text-uppercase py-120 mt-1">
-        we are working on this page, please check back later
-    </p>
+         <!-- Contact section Start -->
+    <section class="contact-section pt-120">
+        <div class="container">
+            <div class="contact-information">
+                <div class="row">
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="info-item d-flex align-items-center rounded-20 gap-4">
+                            <div
+                                class="icon rounded-pill flex-shrink-0 d-flex align-items-center justify-content-center">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="text">
+                                <h4 class="title">Phone</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="tel:929-442-5833">929-442-5833</a></li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="info-item d-flex align-items-center rounded-20 gap-4">
+                            <div
+                                class="icon rounded-pill flex-shrink-0 d-flex align-items-center justify-content-center">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="text">
+                                <h4 class="title">Email</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="mailto:info@halseystreetlaundromat.com">info@halseystreetlaundromat.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="info-item d-flex align-items-center rounded-20 gap-4">
+                            <div
+                                class="icon rounded-pill flex-shrink-0 d-flex align-items-center justify-content-center">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="text">
+                                <h4 class="title">Location</h4>
+                                <ul class="list-unstyled">
+                                    <li>653 Halsey Street Brooklyn NY 11233</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact section End -->
+    
 @endsection

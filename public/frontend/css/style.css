@@ -23,6 +23,8 @@ A. Page Header CSS
 *** Template Pages ***
 =========================
 11. Holidays Page CSS
+12. Location Page CSS
+13. Contact Page CSS
 ============================
 */
 /*=============================
@@ -47,6 +49,7 @@ A. Page Header CSS
   --body-background: #ffffff;
   --border-color: #f0f0f0;
   --shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  --shadow2: rgba(149, 157, 165, 0.2) 0px 8px 6px;
 }
 
 /*=============================
@@ -212,6 +215,7 @@ p {
 
 .theme-btn-primary {
   background: var(--primary);
+  border: none;
   color: white;
   position: relative;
   z-index: 9;
@@ -1295,4 +1299,235 @@ p {
 }
 .holidays-section .holiday-item + .project-item {
   margin-top: 30px;
+}
+
+/*=============================
+	13. Contact CSS Start
+===============================*/
+/*=============================
+ Form Input CSS Start
+===============================*/
+.input-group .form-label {
+  color: var(--primary);
+  font-family: var(--font-Space);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.input-group .form-field {
+  height: 68px;
+  border: 1px solid var(--border-color);
+  color: var(--paragraph-color);
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.36px;
+  width: 100%;
+  border-radius: 50px !important;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  padding: 0 20px;
+}
+.input-group .form-field:focus {
+  border-color: var(--primary);
+}
+.input-group .form-field::-webkit-input-placeholder {
+  color: var(--paragraph-color);
+  opacity: 1;
+}
+.input-group .form-field::-moz-placeholder {
+  color: var(--paragraph-color);
+  opacity: 1;
+}
+.input-group .form-field:-ms-input-placeholder {
+  color: var(--paragraph-color);
+  opacity: 1;
+}
+.input-group .form-field::-ms-input-placeholder {
+  color: var(--paragraph-color);
+  opacity: 1;
+}
+.input-group .form-field::placeholder {
+  color: var(--paragraph-color);
+  opacity: 1;
+}
+.input-group .textarea-control {
+  height: 130px;
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 30px !important;
+  resize: none;
+}
+.input-group .textarea-control:focus {
+  outline: var(--primary) !important;
+}
+.input-group .textarea-control::-webkit-input-placeholder {
+  color: var(--paragraph-color);
+  opacity: 1;
+}
+.input-group .textarea-control::-moz-placeholder {
+  color: var(--paragraph-color);
+  opacity: 1;
+}
+.input-group .textarea-control:-ms-input-placeholder {
+  color: var(--paragraph-color);
+  opacity: 1;
+}
+.input-group .textarea-control::-ms-input-placeholder {
+  color: var(--paragraph-color);
+  opacity: 1;
+}
+.input-group .textarea-control::placeholder {
+  color: var(--paragraph-color);
+  opacity: 1;
+}
+
+.contact-section .contact-information {
+  margin-bottom: 80px;
+}
+.contact-section .contact-information .info-item {
+  border: 1px solid var(--border-color);
+  padding: 20px 30px;
+  height: 100%;
+  -webkit-box-shadow: var(--shadow2);
+          box-shadow: var(--shadow2);
+}
+.contact-section .contact-information .info-item .icon {
+  width: 65px;
+  height: 65px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  background: var(--primary);
+  color: white;
+}
+.contact-section .contact-information .info-item .text .title {
+  margin-bottom: 7px;
+}
+.contact-section .contact-information .info-item .text ul li {
+  color: var(--paragraph-color);
+}
+.contact-section .contact-information .info-item .text ul li a {
+  color: var(--paragraph-color);
+}
+@media (min-width: 1199.98px) and (max-width: 1399.98px) {
+  .contact-section .contact-information .info-item .text ul li a {
+    font-size: 13px;
+  }
+}
+.contact-section .contact-information .info-item .text ul li a:hover {
+  color: var(--primary);
+}
+.contact-section .contact-information .info-item:hover .icon {
+  background-color: var(--tertiary);
+  color: var(--primary);
+}
+
+/*=============================
+	 Message Section CSS start
+===============================*/
+.message-section {
+  padding-bottom: 92px;
+}
+.message-section::before {
+  width: 1600px;
+  height: 100%;
+  background-color: white !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+}
+@media (max-width: 1399.98px) {
+  .message-section::before {
+    width: 1100px;
+  }
+}
+.message-section .section-title {
+  margin-bottom: 40px;
+  position: relative;
+}
+.message-section .message-image {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  max-width: 915px;
+  height: 854px;
+}
+.message-section .message-image img {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  height: 100%;
+}
+@media (max-width: 1399.98px) {
+  .message-section .message-image {
+    max-width: 585px;
+  }
+}
+
+.message-section-two {
+  padding-bottom: 120px;
+}
+.message-section-two::before {
+  display: none;
+}
+.message-section-two .message-main {
+  background-color: white;
+  padding: 80px 60px;
+}
+.message-section-two .message-main .message-form .input-group .form-field {
+  background-color: #f1f6fc;
+  border-radius: 30px !important;
+}
+.message-section-two .message-main .message-form .input-group .textarea-control {
+  height: 150px;
+}
+.message-section-two .message-main .message-contact-info {
+  padding: 80px 40px;
+  background-color: var(--tertiary);
+  height: 100%;
+}
+.message-section-two .message-main .message-contact-info .contact-info li {
+  gap: 15px;
+}
+.message-section-two .message-main .message-contact-info .contact-info li .icon {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+.message-section-two .message-main .message-contact-info .contact-info .cn-title {
+  color: white;
+  margin-bottom: 2px;
+}
+.message-section-two .message-main .message-contact-info .contact-info .cn-info {
+  color: white;
+  text-wrap: wrap !important;
+}
+@media (min-width: 992px) and (max-width: 1399.98px) {
+  .message-section-two .message-main .message-contact-info .contact-info .cn-info {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .message-section-two .message-main .message-contact-info .contact-info .cn-info {
+    font-size: 12px;
+  }
+}
+.message-section-two .message-main .message-contact-info .contact-info .cn-info a {
+  color: white;
+}
+.message-section-two .message-main .message-contact-info .contact-info .cn-info a:hover {
+  color: var(--primary);
+}
+.message-section-two .message-main .message-contact-info .contact-info li + li {
+  margin-top: 58px;
+}
+.message-section-two.style2 .message-main {
+  border: 1px solid var(--border-color);
 }
