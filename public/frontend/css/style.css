@@ -1426,6 +1426,10 @@ p {
   background-color: var(--tertiary);
   color: var(--primary);
 }
+.contact-section .contact-map iframe {
+  width: 100%;
+  height: 737px;
+}
 
 /*=============================
 	 Message Section CSS start
