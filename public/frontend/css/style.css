@@ -15,7 +15,8 @@
 05. About CSS
 06. Service CSS
 07. Feature CSS
-08. Why Section CSS
+08. Service Details CSS
+09. Why Section CSS
 
 *** Template Pages ***
 =========================
@@ -1014,7 +1015,34 @@ p {
 }
 
 /*=============================
-	08. Why CSS Start
+	08. Service Details CSS
+===============================*/
+.service-details-section {
+  padding-bottom: 120px !important;
+}
+.service-details-section .main-img img {
+  max-height: 580px;
+}
+.service-details-section .title {
+  font-size: 40px;
+  line-height: 50px;
+}
+.service-details-section .service-details .desc {
+  margin-top: 5px;
+}
+.service-details-section .service-details .desc p + p {
+  margin-top: 15px;
+}
+.service-details-section .service-details .desc p {
+  font-size: 14px;
+}
+.service-details-section .service-details .desc p span {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/*=============================
+	09. Why CSS Start
 ===============================*/
 .why-section .why-card {
   width: 100%;

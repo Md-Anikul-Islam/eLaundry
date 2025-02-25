@@ -1,0 +1,31 @@
+/*=============================
+	08. Service Details CSS
+===============================*/
+.service-details-section{
+    padding-bottom: 120px !important;
+    .main-img{
+
+        img{
+            max-height: 580px;
+        }
+    }
+    .title{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .service-details{
+        .desc{
+            margin-top: 5px;
+            p+p{
+                margin-top: 15px;
+            }
+            p{
+                font-size: 14px;
+                span{
+                    color: var(--primary);
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

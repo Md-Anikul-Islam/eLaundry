@@ -44,8 +44,10 @@
                 <div class="col-lg-6">
                     <div class="about-img ">
                         <div class="img-main position-relative mx-auto mx-lg-0">
-                            <img src="{{URL::to('frontend/images/about/about-img-1.webp')}}" class="w-100 img-fluid rounded-pill" alt="about-img-1" />
-                            <img src="{{URL::to('frontend/images/about/about-shape.svg')}}" alt="about-shape" class="about-shape position-absolute">
+                            <img src="{{URL::to('frontend/images/about/about-img-1.webp')}}"
+                                class="w-100 img-fluid rounded-pill" alt="about-img-1" />
+                            <img src="{{URL::to('frontend/images/about/about-shape.svg')}}" alt="about-shape"
+                                class="about-shape position-absolute">
                         </div>
                     </div>
                 </div>
@@ -58,7 +60,10 @@
                             </h3>
                         </div>
                         <p class="mb-30">
-                            Welcome to Halsey Street Laundromat, your premier destination for comprehensive laundry services in New York City. Located conveniently in the heart of the bustling metropolis, our establishment stands as a beacon of reliability and efficiency in the realm of garment care. We provide :
+                            Welcome to Halsey Street Laundromat, your premier destination for comprehensive laundry services
+                            in New York City. Located conveniently in the heart of the bustling metropolis, our
+                            establishment stands as a beacon of reliability and efficiency in the realm of garment care. We
+                            provide :
                         </p>
 
 
@@ -83,29 +88,37 @@
                             </div>
                         </div>
                         <div class="text-start text-lg-center text-xl-start">
-                            <a
-                                class="theme-btn theme-btn-primary position-relative d-inline-flex align-items-center" data-bs-toggle="collapse" href="#readMore" role="button" aria-expanded="false" aria-controls="readMore">
+                            <a class="theme-btn theme-btn-primary position-relative d-inline-flex align-items-center"
+                                data-bs-toggle="collapse" href="#readMore" role="button" aria-expanded="false"
+                                aria-controls="readMore">
                                 Read More
                                 <span class="btn-arrow">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <g clip-path="url(#clip0_4443_62)">
-                            <path
-                                d="M13.4317 12.5381C13.4967 12.4215 13.535 12.2898 13.5367 12.1506L13.5733 7.95396C13.5758 7.60896 13.2992 7.32646 12.9483 7.32312C12.6058 7.32312 12.3258 7.59896 12.3233 7.94229L12.2975 10.8665L7.48917 6.05813C7.245 5.81396 6.84917 5.81396 6.605 6.05813C6.36083 6.30229 6.36083 6.69812 6.605 6.94229L11.4158 11.7531L8.59083 11.7831C8.245 11.7873 7.96833 12.0698 7.9725 12.4148C7.97583 12.7581 8.255 13.0331 8.60417 13.0331C8.60417 13.0331 12.6783 12.989 12.685 12.989C12.9967 12.9856 13.2842 12.8023 13.4325 12.539L13.4317 12.5381Z"
-                                fill="currentColor" class="btn-arrow-fill"></path>
-                            <path
-                                d="M9.99984 19.2219C9.29484 19.2219 8.59818 19.2094 7.91151 19.1853C4.06734 19.0503 0.949844 15.9328 0.81401 12.0869C0.789844 11.3994 0.777344 10.7036 0.777344 9.99859C0.777344 9.29359 0.789844 8.59776 0.81401 7.91026C0.949844 4.06609 4.06734 0.948594 7.91151 0.813594C9.28651 0.76526 10.7148 0.76526 12.0882 0.813594C15.9323 0.948594 19.0498 4.06609 19.1857 7.91193C19.2098 8.59859 19.2223 9.29526 19.2223 10.0003C19.2223 10.7053 19.2098 11.4011 19.1857 12.0886C19.0498 15.9336 15.9323 19.0511 12.0882 19.1869C11.4015 19.2111 10.7048 19.2236 9.99984 19.2236V19.2219ZM9.99984 2.02609C9.31068 2.02609 8.62818 2.03859 7.95568 2.06276C4.76401 2.17443 2.17568 4.76276 2.06318 7.95443C2.03984 8.62776 2.02734 9.30859 2.02734 9.99859C2.02734 10.6886 2.03984 11.3703 2.06318 12.0428C2.17568 15.2344 4.76401 17.8236 7.95568 17.9344C9.30151 17.9836 10.699 17.9836 12.044 17.9344C15.2365 17.8228 17.8248 15.2344 17.9365 12.0428C17.9598 11.3694 17.9723 10.6886 17.9723 9.99859C17.9723 9.30859 17.9598 8.62693 17.9365 7.95443C17.824 4.76276 15.2357 2.17359 12.044 2.06276C11.3707 2.03859 10.689 2.02609 9.99984 2.02609Z"
-                                fill="currentColor" class="btn-arrow-fill"></path>
-                          </g>
-                        </svg>
-                      </span>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_4443_62)">
+                                            <path
+                                                d="M13.4317 12.5381C13.4967 12.4215 13.535 12.2898 13.5367 12.1506L13.5733 7.95396C13.5758 7.60896 13.2992 7.32646 12.9483 7.32312C12.6058 7.32312 12.3258 7.59896 12.3233 7.94229L12.2975 10.8665L7.48917 6.05813C7.245 5.81396 6.84917 5.81396 6.605 6.05813C6.36083 6.30229 6.36083 6.69812 6.605 6.94229L11.4158 11.7531L8.59083 11.7831C8.245 11.7873 7.96833 12.0698 7.9725 12.4148C7.97583 12.7581 8.255 13.0331 8.60417 13.0331C8.60417 13.0331 12.6783 12.989 12.685 12.989C12.9967 12.9856 13.2842 12.8023 13.4325 12.539L13.4317 12.5381Z"
+                                                fill="currentColor" class="btn-arrow-fill"></path>
+                                            <path
+                                                d="M9.99984 19.2219C9.29484 19.2219 8.59818 19.2094 7.91151 19.1853C4.06734 19.0503 0.949844 15.9328 0.81401 12.0869C0.789844 11.3994 0.777344 10.7036 0.777344 9.99859C0.777344 9.29359 0.789844 8.59776 0.81401 7.91026C0.949844 4.06609 4.06734 0.948594 7.91151 0.813594C9.28651 0.76526 10.7148 0.76526 12.0882 0.813594C15.9323 0.948594 19.0498 4.06609 19.1857 7.91193C19.2098 8.59859 19.2223 9.29526 19.2223 10.0003C19.2223 10.7053 19.2098 11.4011 19.1857 12.0886C19.0498 15.9336 15.9323 19.0511 12.0882 19.1869C11.4015 19.2111 10.7048 19.2236 9.99984 19.2236V19.2219ZM9.99984 2.02609C9.31068 2.02609 8.62818 2.03859 7.95568 2.06276C4.76401 2.17443 2.17568 4.76276 2.06318 7.95443C2.03984 8.62776 2.02734 9.30859 2.02734 9.99859C2.02734 10.6886 2.03984 11.3703 2.06318 12.0428C2.17568 15.2344 4.76401 17.8236 7.95568 17.9344C9.30151 17.9836 10.699 17.9836 12.044 17.9344C15.2365 17.8228 17.8248 15.2344 17.9365 12.0428C17.9598 11.3694 17.9723 10.6886 17.9723 9.99859C17.9723 9.30859 17.9598 8.62693 17.9365 7.95443C17.824 4.76276 15.2357 2.17359 12.044 2.06276C11.3707 2.03859 10.689 2.02609 9.99984 2.02609Z"
+                                                fill="currentColor" class="btn-arrow-fill"></path>
+                                        </g>
+                                    </svg>
+                                </span>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="description collapse" id="readMore">
-                <p>At Halsey Street Laundromat, we understand the value of time and the significance of impeccable service. Our dedicated team of professionals is committed to upholding the highest standards of excellence, ensuring each customer receives personalized attention and a seamless laundry experience from start to finish.</p>
-                <p>Whether you’re a busy professional seeking convenience or a discerning individual in pursuit of quality garment care, Halsey Street Laundromat stands ready to serve as your trusted laundry partner. Experience the difference today and discover why we are the preferred choice for discerning clients across New York City.</p>
+                <p>At Halsey Street Laundromat, we understand the value of time and the significance of impeccable service.
+                    Our dedicated team of professionals is committed to upholding the highest standards of excellence,
+                    ensuring each customer receives personalized attention and a seamless laundry experience from start to
+                    finish.</p>
+                <p>Whether you’re a busy professional seeking convenience or a discerning individual in pursuit of quality
+                    garment care, Halsey Street Laundromat stands ready to serve as your trusted laundry partner. Experience
+                    the difference today and discover why we are the preferred choice for discerning clients across New York
+                    City.</p>
             </div>
         </div>
     </section>
@@ -178,8 +191,9 @@
                     <div class="service-card rounded-20">
                         <div class="img-part position-relative">
                             <div class="img overflow-hidden">
-                                <div  class="d-block w-100" tabindex="0">
-                                    <img src="{{URL::to('frontend/images/service/image-3.png')}}" alt="service-one-img" class="img-fluid w-100">
+                                <div class="d-block w-100" tabindex="0">
+                                    <img src="{{URL::to('frontend/images/service/image-3.png')}}" alt="service-one-img"
+                                        class="img-fluid w-100">
                                 </div>
                             </div>
                             <div
@@ -189,7 +203,8 @@
                         </div>
                         <div class="service-text text-center">
                             <h4 class="service-title">Pick-up and Delivery</h4>
-                            <p>Enjoy the convenience of our doorstep service – schedule a pickup time, and we’ll handle the rest, ensuring your laundry is cleaned and delivered back to you promptly.</p>
+                            <p>Enjoy the convenience of our doorstep service – schedule a pickup time, and we’ll handle the
+                                rest, ensuring your laundry is cleaned and delivered back to you promptly.</p>
                         </div>
                     </div>
                 </div>
@@ -197,8 +212,9 @@
                     <div class="service-card rounded-20">
                         <div class="img-part position-relative">
                             <div class="img overflow-hidden">
-                                <div  class="d-block w-100" tabindex="0">
-                                    <img src="{{URL::to('frontend/images/service/image-4.png')}}" alt="service-one-img" class="img-fluid w-100">
+                                <div class="d-block w-100" tabindex="0">
+                                    <img src="{{URL::to('frontend/images/service/image-4.png')}}" alt="service-one-img"
+                                        class="img-fluid w-100">
                                 </div>
                             </div>
                             <div
@@ -208,7 +224,8 @@
                         </div>
                         <div class="service-text text-center">
                             <h4 class="service-title">Wash & Fold</h4>
-                            <p>Let us take the hassle out of laundry day with our expert Wash and Fold service, where your clothes are meticulously cleaned, neatly folded, and ready for you to enjoy.</p>
+                            <p>Let us take the hassle out of laundry day with our expert Wash and Fold service, where your
+                                clothes are meticulously cleaned, neatly folded, and ready for you to enjoy.</p>
                         </div>
                     </div>
                 </div>
@@ -216,8 +233,9 @@
                     <div class="service-card rounded-20">
                         <div class="img-part position-relative">
                             <div class="img overflow-hidden">
-                                <div  class="d-block w-100" tabindex="0">
-                                    <img src="{{URL::to('frontend/images/service/image-5.png')}}" alt="service-one-img" class="img-fluid w-100">
+                                <div class="d-block w-100" tabindex="0">
+                                    <img src="{{URL::to('frontend/images/service/image-5.png')}}" alt="service-one-img"
+                                        class="img-fluid w-100">
                                 </div>
                             </div>
                             <div
@@ -228,7 +246,9 @@
                         <div class="service-text text-center">
                             <h4 class="service-title">Dry Cleaning</h4>
 
-                            <p>Trust our professional Dry Cleaning service to preserve the quality and integrity of your garments, using advanced techniques to remove stains and refresh fabrics to with heartiest care.</p>
+                            <p>Trust our professional Dry Cleaning service to preserve the quality and integrity of your
+                                garments, using advanced techniques to remove stains and refresh fabrics to with heartiest
+                                care.</p>
                         </div>
                     </div>
                 </div>
@@ -236,8 +256,9 @@
                     <div class="service-card rounded-20">
                         <div class="img-part position-relative">
                             <div class="img overflow-hidden">
-                                <div  class="d-block w-100" tabindex="0">
-                                    <img src="{{URL::to('frontend/images/service/image-4.png')}}" alt="service-one-img" class="img-fluid w-100">
+                                <div class="d-block w-100" tabindex="0">
+                                    <img src="{{URL::to('frontend/images/service/image-4.png')}}" alt="service-one-img"
+                                        class="img-fluid w-100">
                                 </div>
                             </div>
                             <div
@@ -247,7 +268,8 @@
                         </div>
                         <div class="service-text text-center">
                             <h4 class="service-title">Wash & Fold</h4>
-                            <p>Let us take the hassle out of laundry day with our expert Wash and Fold service, where your clothes are meticulously cleaned, neatly folded, and ready for you to enjoy.</p>
+                            <p>Let us take the hassle out of laundry day with our expert Wash and Fold service, where your
+                                clothes are meticulously cleaned, neatly folded, and ready for you to enjoy.</p>
                         </div>
                     </div>
                 </div>
@@ -255,7 +277,83 @@
         </div>
     </section>
 
-    <!-- Branch section Start -->
+    <!-- Service-details section Start -->
+    <section class="service-details-section">
+        <div class="container">
+            <div class="section-title mb-60 col-lg-7 mx-auto">
+                <h3 class="title text-center">
+                We Clean Everything Laundry Service
+                </h3>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-md-6 align-self-center">
+                    <div class="main-img">
+                        <img src="{{URL::to('frontend/images/service/image-6.png')}}" class="img-fluid" alt="service-img">
+                    </div>
+                </div>
+                <div class="col-md-6 align-self-center">
+                    <div class="service-details">
+                        <div class="desc">
+                            <p>
+                                At Halsey Street Laundromat, we take pride in offering our signature “We Clean Everything”
+                                Laundry Service, ensuring that all your garments receive the care and attention they
+                                deserve. Here’s what sets our laundry service apart:
+                            </p>
+                            <p>
+                                <span>Comprehensive Care:</span> With our “We Clean Everything” Laundry Service, we handle a
+                                wide variety of garments and fabrics, from everyday clothing items like shirts, pants, and
+                                dresses to delicate fabrics such as silk, wool, and cashmere. No matter the material or type
+                                of garment, you can trust us to clean it thoroughly and safely.
+                            </p>
+                            <p>
+                                <span>Advanced Techniques:</span> Our team of skilled professionals employs advanced laundry
+                                techniques and state-of-the-art equipment to ensure optimal cleanliness and garment care.
+                                From pre-treating stains to selecting the appropriate wash cycle and temperature, we take
+                                every measure to deliver superior results.
+                            </p>
+                            <p>
+                                <span>Eco-Friendly Practices: </span> At Halsey Street Laundromat, we are committed to
+                                sustainability and eco-friendly practices. That’s why we use environmentally safe detergents
+                                and cleaning agents that effectively remove dirt and stains while minimizing our impact on
+                                the environment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-md-6 align-self-center">
+                    <div class="service-details">
+                        <div class="desc">
+                            <p>
+                            <span> Customized Solutions: </span> We understand that every garment is unique, which is why we offer customized solutions to meet your specific needs and preferences. Whether you have special instructions for handling delicate fabrics or require stain removal for stubborn marks, we tailor our approach to ensure your complete satisfaction.
+                            </p>
+                            <p>
+                            <span>Convenient Options:</span>  With our convenient Pick up and Delivery service, getting your laundry done has never been easier. Simply schedule a pickup time that works for you, and we’ll take care of the rest. You can also choose our Wash and Fold service for added convenience, where we neatly fold your clean laundry for easy storage and organization.
+                            </p>
+                            <p>
+                            <span>Quality Assurance:</span>  Your satisfaction is our top priority, which is why we stand behind the quality of our “We Clean Everything” Laundry Service. If for any reason you’re not completely satisfied with the results, simply let us know, and we’ll make it right.
+                            </p>
+                            <p>
+                            Experience the convenience and quality of our “We Clean Everything” Laundry Service at Halsey Street Laundromat. Trust us with your laundry needs, and let us exceed your expectations every time.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 align-self-center">
+                    <div class="main-img">
+                        <img src="{{URL::to('frontend/images/service/image-7.jpg')}}" class="img-fluid" alt="service-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <!-- Service-details section Start -->
+
+    <!-- Why section Start -->
+
     <section class="why-section py-120 section-bg">
         <div class="container">
             <div class="section-title style-two text-center mb-1">
@@ -271,7 +369,9 @@
                             <div class="number">01</div>
                             <h4 class="why-title">Comprehensive Services</h4>
                             <p class="why-desc text-center">
-                                At Halsey Street Laundromat, we offer a full suite of laundry services to meet all your needs under one roof. From Pick up and Delivery to meticulous Wash and Fold and professional Dry Cleaning, we have you covered from start to finish.
+                                At Halsey Street Laundromat, we offer a full suite of laundry services to meet all your
+                                needs under one roof. From Pick up and Delivery to meticulous Wash and Fold and professional
+                                Dry Cleaning, we have you covered from start to finish.
                             </p>
                         </div>
                     </div>
@@ -282,7 +382,9 @@
                             <div class="number">02</div>
                             <h4 class="why-title">Unparalleled Convenience</h4>
                             <p class="why-desc text-center">
-                                Our Pick up and Delivery service eliminates the hassle of laundry day by bringing our exceptional services directly to your doorstep. Say goodbye to the time-consuming chore of lugging heavy laundry bags to and from the laundromat – we’ll handle it all for you.
+                                Our Pick up and Delivery service eliminates the hassle of laundry day by bringing our
+                                exceptional services directly to your doorstep. Say goodbye to the time-consuming chore of
+                                lugging heavy laundry bags to and from the laundromat – we’ll handle it all for you.
                             </p>
                         </div>
                     </div>
@@ -293,7 +395,9 @@
                             <div class="number">03</div>
                             <h4 class="why-title">Exceptional Quality</h4>
                             <p class="why-desc text-center">
-                                We take pride in our commitment to delivering exceptional quality with every garment. Our team of skilled professionals utilizes industry-leading techniques and eco-friendly practices to ensure your clothing receives the utmost care and attention it deserves.
+                                We take pride in our commitment to delivering exceptional quality with every garment. Our
+                                team of skilled professionals utilizes industry-leading techniques and eco-friendly
+                                practices to ensure your clothing receives the utmost care and attention it deserves.
                             </p>
                         </div>
                     </div>
@@ -304,7 +408,9 @@
                             <div class="number">04</div>
                             <h4 class="why-title">Personalized Attention</h4>
                             <p class="why-desc text-center">
-                                At Halsey Street Laundromat, every customer is important to us. We believe in providing personalized attention to address your unique needs and preferences, ensuring your complete satisfaction with every service we offer.
+                                At Halsey Street Laundromat, every customer is important to us. We believe in providing
+                                personalized attention to address your unique needs and preferences, ensuring your complete
+                                satisfaction with every service we offer.
                             </p>
                         </div>
                     </div>
@@ -315,7 +421,9 @@
                             <div class="number">05</div>
                             <h4 class="why-title">Reliable Service</h4>
                             <p class="why-desc text-center">
-                                When you choose Halsey Street Laundromat, you can trust that your laundry is in good hands. We prioritize reliability and consistency in our services, so you can rest assured that your garments will be handled with care and returned to you in pristine condition, every time.
+                                When you choose Halsey Street Laundromat, you can trust that your laundry is in good hands.
+                                We prioritize reliability and consistency in our services, so you can rest assured that your
+                                garments will be handled with care and returned to you in pristine condition, every time.
                             </p>
                         </div>
                     </div>
@@ -326,14 +434,16 @@
                             <div class="number">06</div>
                             <h4 class="why-title">Advanced Techniques</h4>
                             <p class="why-desc text-center">
-                                Our team of skilled professionals employs advanced laundry techniques and state-of-the-art equipment to ensure optimal cleanliness and garment care. From pre-treating stains to selecting the appropriate wash cycle and temperature, we take every measure to deliver superior results.
+                                Our team of skilled professionals employs advanced laundry techniques and state-of-the-art
+                                equipment to ensure optimal cleanliness and garment care. From pre-treating stains to
+                                selecting the appropriate wash cycle and temperature, we take every measure to deliver
+                                superior results.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
-
+    <!-- Why section End -->
 @endsection
