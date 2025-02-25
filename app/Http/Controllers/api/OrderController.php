@@ -83,4 +83,10 @@ class OrderController extends Controller
             'order' => $orderWithDetails
         ], 201);
     }
+
+    public function myOrder()
+    {
+        $orders = Order::where('user_id', auth()->user()->id)->with('orderItems.service', 'payment')->latest()->get();
+        return response()->json($orders);
+    }
 }

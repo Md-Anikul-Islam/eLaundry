@@ -39,6 +39,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     //order
     Route::post('order', [OrderController::class, 'store']);
+    Route::get('my-order', [OrderController::class, 'myOrder']);
 
     //slider
     Route::get('slider', [SliderController::class, 'index']);
