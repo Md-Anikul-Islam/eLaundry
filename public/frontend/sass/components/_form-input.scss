@@ -1,0 +1,48 @@
+/*=============================
+ Form Input CSS Start
+===============================*/
+.input-group {
+    .form-label {
+      color: var(--primary);
+      font-family: var(--font-Space);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 30px;
+      margin-bottom: 10px;
+    }
+    .form-field {
+      height: 68px;
+      border: 1px solid var(--border-color);
+      color: var(--paragraph-color);
+      font-size: 18px;
+      font-weight: 400;
+      letter-spacing: -0.36px;
+      width: 100%;
+      border-radius: 50px !important;
+      transition: var(--transition);
+      padding: 0 20px;
+  
+      &:focus {
+        border-color: var(--primary);
+      }
+      &::placeholder {
+        color: var(--paragraph-color);
+        opacity: 1;
+      }
+    }
+    .textarea-control {
+      height: 130px;
+      padding: 20px;
+      margin-bottom: 40px;
+      border-radius: 30px !important;
+      resize: none;
+      &:focus {
+        outline: var(--primary)  !important;
+      }
+      &::placeholder {
+        color: var(--paragraph-color);
+        opacity: 1;
+      }
+    }
+  }
+  
