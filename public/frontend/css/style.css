@@ -1187,5 +1187,42 @@ p {
 }
 
 /*=============================
-	09. About Page CSS Start
+	09. Holidays Page CSS Start
 ===============================*/
+.page-header-section {
+  padding-top: 100px;
+}
+.page-header-section .page-header-title {
+  font-size: 60px;
+  line-height: 68px; /* 113.333% */
+  letter-spacing: -1.48px;
+  margin-bottom: 30px;
+}
+.page-header-section .bread-crumb ul li {
+  color: var(--secondary);
+  text-align: right;
+  font-family: "Space Grotesk";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 163.636% */
+  position: relative;
+  padding: 0 20px;
+}
+.page-header-section .bread-crumb ul li::after {
+  font-family: "Font Awesome 6 Pro";
+  content: "\f105";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: -5px;
+  font-size: 16px;
+  color: var(--primary);
+}
+.page-header-section .bread-crumb ul li:last-child::after {
+  display: none;
+}
+.page-header-section .bread-crumb ul li a {
+  color: var(--primary);
+}

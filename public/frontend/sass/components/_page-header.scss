@@ -1,0 +1,45 @@
+// F. Page Header CSS
+
+.page-header-section {
+    padding-top: 100px;
+    .page-header-title {
+      font-size: 60px;
+      line-height: 68px; /* 113.333% */
+      letter-spacing: -1.48px;
+      margin-bottom: 30px;
+    }
+    .bread-crumb {
+      ul {
+        li {
+          color: var(--secondary);
+          text-align: right;
+          font-family: "Space Grotesk";
+          font-size: 22px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 36px; /* 163.636% */
+          position: relative;
+          padding: 0 20px;
+          &::after {
+            font-family: "Font Awesome 6 Pro";
+            content: "\f105";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -5px;
+            font-size: 16px;
+            color: var(--primary);
+          }
+          &:last-child {
+            &::after {
+              display: none;
+            }
+          }
+          a {
+            color: var(--primary);
+          }
+        }
+      }
+    }
+  }
+  
