@@ -1,0 +1,50 @@
+/*=============================
+	13. Contact CSS Start
+===============================*/
+
+.contact-section {
+    .contact-information {
+      margin-bottom: 80px;
+      
+      .info-item {
+        border: 1px solid var(--border-color);
+        padding: 20px 30px;
+        height: 100%;
+        
+        .icon {
+          width: 65px;
+          height: 65px;
+          transition: var(--transition);
+          background: var(--tertiary);
+          color: var(--primary);
+        }
+        
+        .text {
+          .title {
+            margin-bottom: 7px;
+          }
+          
+          ul {
+            li {
+              color: var(--paragraph-color);
+              
+              a {
+                color: var(--paragraph-color);
+                
+                &:hover {
+                  color: var(--primary);
+                }
+              }
+            }
+          }
+        }
+        
+        &:hover {
+          .icon {
+            background-color: var(--primary);
+            color: white;
+          }
+        }
+      }
+    }
+  }

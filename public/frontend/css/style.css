@@ -23,6 +23,8 @@ A. Page Header CSS
 *** Template Pages ***
 =========================
 11. Holidays Page CSS
+12. Location Page CSS
+13. Contact Page CSS
 ============================
 */
 /*=============================
@@ -1295,4 +1297,40 @@ p {
 }
 .holidays-section .holiday-item + .project-item {
   margin-top: 30px;
+}
+
+/*=============================
+	13. Contact CSS Start
+===============================*/
+.contact-section .contact-information {
+  margin-bottom: 80px;
+}
+.contact-section .contact-information .info-item {
+  border: 1px solid var(--border-color);
+  padding: 20px 30px;
+  height: 100%;
+}
+.contact-section .contact-information .info-item .icon {
+  width: 65px;
+  height: 65px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  background: var(--tertiary);
+  color: var(--primary);
+}
+.contact-section .contact-information .info-item .text .title {
+  margin-bottom: 7px;
+}
+.contact-section .contact-information .info-item .text ul li {
+  color: var(--paragraph-color);
+}
+.contact-section .contact-information .info-item .text ul li a {
+  color: var(--paragraph-color);
+}
+.contact-section .contact-information .info-item .text ul li a:hover {
+  color: var(--primary);
+}
+.contact-section .contact-information .info-item:hover .icon {
+  background-color: var(--primary);
+  color: white;
 }
