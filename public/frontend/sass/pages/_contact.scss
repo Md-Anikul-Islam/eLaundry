@@ -35,6 +35,9 @@
                             @media (min-width: 1199.98px) and (max-width: 1399.98px) {
                                 font-size: 13px;
                             }
+                            @media screen and (max-width: 325.98px) {
+                                font-size: 13px;
+                            }
                             &:hover {
                                 color: var(--primary);
                             }

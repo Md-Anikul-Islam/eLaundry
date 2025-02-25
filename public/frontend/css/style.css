@@ -1414,6 +1414,11 @@ p {
     font-size: 13px;
   }
 }
+@media screen and (max-width: 325.98px) {
+  .contact-section .contact-information .info-item .text ul li a {
+    font-size: 13px;
+  }
+}
 .contact-section .contact-information .info-item .text ul li a:hover {
   color: var(--primary);
 }

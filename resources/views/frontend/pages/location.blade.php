@@ -26,7 +26,7 @@
     <section class="contact-section pt-120">
         <div class="container">
             <div class="contact-information">
-                <div class="row">
+                <div class="row g-4">
                     <div class="col-lg-6 col-xl-4">
                         <div class="info-item d-flex align-items-center rounded-20 gap-4">
                             <div
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-4">
-                        <div class="info-item d-flex align-items-center rounded-20 gap-4">
+                        <div class="info-item d-flex flex-wrap flex-sm-nowrap align-items-center rounded-20 gap-4">
                             <div
                                 class="icon rounded-pill flex-shrink-0 d-flex align-items-center justify-content-center">
                                 <i class="fa-solid fa-envelope"></i>
