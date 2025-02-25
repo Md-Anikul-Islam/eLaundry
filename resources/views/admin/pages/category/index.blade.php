@@ -77,7 +77,7 @@
                                                         <div class="mb-3">
                                                             <label for="example-fileinput" class="form-label">File</label>
                                                             <input type="file" name="image" id="example-fileinput" class="form-control" >
-                                                            <img src="{{asset('images/category/'. $categoryData->file )}}" alt="File or  Image" class="mt-2" style="max-width: 50px;">
+                                                            <img src="{{asset('images/category/'. $categoryData->image )}}" alt="File or  Image" class="mt-2" style="max-width: 50px;">
                                                         </div>
                                                     </div>
 
