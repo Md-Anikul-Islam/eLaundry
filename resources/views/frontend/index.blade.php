@@ -29,7 +29,7 @@
                             quality of service
                             with speed!</p>
                         <div class="banner-btn text-center">
-                            <a href="contact.html" class="theme-btn theme-btn-primary text-uppercase">Contact Us</a>
+                            <a href="{{route('contact.us')}}" class="theme-btn theme-btn-primary text-uppercase">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -168,7 +168,7 @@
                 </div>
             </div>
             <div class="service-btn text-center">
-                <a href="contact.html" class="theme-btn theme-btn-primary text-uppercase">Contact Us</a>
+                <a href="{{route('contact.us')}}" class="theme-btn theme-btn-primary text-uppercase">Contact Us</a>
             </div>
         </div>
     </div>
@@ -348,7 +348,7 @@
                 </div>
             </div>
         </div>
-        
+
     </section>
     <!-- Service-details section Start -->
 

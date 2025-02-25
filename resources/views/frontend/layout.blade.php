@@ -89,16 +89,16 @@
                 <div class="menu-list">
                     <ul class="list-unstyled">
                         <li class="sub-mobile-menu">
-                            <a href="./index.html">Home </a>
+                            <a href="{{route('home')}}">Home </a>
                         </li>
                         <li class="sub-mobile-menu">
-                            <a href="./holidays.html">Holidays</a>
+                            <a href="{{route('holidays')}}">Holidays</a>
                         </li>
                         <li class="sub-mobile-menu">
-                            <a href="./locations.html">Locations</a>
+                            <a href="{{route('locations')}}">Locations</a>
                         </li>
                         <li class="sub-mobile-menu">
-                            <a href="contact.html">Contact Us</a>
+                            <a href="{{route('contact.us')}}">Contact Us</a>
                         </li>
                     </ul>
                 </div>
@@ -140,7 +140,7 @@
                 <div class="col-lg-4">
                     <div class="footer-widget">
                         <div class="footer-logo mb-3">
-                            <a href="index.html" class="d-flex align-items-center gap-2 text-white fw-bold fs-1">
+                            <a href="{{route('home')}}" class="d-flex align-items-center gap-2 text-white fw-bold fs-1">
                                 <img src="{{URL::to('frontend/images/logo/logo-1.webp')}}" style="max-width: 125px" class="img-fluid" alt="logo" />
 
                             </a>
@@ -154,10 +154,10 @@
                     <div class="footer-widget">
                         <h4 class="widget-title">Quick Links</h4>
                         <ul class="list-unstyled">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="holidays.html">Holidays</a></li>
-                            <li><a href="locations.html">Locations</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="{{route('home')}}">Home</a></li>
+                            <li><a href="{{route('holidays')}}">Holidays</a></li>
+                            <li><a href="{{route('locations')}}">Locations</a></li>
+                            <li><a href="{{route('contact.us')}}">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
