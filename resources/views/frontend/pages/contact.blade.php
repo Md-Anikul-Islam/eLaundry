@@ -33,7 +33,7 @@
             <div class="col-lg-7">
               <div class="section-title style-two mb-30 text-start ">
                 <h5 class="sub-title">Talk to us</h5>
-                <h3 class="title z-5">Making Laundry Easier
+                <h3 class="title z-5 split-text right">Making Laundry Easier
                   with Best Service</h3>
               </div>
             </div>
