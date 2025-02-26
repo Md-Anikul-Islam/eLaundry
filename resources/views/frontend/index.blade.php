@@ -280,7 +280,7 @@
     <!-- Service-details section Start -->
     <section class="service-details-section">
         <div class="container">
-            <div class="section-title mb-60 col-lg-7 mx-auto">
+            <div class="section-title mb-60 style-two col-lg-7 mx-auto">
                 <h3 class="title split-text right text-center">
                 We Clean Everything Laundry Service
                 </h3>
