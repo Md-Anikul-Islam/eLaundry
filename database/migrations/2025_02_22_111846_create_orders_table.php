@@ -19,6 +19,8 @@ return new class extends Migration
             $table->decimal('total_amount', 10, 2);
             $table->text('shipping_address')->nullable();
             $table->enum('status', ['pending', 'processing', 'completed', 'decline'])->default('pending');
+            $table->string('delivery_type');
+            $table->string('delivery_charge')->default(0);
             $table->timestamps();
         });
     }

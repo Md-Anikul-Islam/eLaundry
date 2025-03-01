@@ -14,5 +14,6 @@ class Payment extends Model
         'payment_status',
         'payment_date',
         'payment_amount',
+        'delivery_charge'
     ];
 }
