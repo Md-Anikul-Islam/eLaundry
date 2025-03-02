@@ -36,7 +36,8 @@
                     <table class="table table-bordered">
                         <thead>
                         <tr>
-                            <th>Service ID</th>
+                            <th>Service Name</th>
+                            <th>Image</th>
                             <th>Quantity</th>
                             <th>Price</th>
                             <th>Total</th>
@@ -46,6 +47,7 @@
                         @foreach($order->orderItems as $item)
                             <tr>
                                 <td>{{ $item->service->title }}</td>
+                                <td><img src="{{asset('images/service/'.$item->service->image)}}" alt="" style="width: 50px;"></td>
                                 <td>{{ $item->quantity }}</td>
                                 <td>${{ number_format($item->price, 2) }}</td>
                                 <td>{{ $item->quantity*$item->price }}</td>
