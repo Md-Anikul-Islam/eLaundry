@@ -24,4 +24,14 @@ class OrderManageController extends Controller
         $order = Order::with('orderItems.service', 'payment')->latest()->get();
         return view('admin.pages.order.index', compact('order'));
     }
+
+    public function show($id)
+    {
+        $order = Order::with('user','orderItems.service', 'payment')->find($id);
+        return view('admin.pages.order.show', compact('order'));
+
+    }
+
+
+
 }

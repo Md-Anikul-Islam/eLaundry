@@ -111,22 +111,22 @@
 
 
 
-                <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarPages" aria-expanded="false" aria-controls="sidebarPages" class="side-nav-link">
-                        <i class="ri-pages-line"></i>
-                        <span> Resource </span>
-                        <span class="menu-arrow"></span>
-                    </a>
-                    <div class="collapse" id="sidebarPages">
-                        <ul class="side-nav-second-level">
+{{--                <li class="side-nav-item">--}}
+{{--                    <a data-bs-toggle="collapse" href="#sidebarPages" aria-expanded="false" aria-controls="sidebarPages" class="side-nav-link">--}}
+{{--                        <i class="ri-pages-line"></i>--}}
+{{--                        <span> Resource </span>--}}
+{{--                        <span class="menu-arrow"></span>--}}
+{{--                    </a>--}}
+{{--                    <div class="collapse" id="sidebarPages">--}}
+{{--                        <ul class="side-nav-second-level">--}}
 
-                            <li>
-                                <a href="#">Test</a>
-                            </li>
+{{--                            <li>--}}
+{{--                                <a href="#">Test</a>--}}
+{{--                            </li>--}}
 
-                        </ul>
-                    </div>
-                </li>
+{{--                        </ul>--}}
+{{--                    </div>--}}
+{{--                </li>--}}
 
 
                 @can('slider-list')

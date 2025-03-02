@@ -63,6 +63,7 @@ Route::middleware('auth')->group(callback: function () {
 
     //Order Manage
     Route::get('/order-manage', [OrderManageController::class, 'index'])->name('order.manage');
+    Route::get('/order-manage/{id}', [OrderManageController::class, 'show'])->name('order.manage.show');
 
 
 

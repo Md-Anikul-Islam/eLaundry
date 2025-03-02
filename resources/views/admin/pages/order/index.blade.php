@@ -63,7 +63,8 @@
 
                             </td>
                             <td style="width: 100px;">
-                                Delete
+
+                                <a href="{{route('order.manage.show',$orderData->id)}}" class="btn btn-primary btn-sm">Details</a>
                             </td>
                         </tr>
                     @endforeach
