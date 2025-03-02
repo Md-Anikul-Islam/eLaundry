@@ -65,8 +65,27 @@
                             <td style="width: 100px;">
 
                                 <a href="{{route('order.manage.show',$orderData->id)}}" class="btn btn-primary btn-sm">Details</a>
+                                <a href="{{route('order.destroy',$orderData->id)}}"class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#danger-header-modal{{$orderData->id}}">Delete</a>
                             </td>
                         </tr>
+
+                        <div id="danger-header-modal{{$orderData->id}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="danger-header-modalLabel{{$orderData->id}}" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header modal-colored-header bg-danger">
+                                        <h4 class="modal-title" id="danger-header-modalLabe{{$orderData->id}}l">Delete</h4>
+                                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h5 class="mt-0">Are You Went to Delete this ? </h5>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                                        <a href="{{route('order.destroy',$orderData->id)}}" class="btn btn-danger">Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     @endforeach
                     </tbody>
                 </table>

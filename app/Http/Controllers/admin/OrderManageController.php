@@ -32,6 +32,15 @@ class OrderManageController extends Controller
 
     }
 
+    public function destroy($id)
+    {
+        $order = Order::find($id);
+        $order->orderItems()->delete();
+        $order->payment()->delete();
+        $order->delete();
+        return redirect()->back()->with('success', 'Order Deleted Successfully');
+    }
+
 
 
 }
