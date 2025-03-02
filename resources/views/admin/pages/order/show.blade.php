@@ -39,6 +39,7 @@
                             <th>Service ID</th>
                             <th>Quantity</th>
                             <th>Price</th>
+                            <th>Total</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -47,6 +48,7 @@
                                 <td>{{ $item->service->title }}</td>
                                 <td>{{ $item->quantity }}</td>
                                 <td>${{ number_format($item->price, 2) }}</td>
+                                <td>{{ $item->quantity*$item->price }}</td>
                             </tr>
                         @endforeach
                         </tbody>
@@ -63,8 +65,9 @@
                     <p><strong>Amount Paid:</strong> ${{ number_format($order->payment->payment_amount, 2) }}</p>
                 </div>
             </div>
-
-            <a href="{{ route('order.manage') }}" class="btn btn-primary">Back to Orders</a>
+            <div class="text-center mb-2">
+            <a href="{{ route('order.manage') }}" class="btn btn-primary d-inline-block">Back to Orders</a>
+            </div>
         </div>
     </div>
 @endsection
