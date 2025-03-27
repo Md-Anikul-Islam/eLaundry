@@ -17,7 +17,11 @@ class UserAuthController extends Controller
     public function register(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required|string|max:255',
+
+            'first_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
+            'business_type' => 'required',
+            'age' => 'required',
             'phone' => 'required|string|max:15',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|string|min:6',
@@ -27,7 +31,13 @@ class UserAuthController extends Controller
         $verificationCode = rand(100000, 999999);
         try {
             $user = User::create([
-                'name' => $input['name'],
+                'first_name' => $input['first_name'],
+                'last_name' => $input['last_name'],
+                'name' => $input['first_name'] . ' ' . $input['last_name'],
+                'business_type' => $input['business_type'],
+                'age' => $input['age'],
+                'is_receive_promotional_notification' => $input['is_receive_promotional_notification'] ?? 0,
+                'is_receive_account_notification' => $input['is_receive_account_notification'] ?? 0,
                 'email' => $input['email'],
                 'phone' => $input['phone'],
                 'password' => $input['password'],

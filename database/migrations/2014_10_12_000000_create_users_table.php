@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('business_type')->nullable();
+            $table->integer('age')->nullable();
+            $table->tinyInteger('is_receive_promotional_notification')->default(1);
+            $table->tinyInteger('is_receive_account_notification')->default(1);
             $table->string('name');
             $table->string('email')->unique();
             $table->string('phone')->unique();
