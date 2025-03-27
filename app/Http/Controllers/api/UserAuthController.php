@@ -31,6 +31,7 @@ class UserAuthController extends Controller
         $verificationCode = rand(100000, 999999);
         try {
             $user = User::create([
+
                 'first_name' => $input['first_name'],
                 'last_name' => $input['last_name'],
                 'name' => $input['first_name'] . ' ' . $input['last_name'],
@@ -43,6 +44,7 @@ class UserAuthController extends Controller
                 'password' => $input['password'],
                 'verification_code' => $verificationCode,
                 'is_registration_by' => 'User',
+
             ]);
             $user->assignRole('User');
             Mail::to($request->email)->send(new VerifyMail($user));
