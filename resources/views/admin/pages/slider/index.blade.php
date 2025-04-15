@@ -1,6 +1,5 @@
 @extends('admin.app')
 @section('admin_content')
-    {{-- CKEditor CDN --}}
     <div class="row">
         <div class="col-12">
             <div class="page-title-box">
@@ -20,7 +19,6 @@
         <div class="card">
             <div class="card-header">
                 <div class="d-flex justify-content-end">
-                    <!-- Large modal -->
                     @can('slider-create')
                      <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#addNewModalId">Add New</button>
                     @endcan

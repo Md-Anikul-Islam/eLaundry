@@ -11,13 +11,14 @@ class OrderItem extends Model
 
     protected $fillable = [
         'order_id',
-        'service_id',
+        'bag_name',
         'quantity',
-        'price',
     ];
-    public function service()
+
+    public function order()
     {
-        return $this->belongsTo(Service::class);
+        return $this->belongsTo(Order::class);
     }
+
 
 }

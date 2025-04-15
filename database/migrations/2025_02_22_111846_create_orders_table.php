@@ -13,14 +13,21 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->string('invoice_number');
-            $table->date('order_date')->nullable();
-            $table->decimal('total_amount', 10, 2);
-            $table->text('shipping_address')->nullable();
-            $table->enum('status', ['pending', 'processing', 'completed', 'decline'])->default('pending');
-            $table->string('delivery_type');
-            $table->string('delivery_charge')->default(0);
+            $table->unsignedBigInteger('customer_id');
+            $table->string('address');
+            $table->string('pic_spot');
+            $table->string('instructions')->nullable();
+            $table->string('delivery_speed_type');
+            $table->string('detergent_type');
+            $table->boolean('is_delicate_cycle')->default(false);
+            $table->boolean('is_hang_dry')->default(false);
+            $table->boolean('is_return_hanger')->default(false);
+            $table->boolean('is_additional_request')->default(false);
+            $table->string('coverage_type')->nullable();
+            $table->string('invoice_number')->unique();
+            $table->date('order_date')->default(now());
+            $table->decimal('total_amount', 10, 2)->nullable();
+            $table->enum('status', ['pending', 'completed', 'cancelled'])->default('pending');
             $table->timestamps();
         });
     }

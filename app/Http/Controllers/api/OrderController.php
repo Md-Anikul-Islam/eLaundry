@@ -13,136 +13,83 @@ class OrderController extends Controller
 {
     public function store(Request $request)
     {
+
+        // Validate request data
         $validator = Validator::make($request->all(), [
-            'user_id' => 'required|integer',
-            'order_date' => 'required|date',
-            'total_amount' => 'required|numeric',
-            'shipping_address' => 'required|string',
-
-            'delivery_type' => 'required|string',
-            'delivery_charge' => 'required|numeric',
-
+            'customer_id' => 'required|exists:users,id',
+            'address' => 'required|string|max:255',
+            'pic_spot' => 'required|string|max:255',
+            'delivery_speed_type' => 'required|string|max:255',
+            'detergent_type' => 'required|string|max:255',
             'order_items' => 'required|array',
-            'order_items.*.service_id' => 'required|integer',
-            'order_items.*.quantity' => 'required|integer',
-
-
-            'payment_method' => 'required|string',
-            'payment_status' => 'required|string',
-            'payment_amount' => 'required|numeric',
+            'order_items.*.bag_name' => 'required|string|max:255',
+            'order_items.*.quantity' => 'required|integer|min:1',
+            'payment_method' => 'required|string|max:255',
+            'total_amount' => 'required|numeric|min:0',
         ]);
 
         if ($validator->fails()) {
-            return response()->json([
-                'errors' => $validator->errors()
-            ], 422);
+            return response()->json($validator->errors(), 400);
         }
 
-        // Generate an invoice number using the current timestamp and a random 4-digit number
-        $invoice_number = 'INV-' . time() . rand(1000, 9999);
-
-        // Create the order
+        // Create Order
         $order = Order::create([
-            'user_id' => $request->user_id,
-            'invoice_number' => $invoice_number,
-            'order_date' => $request->order_date,
+            'customer_id' => $request->customer_id,
+            'address' => $request->address,
+            'pic_spot' => $request->pic_spot,
+            'instructions' => $request->instructions,
+            'delivery_speed_type' => $request->delivery_speed_type,
+            'detergent_type' => $request->detergent_type,
+            'is_delicate_cycle' => $request->is_delicate_cycle ?? false,
+            'is_hang_dry' => $request->is_hang_dry ?? false,
+            'is_return_hanger' => $request->is_return_hanger ?? false,
+            'is_additional_request' => $request->is_additional_request ?? false,
+            'coverage_type' => $request->coverage_type,
+            'invoice_number' => strtoupper(uniqid('INV-')),
+            'order_date' => now(),
             'total_amount' => $request->total_amount,
-            'shipping_address' => $request->shipping_address,
-            'delivery_type' => $request->delivery_type,
-            'delivery_charge' => $request->delivery_charge,
             'status' => 'pending',
         ]);
 
-        // Create the order items
-        $orderItems = [];
+        // Create Order Items
         foreach ($request->order_items as $item) {
-            // Fetch the service details based on service_id
-            $service = \App\Models\Service::find($item['service_id']);
-
-            if ($service) {
-                // If the service exists, create the order item
-                $orderItem = OrderItem::create([
-                    'order_id' => $order->id,
-                    'service_id' => $item['service_id'],
-                    'quantity' => $item['quantity'],
-                    'price' => $service->price,  // Fetch price from the service table
-                ]);
-                //$orderItems[] = $orderItem;
-                $orderItems[] = [
-                    'id' => $orderItem->id,
-                    'quantity' => $orderItem->quantity,
-                    'price' => $orderItem->price,
-                    'title' => $service->title,
-                    'details' => $service->details,
-                    'image' => $service->image
-                ];
-            } else {
-                // Handle case where service is not found (you can return an error or skip)
-                return response()->json(['message' => 'Service not found for service_id ' . $item['service_id']], 404);
-            }
+            OrderItem::create([
+                'order_id' => $order->id,
+                'bag_name' => $item['bag_name'],
+                'quantity' => $item['quantity'],
+            ]);
         }
 
-        // Create the payment
-        Payment::create([
+        // Create Payment
+        $paymentData = [
             'order_id' => $order->id,
             'payment_method' => $request->payment_method,
-            'payment_status' => $request->payment_status,
             'payment_date' => now(),
-            'payment_amount' => $request->payment_amount,
-        ]);
+            'delivery_charge' => $request->delivery_charge ?? 0,
+            'total_amount' => $request->total_amount,
+            'status' => 'pending',
+        ];
 
+        // If payment method is 'card', add card details to the payment data
+        if ($request->payment_method === 'card') {
+            $paymentData['card_no'] = $request->card_no;
+            $paymentData['card_security_code'] = $request->card_security_code;
+            $paymentData['country'] = $request->country;
+            $paymentData['zip_code'] = $request->zip_code;
+        }
+
+        // Create Payment record
+        $payment = Payment::create($paymentData);
+        $orderWithDetails = Order::with(['payment', 'orderItems'])->find($order->id);
+
+
+        // Return response
         return response()->json([
-            'id' => $order->id,
-            'user_id' => $order->user_id,
-            'invoice_number' => $order->invoice_number,
-            'order_date' => $order->order_date,
-            'total_amount' => $order->total_amount,
-            'shipping_address' => $order->shipping_address,
-            'status' => $order->status,
-            'payment_method' => $order->payment->payment_method ?? null, // Fetch from payment
-            'delivery_type' => $order->delivery_type,
-            'delivery_charge' => $order->delivery_charge,
-            'created_at' => $order->created_at,
-            'updated_at' => $order->updated_at,
-            'order_items' => $orderItems
+            'message' => 'Order created successfully!',
+            'order' => $orderWithDetails,
         ], 201);
     }
 
-    public function myOrder()
-    {
-        $orders = Order::where('user_id', auth()->user()->id)
-            ->with('orderItems.service', 'payment')
-            ->latest()
-            ->get();
 
-        $formattedOrders = $orders->map(function ($order) {
-            return [
-                'id' => $order->id,
-                'user_id' => $order->user_id,
-                'invoice_number' => $order->invoice_number,
-                'order_date' => $order->order_date,
-                'total_amount' => $order->total_amount,
-                'shipping_address' => $order->shipping_address,
-                'status' => $order->status,
-                'payment_method' => $order->payment->payment_method ?? null, // Fetch from payment
-                'delivery_type' => $order->delivery_type,
-                'delivery_charge' => $order->delivery_charge,
-                'created_at' => $order->created_at,
-                'updated_at' => $order->updated_at,
-                'order_items' => $order->orderItems->map(function ($item) {
-                    return [
-                        'id' => $item->id,
-                        'quantity' => $item->quantity,
-                        'price' => $item->price,
-                        'title' => $item->service->title ?? null,
-                        'details' => $item->service->details ?? null,
-                        'image' => $item->service->image ?? null,
-                    ];
-                })
-            ];
-        });
-
-        return response()->json($formattedOrders);
-    }
 
 }

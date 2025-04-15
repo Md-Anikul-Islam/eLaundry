@@ -111,24 +111,6 @@
 
 
 
-{{--                <li class="side-nav-item">--}}
-{{--                    <a data-bs-toggle="collapse" href="#sidebarPages" aria-expanded="false" aria-controls="sidebarPages" class="side-nav-link">--}}
-{{--                        <i class="ri-pages-line"></i>--}}
-{{--                        <span> Resource </span>--}}
-{{--                        <span class="menu-arrow"></span>--}}
-{{--                    </a>--}}
-{{--                    <div class="collapse" id="sidebarPages">--}}
-{{--                        <ul class="side-nav-second-level">--}}
-
-{{--                            <li>--}}
-{{--                                <a href="#">Test</a>--}}
-{{--                            </li>--}}
-
-{{--                        </ul>--}}
-{{--                    </div>--}}
-{{--                </li>--}}
-
-
                 @can('slider-list')
                 <li class="side-nav-item">
                     <a href="{{route('slider.section')}}" class="side-nav-link">
@@ -146,6 +128,15 @@
                         </a>
                     </li>
                 @endcan
+                @can('service-list')
+                    <li class="side-nav-item">
+                        <a href="{{route('service.section')}}" class="side-nav-link">
+                            <i class=" ri-pencil-fill"></i>
+                            <span> Service </span>
+                        </a>
+                    </li>
+                @endcan
+
 
                 @can('order-manage')
                     <li class="side-nav-item">
@@ -156,14 +147,7 @@
                     </li>
                 @endcan
 
-                @can('service-list')
-                    <li class="side-nav-item">
-                        <a href="{{route('service.section')}}" class="side-nav-link">
-                            <i class=" ri-pencil-fill"></i>
-                            <span> Service </span>
-                        </a>
-                    </li>
-                @endcan
+
 
                 @can('site-setting')
                     <li class="side-nav-item">

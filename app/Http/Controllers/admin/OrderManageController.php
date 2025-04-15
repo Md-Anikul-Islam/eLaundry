@@ -4,8 +4,11 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Order;
+use App\Models\OrderItem;
+use App\Models\Payment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Validator;
 
 class OrderManageController extends Controller
 {
@@ -19,27 +22,10 @@ class OrderManageController extends Controller
             return $next($request);
         })->only('index');
     }
-    public function index()
-    {
-        $order = Order::with('orderItems.service', 'payment')->latest()->get();
-        return view('admin.pages.order.index', compact('order'));
-    }
 
-    public function show($id)
-    {
-        $order = Order::with('user','orderItems.service', 'payment')->find($id);
-        return view('admin.pages.order.show', compact('order'));
 
-    }
 
-    public function destroy($id)
-    {
-        $order = Order::find($id);
-        $order->orderItems()->delete();
-        $order->payment()->delete();
-        $order->delete();
-        return redirect()->back()->with('success', 'Order Deleted Successfully');
-    }
+
 
 
 
