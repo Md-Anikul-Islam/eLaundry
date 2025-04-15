@@ -90,6 +90,16 @@ class OrderController extends Controller
         ], 201);
     }
 
+    public function myOrder(Request $request)
+    {
+        $orders = Order::with(['orderItems', 'payment'])
+            ->where('customer_id', $request->user()->id)
+            ->latest()
+            ->paginate(10);
+
+        return response()->json($orders);
+    }
+
 
 
 }
