@@ -26,7 +26,7 @@
                     <thead>
                     <tr>
                         <th>S/N</th>
-                        <th>User Name</th>
+                        <th>Customer Name</th>
                         <th>Invoice No</th>
                         <th>Order Date</th>
                         <th>Total Amount</th>
@@ -35,7 +35,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($order as $key=>$orderData)
+                    @foreach($orders as $key=>$orderData)
                         <tr>
                             <td>{{$key+1}}</td>
                             <td>

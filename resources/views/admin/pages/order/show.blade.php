@@ -23,7 +23,7 @@
             <div class="card mb-4">
                 <div class="card-header">Order Information</div>
                 <div class="card-body">
-                    <p><strong>User Name:</strong> {{ $order->user->name }}</p>
+                    <p><strong>Customer Name:</strong> {{ $order->user->name }}</p>
                     <p><strong>Email:</strong> {{ $order->user->email }}</p>
                     <p><strong>Phone:</strong> {{ $order->user->phone }}</p>
                     <p><strong>Order Status:</strong> {{ $order->status ?? 'Pending' }}</p>
@@ -36,21 +36,15 @@
                     <table class="table table-bordered">
                         <thead>
                         <tr>
-                            <th>Service Name</th>
-                            <th>Image</th>
+                            <th>Bag Name</th>
                             <th>Quantity</th>
-                            <th>Price</th>
-                            <th>Total</th>
                         </tr>
                         </thead>
                         <tbody>
                         @foreach($order->orderItems as $item)
                             <tr>
-                                <td>{{ $item->service->title }}</td>
-                                <td><img src="{{asset('images/service/'.$item->service->image)}}" alt="" style="width: 50px;"></td>
+                                <td>{{ $item->bag_name }}</td>
                                 <td>{{ $item->quantity }}</td>
-                                <td>${{ number_format($item->price, 2) }}</td>
-                                <td>{{ $item->quantity*$item->price }}</td>
                             </tr>
                         @endforeach
                         </tbody>
@@ -62,9 +56,9 @@
                 <div class="card-header">Payment Information</div>
                 <div class="card-body">
                     <p><strong>Payment Method:</strong> {{ $order->payment->payment_method }}</p>
-                    <p><strong>Payment Status:</strong> {{ ucfirst($order->payment->payment_status) }}</p>
+                    <p><strong>Payment Status:</strong> {{ ucfirst($order->payment->status) }}</p>
                     <p><strong>Payment Date:</strong> {{ $order->payment->payment_date }}</p>
-                    <p><strong>Amount Paid:</strong> ${{ number_format($order->payment->payment_amount, 2) }}</p>
+                    <p><strong>Total amount:</strong> ${{ number_format($order->payment->total_amount, 2) }}</p>
                 </div>
             </div>
             <div class="text-center mb-2">

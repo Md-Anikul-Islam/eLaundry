@@ -23,6 +23,18 @@ class OrderManageController extends Controller
         })->only('index');
     }
 
+    public function index(Request $request)
+    {
+        $orders = Order::with('user', 'orderItems')->latest()->paginate(10);
+        return view('admin.pages.order.index', compact('orders'));
+    }
+
+    public function show($id)
+    {
+        $order = Order::with('user', 'orderItems','payment')->findOrFail($id);
+        return view('admin.pages.order.show', compact('order'));
+    }
+
 
 
 
