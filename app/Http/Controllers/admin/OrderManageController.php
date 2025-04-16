@@ -9,6 +9,7 @@ use App\Models\Payment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Validator;
+use Yoeunes\Toastr\Facades\Toastr;
 
 class OrderManageController extends Controller
 {
@@ -33,6 +34,18 @@ class OrderManageController extends Controller
     {
         $order = Order::with('user', 'orderItems','payment')->findOrFail($id);
         return view('admin.pages.order.show', compact('order'));
+    }
+
+    public function destroy($id)
+    {
+        try {
+            $order = Order::find($id);
+            $order->delete();
+            Toastr::success('Order Deleted Successfully', 'Success');
+            return redirect()->back();
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred: ' . $e->getMessage());
+        }
     }
 
 
