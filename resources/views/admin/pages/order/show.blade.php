@@ -31,6 +31,37 @@
             </div>
 
             <div class="card mb-4">
+                <div class="card-header">Order</div>
+                <div class="card-body">
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th>Invoice</th>
+                            <th>Address</th>
+                            <th>Pic Spot</th>
+                            <th>Delivery Speed Type</th>
+                            <th>Detergent Type</th>
+                            <th>Order Date</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td>{{ $order->invoice_number  }}</td>
+                                <td>{{ $order->address }}</td>
+                                <td>{{ $order->pic_spot }}</td>
+                                <td>{{ $order->delivery_speed_type }}</td>
+                                <td>{{ $order->detergent_type }}</td>
+                                <td>{{ $order->order_date }}</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card mb-4">
                 <div class="card-header">Order Items</div>
                 <div class="card-body">
                     <table class="table table-bordered">
