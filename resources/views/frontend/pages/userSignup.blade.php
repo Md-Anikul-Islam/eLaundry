@@ -74,13 +74,13 @@
                                 <p class="text-start">Are you 65 or over?*</p>
                                 <div class="d-flex justify-content-start align-items-center gap-3 w-100">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="ageDefault" id="No" required>
+                                        <input class="form-check-input" type="radio" name="age" value="no" id="No" required>
                                         <label class="form-check-label" for="No">
                                             No
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="ageDefault" id="Yes" required>
+                                        <input class="form-check-input" type="radio" name="age" value="yes" id="Yes" required>
                                         <label class="form-check-label" for="Yes">
                                             Yes
                                         </label>
@@ -89,13 +89,13 @@
                             </div>
                             <div class="w-100">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                                    <input class="form-check-input" type="checkbox" value="1" name="is_receive_promotional_notification" id="checkDefault">
                                     <label class="form-check-label" for="checkDefault">
                                         I Want to receive marketing/ promotional notifications via text message.
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkChecked" >
+                                    <input class="form-check-input" type="checkbox" value="1" name="is_receive_account_notification" id="checkChecked" >
                                     <label class="form-check-label" for="checkChecked">
                                         I want to receive account notifications via text message.
                                     </label>
