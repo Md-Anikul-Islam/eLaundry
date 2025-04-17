@@ -42,11 +42,9 @@
                             <th>Delivery Speed Type</th>
                             <th>Detergent Type</th>
                             <th>Order Date</th>
-
                         </tr>
                         </thead>
                         <tbody>
-
                             <tr>
                                 <td>{{ $order->invoice_number  }}</td>
                                 <td>{{ $order->address }}</td>
@@ -55,7 +53,6 @@
                                 <td>{{ $order->detergent_type }}</td>
                                 <td>{{ $order->order_date }}</td>
                             </tr>
-
                         </tbody>
                     </table>
                 </div>
