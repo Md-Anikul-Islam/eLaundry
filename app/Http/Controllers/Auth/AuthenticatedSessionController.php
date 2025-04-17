@@ -33,15 +33,30 @@ class AuthenticatedSessionController extends Controller
 //        return redirect()->intended(RouteServiceProvider::HOME);
 //    }
 
+//    public function store(LoginRequest $request): RedirectResponse
+//    {
+//
+//        $request->authenticate();
+//        $request->session()->regenerate();
+//        $user = Auth::user();
+//        $userAgent = new Agent();
+//        $data = [
+//            'email' => $user->email,
+//            'ip' => $request->ip(),
+//            'browser' => $userAgent->browser(),
+//            'platform' => $userAgent->platform(),
+//            'last_login' => now(), // or use your preferred date format
+//            'user_agent' => $request->header('User-Agent'),
+//        ];
+//        DB::table('login_logs')->insert($data);
+//        return redirect()->intended(RouteServiceProvider::HOME);
+//    }
+
     public function store(LoginRequest $request): RedirectResponse
     {
-        // Authenticate the user
         $request->authenticate();
-        // Regenerate session
         $request->session()->regenerate();
-        // Get user information
         $user = Auth::user();
-        // Store login time and other information
         $userAgent = new Agent();
         $data = [
             'email' => $user->email,
@@ -51,9 +66,13 @@ class AuthenticatedSessionController extends Controller
             'last_login' => now(), // or use your preferred date format
             'user_agent' => $request->header('User-Agent'),
         ];
-        // Save the data to the database
         DB::table('login_logs')->insert($data);
-        // Redirect the user to the intended page
+        // Redirect based on user role
+        if ($user->is_registration_by == 'admin') {
+            return redirect()->intended('/admin/dashboard');
+        } elseif ($user->is_registration_by == 'user') {
+            return redirect()->intended('/user/dashboard');
+        }
         return redirect()->intended(RouteServiceProvider::HOME);
     }
 

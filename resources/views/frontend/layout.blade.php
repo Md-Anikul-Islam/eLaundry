@@ -46,9 +46,42 @@
                     <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('contact.us') ? 'active' : '' }}" href="{{route('contact.us')}}">Contact us</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('show.signup')}}">Sign Up</a>
-                    </li>
+{{--                    if user login show my profile and logout or user not login show signup--}}
+
+                    @if(Auth::check())
+                        @if(Auth::user()->is_registration_by === 'user')
+                        <!-- Dropdown for My Profile and Logout -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                My Profile
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
+                                    </li>
+                                    <li>
+                                        <form action="{{ route('logout') }}" method="POST">
+                                            @csrf
+                                            <button type="submit" class="dropdown-item">Logout</button>
+                                        </form>
+                                    </li>
+
+                            </ul>
+                        </li>
+
+                        @else
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('show.signup') ? 'active' : '' }}" href="{{route('show.signup')}}">Sign Up</a>
+                        </li>
+                        @endif
+                    @else
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('show.signup') ? 'active' : '' }}" href="{{route('show.signup')}}">Sign Up</a>
+                        </li>
+                    @endif
+
+
                 </ul>
                 <a href="tel:929-442-5833" class="call-to-action d-flex align-items-center">
                     <div class="icon rounded-pill">

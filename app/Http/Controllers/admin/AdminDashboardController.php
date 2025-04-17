@@ -17,6 +17,7 @@ class AdminDashboardController extends Controller
 {
     public function index()
     {
+       //dd('admin');
        $loginLog = LoginLog::orderBy('last_login','desc')->get();
        return view('admin.dashboard', compact('loginLog'));
     }

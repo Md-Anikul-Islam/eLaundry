@@ -103,7 +103,7 @@
             <ul class="side-nav">
                 <li class="side-nav-title">Main</li>
                 <li class="side-nav-item">
-                    <a href="{{route('dashboard')}}" class="side-nav-link">
+                    <a href="{{url('admin/dashboard')}}" class="side-nav-link">
                         <i class="ri-dashboard-3-line"></i>
                         <span> Dashboard </span>
                     </a>
@@ -170,13 +170,13 @@
                         <ul class="side-nav-second-level">
                             @can('user-list')
                             <li>
-                                <a href="{{url('users')}}">Create User</a>
+                                <a href="{{url('admin/users')}}">Create User</a>
                             </li>
                             @endcan
 
                             @can('role-list')
                             <li>
-                                <a href="{{url('roles')}}">Role & Permission</a>
+                                <a href="{{url('admin/roles')}}">Role & Permission</a>
                             </li>
                             @endcan
                         </ul>
