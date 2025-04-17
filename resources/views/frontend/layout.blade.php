@@ -74,12 +74,26 @@
                         <li class="nav-item">
                             <a class="nav-link {{ request()->routeIs('show.signup') ? 'active' : '' }}" href="{{route('show.signup')}}">Sign Up</a>
                         </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{ request()->routeIs('show.signin') ? 'active' : '' }}" href="{{route('show.signin')}}">Sign In</a>
+                            </li>
                         @endif
                     @else
                         <li class="nav-item">
                             <a class="nav-link {{ request()->routeIs('show.signup') ? 'active' : '' }}" href="{{route('show.signup')}}">Sign Up</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('show.signin') ? 'active' : '' }}" href="{{route('show.signin')}}">Sign In</a>
+                        </li>
+
                     @endif
+
+{{--                    @if(Auth::check())--}}
+{{--                        @else--}}
+{{--                        <li class="nav-item">--}}
+{{--                            <a class="nav-link {{ request()->routeIs('show.signin') ? 'active' : '' }}" href="{{route('show.signin')}}">Sign In</a>--}}
+{{--                        </li>--}}
+{{--                    @endif--}}
 
 
                 </ul>

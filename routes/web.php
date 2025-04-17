@@ -34,6 +34,7 @@ Route::get('/contact-us', [FrontendController::class, 'contact'])->name('contact
 
 
 Route::get('/user-signup', [UserSignupController::class, 'showSignupForm'])->name('show.signup');
+Route::get('/user-signin', [UserSignupController::class, 'showSigninForm'])->name('show.signin');
 Route::post('/user-signup-store', [UserSignupController::class, 'signupStore'])->name('signup.store');
 
 //Route::middleware('auth')->group(callback: function () {

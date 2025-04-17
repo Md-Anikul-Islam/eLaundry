@@ -17,6 +17,11 @@ class UserSignupController extends Controller
         return view('frontend.pages.userSignup');
     }
 
+    public function showSigninForm()
+    {
+        return view('frontend.pages.userSignin');
+    }
+
     public function signupStore(Request $request)
     {
         //dd($request->all());
