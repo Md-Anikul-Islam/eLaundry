@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="{{asset('frontend/css/magnific-popup.css')}}" />
     <link rel="stylesheet" href="{{asset('frontend/css/animate.min.css')}}" />
     <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}" />
+
+
+
+
 </head>
 
 <body>
@@ -41,6 +45,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('contact.us') ? 'active' : '' }}" href="{{route('contact.us')}}">Contact us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('show.signup')}}">Sign Up</a>
                     </li>
                 </ul>
                 <a href="tel:929-442-5833" class="call-to-action d-flex align-items-center">
@@ -99,6 +106,9 @@
                         </li>
                         <li class="sub-mobile-menu">
                             <a href="{{route('contact.us')}}">Contact Us</a>
+                        </li>
+                        <li class="sub-mobile-menu">
+                            <a  href="{{route('show.signup')}}">Sign Up</a>
                         </li>
                     </ul>
                 </div>

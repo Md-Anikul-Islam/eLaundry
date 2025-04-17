@@ -9,6 +9,7 @@ use App\Http\Controllers\admin\SliderController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\UserSignupController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,6 +31,9 @@ Route::get('/', [FrontendController::class, 'index'])->name('home');
 Route::get('/holidays', [FrontendController::class, 'holidays'])->name('holidays');
 Route::get('/locations', [FrontendController::class, 'location'])->name('locations');
 Route::get('/contact-us', [FrontendController::class, 'contact'])->name('contact.us');
+
+
+Route::get('/user-signup', [UserSignupController::class, 'showSignupForm'])->name('show.signup');
 
 Route::middleware('auth')->group(callback: function () {
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
