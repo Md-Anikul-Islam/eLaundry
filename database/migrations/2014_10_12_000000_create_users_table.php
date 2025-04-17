@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('business_type')->nullable();
-            $table->integer('age')->nullable();
+            $table->string('age')->nullable();
             $table->tinyInteger('is_receive_promotional_notification')->default(1);
             $table->tinyInteger('is_receive_account_notification')->default(1);
             $table->string('name');

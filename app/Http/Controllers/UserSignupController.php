@@ -10,4 +10,10 @@ class UserSignupController extends Controller
     {
         return view('frontend.pages.userSignup');
     }
+
+    public function signupStore(Request $request)
+    {
+        dd($request->all());
+
+    }
 }
