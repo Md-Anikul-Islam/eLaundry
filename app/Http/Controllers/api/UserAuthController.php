@@ -43,7 +43,7 @@ class UserAuthController extends Controller
                 'phone' => $input['phone'],
                 'password' => $input['password'],
                 'verification_code' => $verificationCode,
-                'is_registration_by' => 'User',
+                'is_registration_by' => 'user',
 
             ]);
             $user->assignRole('User');

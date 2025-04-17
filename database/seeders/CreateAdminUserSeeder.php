@@ -22,7 +22,7 @@ class CreateAdminUserSeeder extends Seeder
             'email' => 'halseystreetlaundromat@admin.com',
             'phone' => '01905256528',
             'address' => 'Dhaka, Bangladesh',
-            'is_registration_by' => 'Admin',
+            'is_registration_by' => 'admin',
             'password' => bcrypt('halseystreetlaundromat@2025')
         ]);
 
