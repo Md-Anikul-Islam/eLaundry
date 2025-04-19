@@ -70,6 +70,14 @@ class OrderManageController extends Controller
         return redirect()->back();
     }
 
+    public function invoice($id)
+    {
+        $order = Order::with('user', 'orderItems','payment')->findOrFail($id);
+        return view('admin.pages.order.invoice', compact('order'));
+    }
+
+
+
     public function destroy($id)
     {
         try {

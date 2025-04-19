@@ -118,6 +118,7 @@ Route::middleware(['auth'])->group(function () {
         //changer order status
         Route::put('/order-status-change/{id}', [OrderManageController::class, 'changeStatus'])->name('order.status.change');
 
+        Route::get('/order-invoice/{id}', [OrderManageController::class, 'invoice'])->name('order.invoice');
 
     });
 
