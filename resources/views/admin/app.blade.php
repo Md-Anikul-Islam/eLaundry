@@ -149,14 +149,6 @@
 
 
 
-                @can('site-setting')
-                    <li class="side-nav-item">
-                        <a href="{{route('site.setting')}}" class="side-nav-link">
-                            <i class="ri-drag-move-fill"></i>
-                            <span> Site Setting </span>
-                        </a>
-                    </li>
-                @endcan
 
 
                     <li class="side-nav-item">
@@ -184,7 +176,16 @@
 
 
 
-                @can('role-and-permission-list')
+                @can('site-setting')
+                    <li class="side-nav-item">
+                        <a href="{{route('site.setting')}}" class="side-nav-link">
+                            <i class="ri-drag-move-fill"></i>
+                            <span> Site Setting </span>
+                        </a>
+                    </li>
+                @endcan
+
+            @can('role-and-permission-list')
                 <li class="side-nav-item">
                     <a data-bs-toggle="collapse" href="#sidebarPages1" aria-expanded="false" aria-controls="sidebarPages" class="side-nav-link">
                         <i class="ri-rotate-lock-line"></i>
