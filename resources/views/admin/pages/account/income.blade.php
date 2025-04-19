@@ -10,7 +10,7 @@
                         <li class="breadcrumb-item active">Order Section!</li>
                     </ol>
                 </div>
-                <h4 class="page-title">Order Section!</h4>
+                <h4 class="page-title">Income Section!</h4>
             </div>
         </div>
     </div>
