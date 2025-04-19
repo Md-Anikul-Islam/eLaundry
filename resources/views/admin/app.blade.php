@@ -159,6 +159,31 @@
                 @endcan
 
 
+                    <li class="side-nav-item">
+                        <a data-bs-toggle="collapse" href="#sidebarPages1" aria-expanded="false" aria-controls="sidebarPages" class="side-nav-link">
+                            <i class="ri-rotate-lock-line"></i>
+                            <span>Account </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <div class="collapse" id="sidebarPages1">
+                            <ul class="side-nav-second-level">
+
+                                    <li>
+                                        <a href="{{route('order.income.report')}}">Income</a>
+                                    </li>
+
+
+
+                                    <li>
+                                        <a href="#">Expense</a>
+                                    </li>
+
+                            </ul>
+                        </div>
+                    </li>
+
+
+
                 @can('role-and-permission-list')
                 <li class="side-nav-item">
                     <a data-bs-toggle="collapse" href="#sidebarPages1" aria-expanded="false" aria-controls="sidebarPages" class="side-nav-link">

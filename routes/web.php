@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\admin\AdminDashboardController;
 use App\Http\Controllers\admin\CategoryController;
+use App\Http\Controllers\admin\IncomeExpenseReportController;
 use App\Http\Controllers\admin\OrderManageController;
 use App\Http\Controllers\admin\ServiceController;
 use App\Http\Controllers\admin\SiteSettingController;
@@ -118,8 +119,9 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/order-manage/{id}', [OrderManageController::class, 'show'])->name('order.manage.show');
         //changer order status
         Route::put('/order-status-change/{id}', [OrderManageController::class, 'changeStatus'])->name('order.status.change');
-
         Route::get('/order-invoice/{id}', [OrderManageController::class, 'invoice'])->name('order.invoice');
+
+        Route::get('/income-report', [IncomeExpenseReportController::class, 'income'])->name('order.income.report');
 
     });
 
