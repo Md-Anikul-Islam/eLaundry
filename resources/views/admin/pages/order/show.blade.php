@@ -21,23 +21,62 @@
                 </div>
             </div>
             <div class="card mb-4">
-                <div class="card-header">Order Information</div>
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="">Order Information</h5>
+                    <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#editNewModalId{{$order->id}}">Change Order Status</button>
+
+                    <div class="modal fade" id="editNewModalId{{$order->id}}" data-bs-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="editNewModalLabel{{$order->id}}" aria-hidden="true">
+                        <div class="modal-dialog  modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="addNewModalLabel{{$order->id}}">Order Status</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form method="post" action="{{route('order.status.change',$order->id)}}" enctype="multipart/form-data">
+                                        @csrf
+                                        @method('PUT')
+
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="mb-3">
+                                                    <label for="example-select" class="form-label">Status</label>
+                                                    <select name="status" class="form-select">
+                                                        <option value="pending" {{ $order->status === 'pending' ? 'selected' : '' }}>Pending</option>
+                                                        <option value="completed" {{ $order->status === 'completed' ? 'selected' : '' }}>Completed</option>
+                                                        <option value="canceled" {{ $order->status === 'canceled' ? 'selected' : '' }}>Canceled</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-end">
+                                            <button class="btn btn-primary" type="submit">Update</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="card-body">
                     <p><strong>Customer Name:</strong> {{ $order->user->name }}</p>
                     <p><strong>Email:</strong> {{ $order->user->email }}</p>
                     <p><strong>Phone:</strong> {{ $order->user->phone }}</p>
                     <p><strong>Order Status:</strong>
                         @if($order->status == 'pending')
-                            <span class="text-bg-info  rounded-1">Pending</span>
+                            <span class="badge badge-outline-primary">Pending</span>
                         @elseif($order->status == 'completed')
-                            <span class="badge badge-success">Completed</span>
+                            <span class="badge badge-outline-info">Completed</span>
                         @elseif($order->status == 'canceled')
                             <span class="badge badge-danger">Canceled</span>
                         @else
                             <span class="badge badge-secondary">Unknown</span>
                         @endif
                     </p>
+
                 </div>
+
             </div>
 
             <div class="card mb-4">
@@ -67,6 +106,8 @@
                     </table>
                 </div>
             </div>
+
+
 
             <div class="card mb-4">
                 <div class="card-header">Order Items</div>

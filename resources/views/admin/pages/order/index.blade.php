@@ -41,7 +41,7 @@
                     <!-- Button to download the PDF report -->
                     <button style="background-color:darkblue;" class="btn text-nowrap text-light"
                             onclick="exportTableToPDF('report.pdf', 'Order List')">
-                        Download PDF Report
+                        Download Order Report
                     </button>
                 </div>
             </div>

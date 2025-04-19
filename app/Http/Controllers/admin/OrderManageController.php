@@ -24,11 +24,6 @@ class OrderManageController extends Controller
         })->only('index');
     }
 
-//    public function index(Request $request)
-//    {
-//        $orders = Order::with('user', 'orderItems')->latest()->paginate(10);
-//        return view('admin.pages.order.index', compact('orders'));
-//    }
 
     public function index(Request $request)
     {
@@ -58,6 +53,21 @@ class OrderManageController extends Controller
     {
         $order = Order::with('user', 'orderItems','payment')->findOrFail($id);
         return view('admin.pages.order.show', compact('order'));
+    }
+
+    public function changeStatus($id)
+    {
+        $order = Order::find($id);
+        if ($order->status == 'pending') {
+            $order->status = 'completed';
+            $order->save();
+            Toastr::success('Order Status Updated Successfully', 'Success');
+        } else {
+            $order->status = 'pending';
+            $order->save();
+            Toastr::success('Order Status Updated Successfully', 'Success');
+        }
+        return redirect()->back();
     }
 
     public function destroy($id)

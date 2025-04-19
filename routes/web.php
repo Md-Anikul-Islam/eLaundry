@@ -115,6 +115,8 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/order-manage', [OrderManageController::class, 'index'])->name('order.manage');
         Route::get('/order-delete/{id}', [OrderManageController::class, 'destroy'])->name('order.destroy');
         Route::get('/order-manage/{id}', [OrderManageController::class, 'show'])->name('order.manage.show');
+        //changer order status
+        Route::put('/order-status-change/{id}', [OrderManageController::class, 'changeStatus'])->name('order.status.change');
 
 
     });
