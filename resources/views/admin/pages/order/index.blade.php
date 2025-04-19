@@ -18,7 +18,31 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <div class="d-flex justify-content-end">
+                <div class="d-flex justify-content-between">
+                    <form action="{{ route('order.manage') }}" method="GET" class="d-flex">
+                        <div class="me-2">
+                            <input type="date" name="start_date" value="{{ request('start_date') }}" class="form-control" placeholder="Start Date">
+                        </div>
+                        <div class="me-2">
+                            <input type="date" name="end_date" value="{{ request('end_date') }}" class="form-control" placeholder="End Date">
+                        </div>
+
+                        <!-- Status Filter Dropdown -->
+                        <div class="me-2">
+                            <select name="status" class="form-control">
+                                <option value="">Select Status</option>
+                                <option value="pending" {{ request('status') == 'pending' ? 'selected' : '' }}>Pending</option>
+                                <option value="completed" {{ request('status') == 'completed' ? 'selected' : '' }}>Completed</option>
+                                <option value="decline" {{ request('status') == 'decline' ? 'selected' : '' }}>Decline</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Filter</button>
+                    </form>
+                    <!-- Button to download the PDF report -->
+                    <button style="background-color:darkblue;" class="btn text-nowrap text-light"
+                            onclick="exportTableToPDF('report.pdf', 'Order List')">
+                        Download PDF Report
+                    </button>
                 </div>
             </div>
             <div class="card-body">
@@ -53,10 +77,8 @@
                             <td>
                                 @if($orderData->status == 'pending')
                                     <span class="badge badge-outline-success">Pending</span>
-                                @elseif($orderData->status == 'processing')
-                                    <span class="badge badge-info">Processing</span>
                                 @elseif($orderData->status == 'completed')
-                                    <span class="badge badge-success">Completed</span>
+                                    <span class="badge badge-outline-info">Completed</span>
                                 @elseif($orderData->status == 'decline')
                                     <span class="badge badge-danger">Decline</span>
                                 @endif
@@ -92,4 +114,29 @@
             </div>
         </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.13/jspdf.plugin.autotable.min.js"></script>
+    <script>
+        function exportTableToPDF(filename, heading) {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            doc.text(heading, doc.internal.pageSize.getWidth() / 2, 20, { align: 'center' });
+            let rows = document.querySelectorAll("table tr");
+            let data = [];
+            for (let i = 0; i < rows.length; i++) {
+                let row = [],
+                    cols = rows[i].querySelectorAll("td, th");
+                for (let j = 0; j < cols.length - 1; j++)
+                    row.push(cols[j].innerText);
+                data.push(row);
+            }
+            doc.autoTable({
+                head: [data[0]],
+                body: data.slice(1),
+                startY: 30
+            });
+            doc.save(filename);
+        }
+    </script>
 @endsection

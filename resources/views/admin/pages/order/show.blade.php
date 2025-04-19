@@ -26,7 +26,17 @@
                     <p><strong>Customer Name:</strong> {{ $order->user->name }}</p>
                     <p><strong>Email:</strong> {{ $order->user->email }}</p>
                     <p><strong>Phone:</strong> {{ $order->user->phone }}</p>
-                    <p><strong>Order Status:</strong> {{ $order->status ?? 'Pending' }}</p>
+                    <p><strong>Order Status:</strong>
+                        @if($order->status == 'pending')
+                            <span class="text-bg-info  rounded-1">Pending</span>
+                        @elseif($order->status == 'completed')
+                            <span class="badge badge-success">Completed</span>
+                        @elseif($order->status == 'canceled')
+                            <span class="badge badge-danger">Canceled</span>
+                        @else
+                            <span class="badge badge-secondary">Unknown</span>
+                        @endif
+                    </p>
                 </div>
             </div>
 
