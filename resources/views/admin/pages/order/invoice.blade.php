@@ -111,7 +111,7 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="float-end mt-3 mt-sm-0">
-                                <h3>{{$order->total_amount}}$ USD</h3>
+                                <h4>{{$order->total_amount}}$ USD</h4>
                             </div>
                             <div class="clearfix"></div>
                         </div>
@@ -119,6 +119,7 @@
                     <div class="d-print-none mt-4">
                         <div class="text-center">
                             <a href="javascript:window.print()" class="btn btn-primary"><i class="ri-printer-line"></i> Print</a>
+
                         </div>
                     </div>
                 </div>
