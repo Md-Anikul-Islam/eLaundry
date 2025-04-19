@@ -13,7 +13,7 @@
     }
     $(document).ready(function () {
         // Initialize button states
-        ['small', 'regular', 'large'].forEach(updateButtons);
+        ['small', 'regular', 'large', 'overSized'].forEach(updateButtons);
 
         $('.increase').on('click', function () {
             const targetId = $(this).data('target');
@@ -52,11 +52,7 @@
         }
     });
 
-    // form submit redirect to index2.html
-    // $("#signup-form").on("submit", function (e) {
-    //     e.preventDefault(); // Prevent the default form submission
-    //     window.location.href = "index2.html"; // Redirect to index2.html
-    // });
+
     // banner slider js
     $(".banner-slider").slick({
         dots: true,
@@ -89,7 +85,7 @@
             }
         });
 
-        if (valid && currentStep < 6) {
+        if (valid && currentStep < 7) {
             currentStep++;
             showStep(currentStep);
         }
@@ -121,6 +117,11 @@
             $icon.removeClass("fa-eye-slash").addClass("fa-eye");
         }
     });
+
+
+
+
+
 
 
 

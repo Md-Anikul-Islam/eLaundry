@@ -9,6 +9,7 @@ use App\Http\Controllers\admin\SliderController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\UserOrderController;
 use App\Http\Controllers\UserSignupController;
 use Illuminate\Support\Facades\Route;
 
@@ -126,6 +127,8 @@ Route::middleware(['auth'])->group(function () {
 
         //User
         Route::get('/dashboard', [UserSignupController::class, 'userHome'])->name('dashboard');
+
+        Route::get('/order', [UserOrderController::class, 'userOrder'])->name('user.order');
 
     });
 });

@@ -53,13 +53,13 @@ class UserSignupController extends Controller
                 'password' => $input['password'],
                 'verification_code' => null,
                 'email_verified_at' => now(),
-                'is_registration_by' => 'User',
+                'is_registration_by' => 'user',
 
             ]);
             $user->assignRole('User');
             //Mail::to($request->email)->send(new VerifyMail($user));
             Toastr::success('User Register Successfully', 'Success');
-            return redirect()->route('dashboard')->with('success', 'Account created, please verify your email.');
+            return redirect()->route('show.signin')->with('success', 'Account created, please verify your email.');
         } catch (QueryException $e) {
             if ($e->getCode() === '23000') {
                 Toastr::error('The email has already been taken. Please choose a different email.', 'Error');

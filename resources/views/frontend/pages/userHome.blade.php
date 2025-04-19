@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="service-btn text-center">
-                <a href="#" class="theme-btn theme-btn-primary text-uppercase">Order Now <span class="ms-2"><i
+                <a href="{{route('user.order')}}" class="theme-btn theme-btn-primary text-uppercase">Order Now <span class="ms-2"><i
                             class="fa-solid fa-arrow-right"></i></span></a>
             </div>
         </div>
