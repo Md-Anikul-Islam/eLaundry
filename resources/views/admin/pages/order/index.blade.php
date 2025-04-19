@@ -63,7 +63,9 @@
                         <tr>
                             <td>{{$key+1}}</td>
                             <td>
-                                {{$orderData->user->name}}
+                                {{$orderData->user->name}}<br>
+                                {{$orderData->user->phone}}<br>
+                                {{$orderData->user->email}}
                             </td>
                             <td>
                                 {{$orderData->invoice_number}}
